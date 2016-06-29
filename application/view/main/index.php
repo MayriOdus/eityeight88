@@ -8,7 +8,7 @@
 ?>
 
 
-<div class="main-container parallax jumbotron border-clear light-translucent-bg text-center margin-clear" style="">
+<div class="main-container text-center margin-clear">
 	<div class="container">
 		<div class="row">
 			<!-- main start -->
