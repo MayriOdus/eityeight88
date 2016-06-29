@@ -1,0 +1,156 @@
+
+
+body {
+	margin: 0px;
+	color: #272727;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+img {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+a {
+	text-decoration: none;
+	color: #272727;
+}
+textarea {
+	resize:none;
+}
+#wrapper {
+	width: 1050px;
+	margin: 0px auto;
+	padding: 0px;
+	float: none;
+}
+#header {
+	padding: 0px;
+	float: left;
+	width: 100%;
+	margin-top: 15px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+}
+.logo {
+	padding: 0px;
+	float: left;
+	height: 105px;
+	width: 105px;
+	margin-top: 0px;
+	margin-right: 16px;
+	margin-bottom: 0px;
+	margin-left: 2px;
+}
+.hright {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+}
+.hoption {
+	margin: 0px;
+	padding: 0px;
+	float: right;
+	height: 13px;
+	list-style-type: none;
+}
+.hoption li {
+	font-size: 10px;
+	line-height: 11px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 0px;
+	float: left;
+	height: 11px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 25px;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #d4d4d4;
+}
+ul.hoption li a:not(:last-child){
+	margin-right: 14px;
+}
+ul.hoption li a{
+	float: left;
+}
+ul.hoption li a.hth {
+/*	margin-right: 10px;*/
+}
+ul.hoption li a.hsc {
+/*	margin-right: 25px;*/
+}
+.hnavi {
+	padding: 0px;
+	float: left;
+	width: 100%;
+	margin-top: 73px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	height: 19px;
+}
+.menu {
+	font-size: 22px;
+	line-height: 19px;
+	text-transform: uppercase;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	height: 19px;
+	list-style-type: none;
+}
+.menu>li {
+	padding: 0px;
+	float: left;
+	height: 19px;
+	margin: 0px 18px 0px 0px;
+	position: relative;
+}
+.menu>li a{
+	color: #535353;
+}
+.menu>li.cat-item a{
+	color: #000000;
+}
+.menu li.cat-item a:hover,
+.menu a:hover {
+	color: #ff5ca1;
+}
+.menu>li>ul{
+	position: absolute;
+	padding: 15px 0 4px;
+	display: none;
+	z-index: 500;
+	background-color: #ffffff;
+	margin-left: -10px;
+}
+.menu>li>ul>li{
+	display: block;
+	white-space: nowrap;
+	margin-bottom: 6px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.hsearch {
+	background-image: url(images/main_13.jpg);
+	margin: 0px;
+	float: left;
+	height: 18px;
+	width: 135px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-bottom-color: #434343;
+	line-height: 18px;
+	padding: 0;
+}

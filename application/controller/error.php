@@ -16,9 +16,10 @@ class Error extends Controller
      */
     public function index()
     {
+		$_URL = URL . $_SESSION["Lang"] . "/";
+
         // load views
-        //require APP . 'view/_templates/header.php';
-        require APP . 'view/error/index.php';
-        //require APP . 'view/_templates/footer.php';
+		$content = 'view/main/index.php';
+        require APP . 'view/_templates/layout.php';
     }
 }

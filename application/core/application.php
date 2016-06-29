@@ -22,6 +22,10 @@ class Application
         // create array with URL parts in $url
         $this->splitUrl();
 
+		$_SESSION["Lang"] = $this->lang;
+
+		require 'lang/'.strtolower($this->lang).'/index.php';
+
         // check for controller: no controller given ? then load start-page
         if (!$this->url_controller) 
 		{
@@ -67,8 +71,8 @@ class Application
 		{
             header('location: ' . URL . 'error');
         }
-
-    }
+		
+    }	
 
     /**
      * Get and split the URL
