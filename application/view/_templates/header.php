@@ -9,7 +9,32 @@
 		</div>
 
 		<div class="col-md-10 hright">
+
+			
+
 			<ul class="hoption">
+				
+				<li>
+					<ul class="qtrans_language_chooser" id="qtranslate-chooser">
+
+						<li class="active" style="border:none;">
+							<a href="http://facebook.com/" class="btn btn-social-icon btn-facebook">
+								<i class="fa fa-facebook"></i>
+							</a>
+							<a href="http://facebook.com/" class="btn btn-social-icon btn-twitter">
+								<i class="fa fa-twitter"></i>
+							</a>
+							<a href="http://facebook.com/" class="btn btn-social-icon btn-instagram">
+								<i class="fa fa-instagram"></i>
+							</a>
+							<a href="http://facebook.com/" class="btn btn-social-icon btn-youtube-play">
+								<i class="fa fa-youtube-play"></i>
+							</a>
+						</li>
+
+					</ul>
+				</li>
+
 				<li>
 					<a href="#" class="hsc">Login</a><a href="#">Register</a>
 				</li>
@@ -23,6 +48,8 @@
 					<div class="qtrans_widget_end"></div>
 				</li>
 			</ul>
+			
+
 			<div class="hnavi">
 				<ul class="menu">
 					<li class="cat-item"><a href="#">Home</a>
