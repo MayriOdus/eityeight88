@@ -4,7 +4,7 @@
 		
 		<div class="col-md-2">
 			<a href="#">
-				<img alt="" class="logo" src="<?=URL;?>img/logo.png">
+				<img alt="" class="logo" src="<?=URL;?>img/logo.jpg">
 			</a>
 		</div>
 
