@@ -81,7 +81,8 @@
 			<div class="caption text-center">
 				<h4><a href="#">VER. 88 BOUNCE UP PACT</a></h4>
 				<h4>฿490</h4>
-				<p>Extended Coverage, Intended Closeness A foundation used nationwide... <a target="_blank" href="#"> More </a>.</p>
+				<p>SPF 50 PA+++</p>
+				<p><button type="button" class="btn btn-black btn-sm">ADD TO CART</button></p>
 			</div>
 			<!-- <div class="ratings">
 				<p class="pull-right">15 reviews</p>
@@ -102,18 +103,8 @@
 			<div class="caption text-center">
 				<h4><a href="#">EITY EIGHT DEWY FACE GLOW</a></h4>
 				<h4>฿650</h4>
-				<p>soft primer applied prior to foundation that provides you a new dewy radiance finish... <a target="_blank" href="#"> More </a>.</p>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-sm-4 col-lg-4 col-md-4">
-		<div class="thumbnail">
-			<img src="<?=URL;?>img/Gif-Lips-Box.gif" alt="">
-			<div class="caption text-center">
-				<h4><a href="#">EITY EIGHT DEWY FACE GLOW</a></h4>
-				<h4>฿990</h4>
-				<p>NO.21 LIGHT BEIGE + CURVED FACE BRUSH . <a target="_blank" href="#"> More </a>.</p>
+				<p>Shine Bright Radiance Finish.</p>
+				<p><button type="button" class="btn btn-black btn-sm">ADD TO CART</button></p>
 			</div>
 		</div>
 	</div>
@@ -122,9 +113,22 @@
 		<div class="thumbnail">
 			<img src="<?=URL;?>img/Gif-Liquid-Foundation-and-Brush.gif" alt="">
 			<div class="caption text-center">
-				<h4><a href="#">HOLIDAY LIP PENCIL SET</a></h4>
+				<h4><a href="#">EITY EIGHT LIQUID FOUNDATION</a></h4>
 				<h4>฿990</h4>
-				<p>MADE IN KORE. <a target="_blank" href="#"> More </a>.</p>
+				<p>NO.21 , NO.23 </p>
+				<p><button type="button" class="btn btn-black btn-sm">ADD TO CART</button></p>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-sm-4 col-lg-4 col-md-4">
+		<div class="thumbnail">
+			<img src="<?=URL;?>img/Gif-Lips-Box.gif" alt="">
+			<div class="caption text-center">
+				<h4><a href="#">VER.88</a></h4>
+				<h4>฿990</h4>
+				<p>HOLIDAY LIP PENCIL SET</p>
+				<p><button type="button" class="btn btn-black btn-sm">ADD TO CART</button></p>
 			</div>
 		</div>
 	</div>
@@ -135,7 +139,7 @@
 			<div class="caption text-center">
 				<h4><a href="#">MINI MIRROR ORANGE NEON</a></h4>
 				<h4> N/A </h4>
-				<p>NOT FOR SALE <a target="_blank" href="#"> More </a>.</p>
+				<p>NOT FOR SALE</p>
 			</div>
 		</div>
 	</div>
@@ -144,27 +148,6 @@
 </div>
 
 
-<br>
 
-<div class="row sep-line"></div>	
 
-<!-- Footer -->
-<footer class="footer footer-basic-centered">
 
-		<p class="footer-company-motto">Eityeight88</p>
-		
-		<p class="footer-links">
-			<ul class="social-network social-circle ">
-				<li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
-				<li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-				<li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-				<li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
-				<li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-			</ul>
-		</p>
-
-		<p class="footer-company-name">
-			© <script>document.write(new Date().getFullYear())</script>, EITYEIGHT88. ALL RIGHTS RESERVED.
-		</p>
-
-</footer><!--End footer 2-->

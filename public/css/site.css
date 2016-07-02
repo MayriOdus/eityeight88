@@ -106,7 +106,7 @@ ul.hoption li a.hsc {
 	font-family: 'Anton', sans-serif;
 }
 .menu {
-	font-size: 22px;
+	font-size: 21px;
 	line-height: 19px;
 	text-transform: uppercase;
 	margin: 0px;
@@ -323,11 +323,17 @@ ul.social-network li {
 .social-network a.icoGoogle:hover {
 	background-color:#BD3518;
 }
+.social-network a.icoInstragram:hover {
+	background-color:#964B00;
+}
 .social-network a.icoVimeo:hover {
 	background-color:#0590B8;
 }
 .social-network a.icoLinkedin:hover {
 	background-color:#007bb7;
+}
+.social-network a.icoLine:hover {
+	background-color:#00C300;
 }
 .social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
 .social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
@@ -374,6 +380,31 @@ a.socialIcon:hover, .socialHoverClass {
 	-ms-transition: all 0.8s;
 	transition: all 0.8s;
 }
+.social-circle li a:hover svg, .triggeredHover {
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-ms--transform: rotate(360deg);
+	transform: rotate(360deg);
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.social-circle svg {
+	color: #fff;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	transition: all 0.8s;
+}
+
+
+
+i.line-w {
+    background: url(/img/line-messenger.png) no-repeat;
+}
 
 .footer-basic-centered a {
 	background-color: #000;   
@@ -410,4 +441,12 @@ a.socialIcon:hover, .socialHoverClass {
 
 .btn-social-icon {
 	margin-top: -13px;
+}
+
+.btn-black {
+	background: #000;
+	color:#fff;
+}
+.btn-black:hover {
+	color:#fff;
 }

@@ -23,6 +23,8 @@
 
 	<?php require APP . $content;  ?>
 
+	<?php require APP . 'view/_templates/footer.php'; ?>
+
 </div>
 
 <?php require APP . 'view/_templates/script.php'; ?>
