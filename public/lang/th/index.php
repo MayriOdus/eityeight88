@@ -11,3 +11,8 @@ define("_ABOUT_US", "เกี่ยวกับเรา");
 define("_PRODUCTS", "สินค้า");
 define("_CONTACT_US", "ติดต่อเรา");
 define("_SECURITY_CODE_CHECKING", "เช็ครหัสผลิตภัณฑ์ แป้ง(เวอร์.88)");
+define("_NAME", "ซื่อ");
+define("_EMAIL_ADDRESS", "ที่อยู่ อีเมลล์");
+define("_SUBJECT", "หัวข้อ");
+define("_MESSAGE", "ข้อความ");
+define("_SEND_MESSAGE", "ส่งข้อความ");

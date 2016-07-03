@@ -18,17 +18,63 @@
 					<div class="item">
 						<div align="center" class="embed-responsive embed-responsive-16by9">
 							  <video autoplay loop muted style="width:100%;" class="embed-responsive-item">
-								 <source src="<?=URL;?>video/02.mp4" type="video/mp4" onclick="this.play();">
+								 <source src="<?=URL;?>video/02.mp4" type="video/mp4">
 								 Your browser does not support the video tag.
 							  </video>
 						</div>
 					</div>
+
+					<!-- <div class="item">
+						<div align="center" class="embed-responsive embed-responsive-16by9">
+							  <video autoplay loop muted style="width:100%;" class="embed-responsive-item">
+								 <source src="<?=URL;?>video/03.mp4" type="video/mp4">
+								 Your browser does not support the video tag.
+							  </video>
+						</div>
+					</div> -->
 
 					<div class="item">
 						<div align="center" class="img-slide-res">
 							  <img class="img-responsive" src="<?=URL;?>img/88_main01.gif">
 						</div>
 					</div>
+
+					<div class="item">
+						<div align="center" class="img-slide-res">
+							  <img class="img-responsive" src="<?=URL;?>img/88_main002.gif">
+						</div>
+					</div>
+
+					<div class="item">
+						<div align="center" class="img-slide-res">
+							  <img class="img-responsive" src="<?=URL;?>img/88_main003.gif">
+						</div>
+					</div>
+
+					<div class="item">
+						<div align="center" class="img-slide-res">
+							  <img class="img-responsive" src="<?=URL;?>img/88_main04.jpg">
+						</div>
+					</div>
+
+					<div class="item">
+						<div align="center" class="img-slide-res">
+							  <img class="img-responsive" src="<?=URL;?>img/88_main05.gif">
+						</div>
+					</div>
+
+					<div class="item">
+						<div align="center" class="img-slide-res">
+							  <img class="img-responsive" src="<?=URL;?>img/88_main06.gif">
+						</div>
+					</div>
+
+					<div class="item">
+						<div align="center" class="img-slide-res">
+							  <img class="img-responsive" src="<?=URL;?>img/88_main07.gif">
+						</div>
+					</div>
+
 				</div>
 
 				<!-- Controls -->

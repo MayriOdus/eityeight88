@@ -4,7 +4,7 @@
 		
 		<div class="col-md-2">
 			<a href="">
-				<img alt="" class="logo" src="<?=URL;?>img/logo.jpg">
+				<img alt="<?=$_URL;?>" class="logo" src="<?=URL;?>img/logo.jpg">
 			</a>
 		</div>
 
@@ -54,9 +54,9 @@
 
 				<li>
 					<ul class="qtrans_language_chooser" id="qtranslate-chooser">
-						<li class="active"><a href="<?=URL."en";?>" class="qtrans_flag_en qtrans_flag_and_text" title="English"><span>English</span></a>
+						<li class="active"><a href="<?="http://".$_SERVER['HTTP_HOST'].str_replace("th", "en", $_SERVER['REQUEST_URI']);?>" class="qtrans_flag_en qtrans_flag_and_text" title="English"><span>English</span></a>
 						</li>
-						<li><a href="<?=URL."th";?>" class="qtrans_flag_th qtrans_flag_and_text" title="ภาษาไทย"><span>ภาษาไทย</span></a>
+						<li><a href="<?="http://".$_SERVER['HTTP_HOST'].str_replace("en", "th", $_SERVER['REQUEST_URI']);?>" class="qtrans_flag_th qtrans_flag_and_text" title="ภาษาไทย"><span>ภาษาไทย</span></a>
 						</li>
 					</ul>
 					<div class="qtrans_widget_end"></div>
@@ -66,13 +66,13 @@
 
 			<div class="hnavi">
 				<ul class="menu">
-					<li class="cat-item"><a href="#" title="<?=_HOME;?>"><?=_HOME;?></a>
+					<li class="cat-item"><a href="<?=$_URL;?>" title="<?=_HOME;?>"><?=_HOME;?></a>
 					</li>
-					<li class="cat-item cat-item-27"><a href="#" title="<?=_ABOUT_US;?>"><?=_ABOUT_US;?></a>
+					<li class="cat-item cat-item-27"><a href="<?=$_URL;?>about" title="<?=_ABOUT_US;?>"><?=_ABOUT_US;?></a>
 					</li>
-					<li class="cat-item cat-item-26"><a href="#" title="<?=_PRODUCTS;?>"><?=_PRODUCTS;?></a>
+					<li class="cat-item cat-item-26"><a href="<?=$_URL;?>products" title="<?=_PRODUCTS;?>"><?=_PRODUCTS;?></a>
 					</li>
-					<li class="cat-item"><a href="#" title="<?=_CONTACT_US;?>"><?=_CONTACT_US;?></a>
+					<li class="cat-item"><a href="<?=$_URL;?>contact" title="<?=_CONTACT_US;?>"><?=_CONTACT_US;?></a>
 					</li>
 					<li class="cat-item cat-item-26"><a href="#" title="<?=_SECURITY_CODE_CHECKING;?>"><?=_SECURITY_CODE_CHECKING;?></a>
 					</li>
