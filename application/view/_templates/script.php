@@ -100,6 +100,15 @@ $(window).resize(function ()
         $("#min-tital").hide();
         $("#full-tital").show();
     }
+
+	if( $(window).width() <= 768 )
+	{
+		//$('video').trigger('pause');
+	}
+	else
+	{
+
+	}
 });
 
 var lbd = {
@@ -132,12 +141,21 @@ var lbd = {
             $off_canvas_sidebar.addClass('off-canvas-sidebar');
 
             //add the content from the regular header to the right menu
-            //$off_canvas_sidebar.find(".qtrans_social_chooser").each(function ()
-            //{
-                //content_buff = "<div class='col-md-12'>" + $(this).html() + "</div>";
-                //ul_content = ul_content + content_buff;
-            //});
+            $off_canvas_sidebar.find(".qtrans_social_chooser a").each(function ()
+            {
+                content_buff = "<div class='col-xs-3 col-sm-3' style='font-size: 20px;'>" + $(this)[0].outerHTML + "</div>";
+                ul_content = ul_content + content_buff;
+            });
 
+			ul_content = "<div style='margin:15px 0 40px 0;'>" + ul_content + "</div>";
+
+            $off_canvas_sidebar.find(".qtrans_language_chooser a").each(function ()
+            {
+                content_buff = "<div class='col-xs-2 col-sm-2' style='font-size: 20px;margin-top:10px;'>" + $(this)[0].outerHTML + "</div>";
+                ul_content = ul_content + content_buff.replace(/(<span>).*(<\/span>)/i,"&nbsp;&nbsp;&nbsp;");
+            });
+
+			//ul_content = "<div style='margin:15px 0 40px 0;'>" + ul_content + "</div>";
 
             //$off_canvas_sidebar.find(".qtrans_social_chooser").each(function ()
             //{

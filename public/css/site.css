@@ -51,14 +51,6 @@ textarea {
 }
 
 
-@media (min-width: 992px) {
-  .logo {
-		padding: 0px;
-		float: left;
-		margin-bottom: 0px;
-	}
-}
-
 .hright {
 	margin: 0px;
 	padding: 0px;
@@ -131,6 +123,21 @@ ul.hoption li a.hsc {
 		margin: 0px 18px 0px 0px;
 		position: relative;
 	}
+
+	.res-logo, .res-basket {
+		display:none;
+	}
+
+	.logo {
+		padding: 0px;
+		float: left;
+		margin-bottom: 0px;
+	}
+
+	#Layer_1 {
+		width: 15px; 
+		margin-top: 2px;
+	}
 }
 
 @media (max-width: 991px) {
@@ -138,10 +145,30 @@ ul.hoption li a.hsc {
 		padding: 0px;
 		display: block;
 		position: relative;
-		margin: 10px 0px;
+		margin: 15px 0px;
+		font-family: 'Oswald', sans-serif;
 		text-align: left;
 	}
+
+	.res-logo {
+		padding: 0 15px;
+	}
+	
+	.res-basket {
+		margin-right: 15px;
+	}
+
+	.small-bx {
+		margin: 10px 0;
+	}
+
+	#Layer_1 {
+		width: 16px; 
+		margin-top: 2px;
+	}
 }
+
+
 
 .btn:hover, .btn:focus, .btn.focus, a:hover {
     color: #c7bdbd;
@@ -564,7 +591,7 @@ i.line-w {
 .breadcrumbs-v3.img-v1 {
   background: url(/img/banner.jpg) no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: center right;
 }
 
 .breadcrumbs-v3.img-v2 {

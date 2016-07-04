@@ -34,6 +34,14 @@
 
 </div>
 
+<div class="modal fade soci-line" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm">
+	<div class="modal-content">
+	  <input type="image" src="<?=URL;?>img/line-code.jpg">
+	</div>
+  </div>
+</div>
+
 <?php require APP . 'view/_templates/script.php'; ?>
 
 </body>

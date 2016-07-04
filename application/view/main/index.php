@@ -104,16 +104,16 @@
 <div class="row">
 	
 	<div class="col-md-8 col-md-offset-2 nopadd">
-		<div class="col-md-3">
+		<div class="col-xs-6 col-sm-3 col-md-3 small-bx">
 			<img src="<?=URL;?>img/AW-88-Button-Wed-01.gif" class="img-list">
 		</div>
-		<div class="col-md-3">
+		<div class="col-xs-6 col-sm-3 col-md-3 small-bx">
 			<img src="<?=URL;?>img/AW-88-Button-Wed-02.gif" class="img-list">
 		</div>
-		<div class="col-md-3">
+		<div class="col-xs-6 col-sm-3 col-md-3 small-bx">
 			<img src="<?=URL;?>img/AW-88-Button-Wed-03.gif" class="img-list">
 		</div>
-		<div class="col-md-3">
+		<div class="col-xs-6 col-sm-3 col-md-3 small-bx">
 			<img src="<?=URL;?>img/AW-88-Button-Wed-04.gif" class="img-list">
 		</div>
 	</div>
@@ -128,7 +128,7 @@
 
 <div class="row">
 
-	<div class="col-sm-4 col-lg-4 col-md-4">
+	<div class="col-sm-4 col-lg-3 col-md-4">
 		<div class="thumbnail">
 			<img src="<?=URL;?>img/Gif-Cushion.gif" alt="">
 			<div class="caption text-center">
@@ -150,7 +150,7 @@
 		</div>
 	</div>
 
-	<div class="col-sm-4 col-lg-4 col-md-4">
+	<div class="col-sm-4 col-lg-3 col-md-4">
 		<div class="thumbnail">
 			<img src="<?=URL;?>img/Gif-Dewy-2.gif" alt="">
 			<div class="caption text-center">
@@ -162,7 +162,7 @@
 		</div>
 	</div>
 
-	<div class="col-sm-4 col-lg-4 col-md-4">
+	<div class="col-sm-4 col-lg-3 col-md-4">
 		<div class="thumbnail">
 			<img src="<?=URL;?>img/Gif-Liquid-Foundation-and-Brush.gif" alt="">
 			<div class="caption text-center">
@@ -174,7 +174,7 @@
 		</div>
 	</div>
 
-	<div class="col-sm-4 col-lg-4 col-md-4">
+	<div class="col-sm-4 col-lg-3 col-md-4">
 		<div class="thumbnail">
 			<img src="<?=URL;?>img/Gif-Lips-Box.gif" alt="">
 			<div class="caption text-center">
@@ -186,7 +186,7 @@
 		</div>
 	</div>
 
-	<div class="col-sm-4 col-lg-4 col-md-4">
+	<div class="col-sm-4 col-lg-3 col-md-4">
 		<div class="thumbnail">
 			<img src="<?=URL;?>img/Gif-Mirror.gif" alt="">
 			<div class="caption text-center">
