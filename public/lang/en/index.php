@@ -10,7 +10,7 @@ define("_HOME", "Home");
 define("_ABOUT_US", "About Us");
 define("_PRODUCTS", "Products");
 define("_CONTACT_US", "Contact Us");
-define("_SECURITY_CODE_CHECKING", "Security Code Checking Ver.88 Bounce Up Pact");
+define("_SECURITY_CODE_CHECKING", "Security Code Checking Ver.88<br> Bounce Up Pact");
 define("_NAME", "Name");
 define("_EMAIL_ADDRESS", "Email Address");
 define("_SUBJECT", "Subject");

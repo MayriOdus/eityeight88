@@ -17,13 +17,20 @@
 </head>
 <body>
 
-<div class="container">
+<div class="wrapper">
 	
-	<?php require APP . 'view/_templates/header.php'; ?>
+	<div class="container">
+	
+		<div class="main-panel">
 
-	<?php require APP . $content;  ?>
+		<?php require APP . 'view/_templates/header.php'; ?>
 
-	<?php require APP . 'view/_templates/footer.php'; ?>
+		<?php require APP . $content;  ?>
+
+		<?php require APP . 'view/_templates/footer.php'; ?>
+
+		</div>
+	</div>
 
 </div>
 

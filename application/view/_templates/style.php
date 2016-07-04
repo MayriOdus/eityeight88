@@ -2,12 +2,6 @@
 <link rel="shortcut icon" href="<?=URL;?>img/favicon.ico">
 <!-- end: Favicon -->
 
-<!-- Web Fonts -->
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
-
 <!-- Bootstrap core CSS -->
 <link href="<?=URL;?>css/bootstrap.min.css" rel="stylesheet">
 <link href="<?=URL;?>font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -24,4 +18,5 @@
 
 <!-- Custom styles for this template -->
 <link href="<?=URL;?>css/site.css" rel="stylesheet">
+<link href="<?=URL;?>css/navbar.css" rel="stylesheet">
 <!-- <link href="<?=URL;?>css/custom.css" rel="stylesheet"> -->

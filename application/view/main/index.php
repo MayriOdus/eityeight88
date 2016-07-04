@@ -1,114 +1,121 @@
-<div class="row">
+
 	
-	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
-			<div id="carousel-top" class="carousel slide" data-ride="carousel" data-interval="15000">	
-				<!-- Wrapper for slides -->
-				<div class="carousel-inner" role="listbox">            
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<div id="carousel-top" class="carousel slide" data-ride="carousel" data-interval="15000">	
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">            
 
-					<div class="item active">
-						<div align="center" class="embed-responsive embed-responsive-16by9">
-							  <video autoplay loop muted class="embed-responsive-item">
-								 <source src="<?=URL;?>video/01.mp4" type="video/mp4">
-								 Your browser does not support the video tag.
-							  </video>
-						</div>
-					</div> 
-
-					<div class="item">
-						<div align="center" class="embed-responsive embed-responsive-16by9">
-							  <video autoplay loop muted style="width:100%;" class="embed-responsive-item">
-								 <source src="<?=URL;?>video/02.mp4" type="video/mp4">
-								 Your browser does not support the video tag.
-							  </video>
-						</div>
+				<div class="item active">
+					<div align="center" class="embed-responsive embed-responsive-16by9">
+						  <video autoplay loop muted class="embed-responsive-item">
+							 <source src="<?=URL;?>video/01.mp4" type="video/mp4">
+							 Your browser does not support the video tag.
+						  </video>
 					</div>
+				</div> 
 
-					<!-- <div class="item">
-						<div align="center" class="embed-responsive embed-responsive-16by9">
-							  <video autoplay loop muted style="width:100%;" class="embed-responsive-item">
-								 <source src="<?=URL;?>video/03.mp4" type="video/mp4">
-								 Your browser does not support the video tag.
-							  </video>
-						</div>
-					</div> -->
-
-					<div class="item">
-						<div align="center" class="img-slide-res">
-							  <img class="img-responsive" src="<?=URL;?>img/88_main01.gif">
-						</div>
+				<div class="item">
+					<div align="center" class="embed-responsive embed-responsive-16by9">
+						  <video autoplay loop muted style="width:100%;" class="embed-responsive-item">
+							 <source src="<?=URL;?>video/02.mp4" type="video/mp4">
+							 Your browser does not support the video tag.
+						  </video>
 					</div>
-
-					<div class="item">
-						<div align="center" class="img-slide-res">
-							  <img class="img-responsive" src="<?=URL;?>img/88_main002.gif">
-						</div>
-					</div>
-
-					<div class="item">
-						<div align="center" class="img-slide-res">
-							  <img class="img-responsive" src="<?=URL;?>img/88_main003.gif">
-						</div>
-					</div>
-
-					<div class="item">
-						<div align="center" class="img-slide-res">
-							  <img class="img-responsive" src="<?=URL;?>img/88_main04.jpg">
-						</div>
-					</div>
-
-					<div class="item">
-						<div align="center" class="img-slide-res">
-							  <img class="img-responsive" src="<?=URL;?>img/88_main05.gif">
-						</div>
-					</div>
-
-					<div class="item">
-						<div align="center" class="img-slide-res">
-							  <img class="img-responsive" src="<?=URL;?>img/88_main06.gif">
-						</div>
-					</div>
-
-					<div class="item">
-						<div align="center" class="img-slide-res">
-							  <img class="img-responsive" src="<?=URL;?>img/88_main07.gif">
-						</div>
-					</div>
-
 				</div>
 
-				<!-- Controls -->
-				<a class="left carousel-control" href="#carousel-top" role="button" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				</a>
-				<a class="right carousel-control" href="#carousel-top" role="button" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-				</a>
+				<!-- <div class="item">
+					<div align="center" class="embed-responsive embed-responsive-16by9">
+						  <video autoplay loop muted style="width:100%;" class="embed-responsive-item">
+							 <source src="<?=URL;?>video/03.mp4" type="video/mp4">
+							 Your browser does not support the video tag.
+						  </video>
+					</div>
+				</div> -->
+
+				<div class="item">
+					<div align="center" class="img-slide-res">
+						  <img class="img-responsive" src="<?=URL;?>img/88_main01.gif">
+					</div>
+				</div>
+
+				<div class="item">
+					<div align="center" class="img-slide-res">
+						  <img class="img-responsive" src="<?=URL;?>img/88_main002.gif">
+					</div>
+				</div>
+
+				<div class="item">
+					<div align="center" class="img-slide-res">
+						  <img class="img-responsive" src="<?=URL;?>img/88_main003.gif">
+					</div>
+				</div>
+
+				<div class="item">
+					<div align="center" class="img-slide-res">
+						  <img class="img-responsive" src="<?=URL;?>img/88_main04.jpg">
+					</div>
+				</div>
+
+				<div class="item">
+					<div align="center" class="img-slide-res">
+						  <img class="img-responsive" src="<?=URL;?>img/88_main05.gif">
+					</div>
+				</div>
+
+				<div class="item">
+					<div align="center" class="img-slide-res">
+						  <img class="img-responsive" src="<?=URL;?>img/88_main06.gif">
+					</div>
+				</div>
+
+				<div class="item">
+					<div align="center" class="img-slide-res">
+						  <img class="img-responsive" src="<?=URL;?>img/88_main07.gif">
+					</div>
+				</div>
 
 			</div>
+
+			<!-- Controls -->
+			<a class="left carousel-control" href="#carousel-top" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#carousel-top" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+
 		</div>
 	</div>
-
-	<!-- <div class="row">
-		<div class="col-md-8 panal-box2">
-			<ol class="carousel-indicators">
-				<li data-target="#carousel-top" data-slide-to="0"></li>
-				<li data-target="#carousel-top" data-slide-to="1"></li>
-			</ol>
-		</div>
-	</div> -->
-
 </div>
+
+<!-- <div class="row">
+	<div class="col-md-8 panal-box2">
+		<ol class="carousel-indicators">
+			<li data-target="#carousel-top" data-slide-to="0"></li>
+			<li data-target="#carousel-top" data-slide-to="1"></li>
+		</ol>
+	</div>
+</div> -->
+
 
 <div class="row">
 	
-	<div class="col-md-12 text-center">
-		<img src="<?=URL;?>img/AW-88-Button-Wed-01.gif" style="width:100px;margin-right:10px;">
-		<img src="<?=URL;?>img/AW-88-Button-Wed-02.gif" style="width:100px;margin-right:10px;">
-		<img src="<?=URL;?>img/AW-88-Button-Wed-03.gif" style="width:100px;margin-right:10px;">
-		<img src="<?=URL;?>img/AW-88-Button-Wed-04.gif" style="width:100px;margin-right:10px;">
+	<div class="col-md-8 col-md-offset-2 nopadd">
+		<div class="col-md-3">
+			<img src="<?=URL;?>img/AW-88-Button-Wed-01.gif" class="img-list">
+		</div>
+		<div class="col-md-3">
+			<img src="<?=URL;?>img/AW-88-Button-Wed-02.gif" class="img-list">
+		</div>
+		<div class="col-md-3">
+			<img src="<?=URL;?>img/AW-88-Button-Wed-03.gif" class="img-list">
+		</div>
+		<div class="col-md-3">
+			<img src="<?=URL;?>img/AW-88-Button-Wed-04.gif" class="img-list">
+		</div>
 	</div>
 
 </div>
@@ -186,6 +193,7 @@
 				<h4><a href="#">MINI MIRROR ORANGE NEON</a></h4>
 				<h4> N/A </h4>
 				<p>NOT FOR SALE</p>
+				<p><button type="button" class="btn btn-black btn-sm" disabled>ADD TO CART</button></p>
 			</div>
 		</div>
 	</div>
