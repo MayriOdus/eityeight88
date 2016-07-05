@@ -9,6 +9,7 @@
 	<meta name="Author" content="OM">
 	<meta name="Keywords" content="eityeight88">
 	<meta name="Description" content="">
+	<meta name="viewport" content="width=device-width">
 
 	<title><?=SITE_TITLE;?></title>
 

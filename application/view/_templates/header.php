@@ -20,10 +20,10 @@
 				<div class="pull-right res-basket">
 					<ul class="hoption">
 						<li>
-							<a href="#" class="hsc"><?=_LOGIN;?></a><a href="#"><?=_REGISTER;?></a>
+							<a href="<?=$_URL;?>member/login" class="hsc"><?=_LOGIN;?></a><a href="<?=$_URL;?>member/register"><?=_REGISTER;?></a>
 						</li>
 						<li>
-							<a href="#" class="hsc"><?=_CART;?></a><a href="#"><?=_PAYMENT_NOTE;?></a>
+							<a href="<?=$_URL;?>shipping/payment" class="hsc"><?=_SHIPPING_BAG;?></a>
 						</li>
 					</ul>
 				</div>
@@ -74,11 +74,11 @@
 							</li>
 
 							<li>
-								<a href="#" class="hsc"><?=_LOGIN;?></a><a href="#"><?=_REGISTER;?></a>
+								<a href="<?=$_URL;?>member/login" class="hsc"><?=_LOGIN;?></a><a href="<?=$_URL;?>member/register"><?=_REGISTER;?></a>
 							</li>
 
 							<li>
-								<a href="#" class="hsc"><?=_CART;?></a><a href="#"><?=_PAYMENT_NOTE;?></a>
+								<a href="<?=$_URL;?>shipping/payment" class="hsc"><?=_SHIPPING_BAG;?></a>
 							</li>
 
 							<li>
@@ -103,7 +103,7 @@
 								</li>
 								<li class="cat-item"><a href="<?=$_URL;?>contact" title="<?=_CONTACT_US;?>"><?=_CONTACT_US;?></a>
 								</li>
-								<li class="cat-item cat-item-26 text-center"><a href="#" title="<?=_SECURITY_CODE_CHECKING;?>"><?=_SECURITY_CODE_CHECKING;?></a>
+								<li class="cat-item cat-item-26 text-center"><a href="<?=$_URL;?>products" title="<?=_SECURITY_CODE_CHECKING;?>"><?=_SECURITY_CODE_CHECKING;?></a>
 								</li>
 							</ul>
 

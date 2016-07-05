@@ -87,6 +87,8 @@ $(document).ready(function ()
 
     //  Activate the tooltips
     //$('[rel="tooltip"]').tooltip();
+	
+	$("#carousel-top").css("height", $(".embed-responsive-item").eq(0).height());
 
 });
 
@@ -109,6 +111,9 @@ $(window).resize(function ()
 	{
 
 	}
+
+	$("#carousel-top").css("height", $(".embed-responsive-item").eq(0).height());
+
 });
 
 var lbd = {

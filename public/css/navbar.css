@@ -129,7 +129,7 @@
     -ms-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
     transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
     left: 0;
-    background-color: #000;
+    background-color: #fff;
   }
 
   .navbar .container {
@@ -187,7 +187,7 @@
     overflow-y: scroll;
     height: 100%;
     box-shadow: inset 1px 0px 0px 0px #DDDDDD;
-	background: #000;
+	background: #fff;
   }
   .off-canvas-sidebar .nav {
     margin-top: 0;
@@ -293,7 +293,7 @@
   .navbar-toggle .icon-bar {
     display: block;
     position: relative;
-    background: #fff;
+    background: #000;
     width: 24px;
     height: 2px;
     border-radius: 1px;
@@ -724,3 +724,4 @@
 .toggled-m {
 	width: calc(100% - 68px);
 }
+

@@ -16,3 +16,4 @@ define("_EMAIL_ADDRESS", "ที่อยู่ อีเมลล์");
 define("_SUBJECT", "หัวข้อ");
 define("_MESSAGE", "ข้อความ");
 define("_SEND_MESSAGE", "ส่งข้อความ");
+define("_SHIPPING_BAG", "ระบบสั่งจอง");

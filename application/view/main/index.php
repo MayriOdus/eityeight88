@@ -2,7 +2,7 @@
 	
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
-		<div id="carousel-top" class="carousel slide" data-ride="carousel" data-interval="15000">	
+		<div id="carousel-top" class="carousel slide"  data-interval="15000">	
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner" role="listbox">            
 
@@ -76,18 +76,18 @@
 				</div>
 
 			</div>
-
-			<!-- Controls -->
-			<a class="left carousel-control" href="#carousel-top" role="button" data-slide="prev">
-				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="right carousel-control" href="#carousel-top" role="button" data-slide="next">
-				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>
-
 		</div>
+
+		<!-- Controls -->
+		<a class="left carousel-control" href="#carousel-top" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#carousel-top" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+
 	</div>
 </div>
 
@@ -105,16 +105,16 @@
 	
 	<div class="col-md-8 col-md-offset-2 nopadd">
 		<div class="col-xs-6 col-sm-3 col-md-3 small-bx">
-			<img src="<?=URL;?>img/AW-88-Button-Wed-01.gif" class="img-list">
+			<a href="<?=$_URL;?>products"><img src="<?=URL;?>img/AW-88-Button-Wed-01.gif" class="img-list"></a>
 		</div>
 		<div class="col-xs-6 col-sm-3 col-md-3 small-bx">
-			<img src="<?=URL;?>img/AW-88-Button-Wed-02.gif" class="img-list">
+			<a href="<?=$_URL;?>products"><img src="<?=URL;?>img/AW-88-Button-Wed-02.gif" class="img-list"></a>
 		</div>
 		<div class="col-xs-6 col-sm-3 col-md-3 small-bx">
-			<img src="<?=URL;?>img/AW-88-Button-Wed-03.gif" class="img-list">
+			<a href="<?=$_URL;?>products"><img src="<?=URL;?>img/AW-88-Button-Wed-03.gif" class="img-list"></a>
 		</div>
 		<div class="col-xs-6 col-sm-3 col-md-3 small-bx">
-			<img src="<?=URL;?>img/AW-88-Button-Wed-04.gif" class="img-list">
+			<a href="<?=$_URL;?>products"><img src="<?=URL;?>img/AW-88-Button-Wed-04.gif" class="img-list"></a>
 		</div>
 	</div>
 
@@ -130,9 +130,9 @@
 
 	<div class="col-sm-4 col-lg-3 col-md-4">
 		<div class="thumbnail">
-			<img src="<?=URL;?>img/Gif-Cushion.gif" alt="">
+			<a href="<?=$_URL;?>products/product_detail"><img src="<?=URL;?>img/Gif-Cushion.gif" alt=""></a>
 			<div class="caption text-center">
-				<h4><a href="#">VER. 88 BOUNCE UP PACT</a></h4>
+				<h4><a href="<?=$_URL;?>products/product_detail">VER. 88 BOUNCE UP PACT</a></h4>
 				<h4>฿490</h4>
 				<p>SPF 50 PA+++</p>
 				<p><button type="button" class="btn btn-black btn-sm">ADD TO CART</button></p>
@@ -154,7 +154,7 @@
 		<div class="thumbnail">
 			<img src="<?=URL;?>img/Gif-Dewy-2.gif" alt="">
 			<div class="caption text-center">
-				<h4><a href="#">EITY EIGHT DEWY FACE GLOW</a></h4>
+				<h4><a href="<?=$_URL;?>products/product_detail">EITY EIGHT DEWY FACE GLOW</a></h4>
 				<h4>฿650</h4>
 				<p>Shine Bright Radiance Finish.</p>
 				<p><button type="button" class="btn btn-black btn-sm">ADD TO CART</button></p>
@@ -166,7 +166,7 @@
 		<div class="thumbnail">
 			<img src="<?=URL;?>img/Gif-Liquid-Foundation-and-Brush.gif" alt="">
 			<div class="caption text-center">
-				<h4><a href="#">EITY EIGHT LIQUID FOUNDATION</a></h4>
+				<h4><a href="<?=$_URL;?>products/product_detail">EITY EIGHT LIQUID FOUNDATION</a></h4>
 				<h4>฿990</h4>
 				<p>NO.21 , NO.23 </p>
 				<p><button type="button" class="btn btn-black btn-sm">ADD TO CART</button></p>
@@ -178,7 +178,7 @@
 		<div class="thumbnail">
 			<img src="<?=URL;?>img/Gif-Lips-Box.gif" alt="">
 			<div class="caption text-center">
-				<h4><a href="#">VER.88</a></h4>
+				<h4><a href="<?=$_URL;?>products/product_detail">VER.88</a></h4>
 				<h4>฿990</h4>
 				<p>HOLIDAY LIP PENCIL SET</p>
 				<p><button type="button" class="btn btn-black btn-sm">ADD TO CART</button></p>
@@ -190,7 +190,7 @@
 		<div class="thumbnail">
 			<img src="<?=URL;?>img/Gif-Mirror.gif" alt="">
 			<div class="caption text-center">
-				<h4><a href="#">MINI MIRROR ORANGE NEON</a></h4>
+				<h4><a href="<?=$_URL;?>products/product_detail">MINI MIRROR ORANGE NEON</a></h4>
 				<h4> N/A </h4>
 				<p>NOT FOR SALE</p>
 				<p><button type="button" class="btn btn-black btn-sm" disabled>ADD TO CART</button></p>
