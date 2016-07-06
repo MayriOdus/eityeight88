@@ -32,4 +32,13 @@ class Member extends Controller
         require APP . 'view/_templates/layout.php';
 	}
 
+	public function forgot()
+	{
+		$_URL = URL . $_SESSION["Lang"] . "/";
+
+        // load views
+		$content = 'view/member/forgot.php';
+        require APP . 'view/_templates/layout.php';
+	}
+
 }
