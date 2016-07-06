@@ -14,25 +14,35 @@ class Model
         }
     }
 	
-	
 
-	public function getDistrictList($amp)
+	public function getLogin($pos)
 	{
-		$sql = " SELECT DISTRICT_ID, DISTRICT_NAME FROM tbl_district WHERE AMPHUR_ID = '".$amp."' ";
+		$r = array("SUCCESS" => false);
+
+		$sql = " SELECT id_user, id, type_user, username FROM users WHERE email = :email AND password = :password";
         $query = $this->db->prepare($sql);
-
+		
+		$parameters = array(
+			":email" => $pos["member_username"],
+			":password" => $pos["member_password"]
+		);
         // echo '[ PDO DEBUG ]: ' . Helper::debugPDO($sql, $parameters);  exit();
+		
+        $query->execute($parameters);
 
-        $query->execute();
-		$dist = $query->fetchAll(PDO::FETCH_ASSOC);
-	
-		$opt = '<option value=""> -- เลือก -- </option>';
-		foreach( $dist as $g )
+		$info = $query->fetch(PDO::FETCH_ASSOC);
+		
+		if( !empty($info) )
 		{
-			$opt .= '<option value="'.$g["DISTRICT_ID"].'">'.trim($g["DISTRICT_NAME"]).'</option>';
+			$_SESSION["member_id"] = $info['id_user'];
+			$_SESSION["member_ns"] = $info['id'];
+			$_SESSION["member_name"] = $info['username'];
+			$_SESSION["type_user"] = $info['type_user'];
+
+			$r["SUCCESS"] = true;
 		}
 
-		return $opt;
+		return $r;
 	}
 
 }

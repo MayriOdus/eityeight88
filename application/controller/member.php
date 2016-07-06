@@ -41,4 +41,20 @@ class Member extends Controller
         require APP . 'view/_templates/layout.php';
 	}
 
+	public function logout()
+	{
+		unset($_SESSION["member_id"]);
+		unset($_SESSION["member_ns"]);
+		unset($_SESSION["member_name"]);
+		unset($_SESSION["type_user"]);
+
+		header("Location: " . URL);
+	}
+
+	public function ajax_getlogin()
+	{
+		$login = $this->model->getLogin($_POST);
+
+		echo json_encode($login);
+	}
 }

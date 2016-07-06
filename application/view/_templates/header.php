@@ -20,7 +20,20 @@
 				<div class="pull-right res-basket">
 					<ul class="hoption">
 						<li>
-							<a href="<?=$_URL;?>member/login" class="hsc"><?=_LOGIN;?></a><a href="<?=$_URL;?>member/register"><?=_REGISTER;?></a>
+							<?php
+							if( isset($_SESSION["member_name"]) && !empty($_SESSION["member_name"]) )
+							{
+								?>
+								<a href="<?=$_URL;?>member/profile/<?=$_SESSION["member_ns"];?>" class="hsc"><?=$_SESSION["member_name"];?></a><a href="<?=$_URL;?>member/logout"><?=_LOGOUT;?></a>
+								<?php
+							}
+							else
+							{
+								?>
+								<a href="<?=$_URL;?>member/login" class="hsc"><?=_LOGIN;?></a><a href="<?=$_URL;?>member/register"><?=_REGISTER;?></a>
+								<?php
+							}
+							?>
 						</li>
 						<li>
 							<a href="<?=$_URL;?>shipping/payment" class="hsc"><?=_SHIPPING_BAG;?></a>
@@ -74,7 +87,20 @@
 							</li>
 
 							<li>
-								<a href="<?=$_URL;?>member/login" class="hsc"><?=_LOGIN;?></a><a href="<?=$_URL;?>member/register"><?=_REGISTER;?></a>
+								<?php
+								if( isset($_SESSION["member_name"]) && !empty($_SESSION["member_name"]) )
+								{
+									?>
+									<a href="<?=$_URL;?>member/profile/<?=$_SESSION["member_ns"];?>" class="hsc"><?=$_SESSION["member_name"];?></a><a href="<?=$_URL;?>member/logout"><?=_LOGOUT;?></a>
+									<?php
+								}
+								else
+								{
+									?>
+									<a href="<?=$_URL;?>member/login" class="hsc"><?=_LOGIN;?></a><a href="<?=$_URL;?>member/register"><?=_REGISTER;?></a>
+									<?php
+								}
+								?>
 							</li>
 
 							<li>

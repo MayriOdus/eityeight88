@@ -7,31 +7,22 @@
 			<div class="carousel-inner" role="listbox">            
 
 				<div class="item active">
-					<div align="center" class="embed-responsive embed-responsive-16by9">
-						  <video autoplay loop muted class="embed-responsive-item">
-							 <source src="<?=URL;?>video/01.mp4" type="video/mp4">
-							 Your browser does not support the video tag.
-						  </video>
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" id="video1" src="//www.youtube.com/embed/V9G5vil03-s?playlist=V9G5vil03-s&enablejsapi=1"></iframe>
 					</div>
 				</div> 
 
 				<div class="item">
-					<div align="center" class="embed-responsive embed-responsive-16by9">
-						  <video autoplay loop muted style="width:100%;" class="embed-responsive-item">
-							 <source src="<?=URL;?>video/02.mp4" type="video/mp4">
-							 Your browser does not support the video tag.
-						  </video>
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" id="video2" src="//www.youtube.com/embed/hcysusFTpdU?playlist=hcysusFTpdU&enablejsapi=1"></iframe>
 					</div>
 				</div>
 
-				<!-- <div class="item">
-					<div align="center" class="embed-responsive embed-responsive-16by9">
-						  <video autoplay loop muted style="width:100%;" class="embed-responsive-item">
-							 <source src="<?=URL;?>video/03.mp4" type="video/mp4">
-							 Your browser does not support the video tag.
-						  </video>
+				<div class="item">
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" id="video3" src="//www.youtube.com/embed/zHnTKKZu4sM?playlist=zHnTKKZu4sM&enablejsapi=1"></iframe>
 					</div>
-				</div> -->
+				</div>
 
 				<div class="item">
 					<div align="center" class="img-slide-res">

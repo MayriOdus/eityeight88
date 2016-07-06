@@ -58,6 +58,7 @@ define('SITE_TITLE', "eityeight88");
  */
 /**/
 
+date_default_timezone_set("Asia/Bangkok");
 
 $host = "mysql-5.5.chaiyohosting.com";
 $username ="adm_eityeight"; 

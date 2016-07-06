@@ -20,6 +20,9 @@ var ete = (function( $, dc, w ) {
 
 			$(function() {
 				
+				
+				self.login_init();
+				
 				//Function to animate slider captions 
 				function doAnimations(elems)
 				{
@@ -38,7 +41,7 @@ var ete = (function( $, dc, w ) {
 				}
 
 				//Variables on page load 
-				var $myCarousel = $('#carousel-example-generic'),
+				var $myCarousel = $('#carousel-top'),
 					$firstAnimatingElems = $myCarousel.find('.item:first').find("[data-animation ^= 'animated']");
 
 				//Initialize carousel 
@@ -92,6 +95,38 @@ var ete = (function( $, dc, w ) {
 				//$("#carousel-top").css("height", $(".embed-responsive-item").eq(0).height());
 
 			});
+		},
+
+		login_init : function()
+		{
+			var self = this;
+
+			if( $("#login-form").length )
+			{
+				$("#login-form").on("submit", function(e) {
+					
+					e.preventDefault();
+
+					self.getlogin();
+
+				});
+			}
+		},
+
+		getlogin : function()
+		{
+			$.post(_URL+"member/ajax_getlogin", $("#login-form").serialize(), function(msg) {
+				
+				if( msg.SUCCESS )
+				{
+					window.location = _URL;
+				}
+				else
+				{
+					alert("email or password is wrong");
+				}
+
+			}, 'json');
 		}
 
 	};
@@ -223,3 +258,54 @@ function debounce(func, wait, immediate)
         if (immediate && !timeout) func.apply(context, args);
     };
 };
+
+
+var tag = document.createElement('script');
+
+tag.src = "//www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var player1,player2,player3,done;
+
+function onYouTubeIframeAPIReady() {
+
+	var option = {
+		playerVars: {
+			autoplay: 1,
+			loop: 1,
+			controls: 0,
+			showinfo: 0,
+			autohide: 1,
+			modestbranding: 1
+		},
+		events: {
+			'onReady': onPlayerReady/*,
+			'onStateChange': onPlayerStateChange*/
+		}
+	};
+
+	player1 = new YT.Player('video1', option);
+	player2 = new YT.Player('video2', option);
+	player3 = new YT.Player('video3', option);
+	
+}
+
+function onPlayerStateChange(e) 
+{
+	if (e.data == YT.PlayerState.PLAYING && !done) {
+	  setTimeout(stopVideo, 6000);
+	  done = true;
+	}
+}
+
+function onPlayerReady(e) 
+{
+	e.target.playVideo();
+	e.target.mute();
+}
+
+function stopVideo() 
+{
+	player1.stopVideo();
+}
