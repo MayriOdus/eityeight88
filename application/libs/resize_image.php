@@ -22,8 +22,8 @@ function resize($filename,$images_file,$images,$paths,$sizewant)
 	}
 
 	$width = $sizewant; //600
-	$b_new_images = $img_time.$bn.$ext;
-	$new_images =  $img_time.$bn.$ext;
+	$b_new_images = $bn.$ext;
+	$new_images =  $bn.$ext;
 
 	$new_name_images_base = $b_new_images;
 	$size = GetimageSize($images);

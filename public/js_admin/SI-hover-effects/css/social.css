@@ -1,0 +1,495 @@
+/* Author: CreativePig
+
+URL: www.creativepig.net
+
+Description: CreativePig offers web design resources 
+including PSDs, Illustrations, JQuery, CSS Wordpress and HTML Templates. 
+Keep coming back to find useful resources.
+
+Licence: You are allowed to use, make changes and redistribute this in any manner you want.
+However, any attribution will be appreciated.
+
+Copyright © 2015 creativepig.net
+*/
+  
+
+.effect-cate{ margin:50px 0 25px; text-align:center;}
+.effect-cate li{ display:inline-block; vertical-align:top; margin:0 0 4px; }
+.effect-cate li a{ background:#707070; color:#efefef; padding:5px 20px; display:block;  }
+.effect-cate li a:hover, .effect-cate li.active a{ background:#000; color:#fff;}
+
+.effects-sect{ display:table; width:82%; height:700px; margin:0 auto;}
+.eff-content{ display:table-cell; vertical-align:middle;}
+
+.title{ text-transform:uppercase; color:#505050; margin:25px 0 45px; display:block;}
+.title{ display:inline-block; border-bottom:1px solid #505050; padding:0 25px;}
+
+.effect-lists{ margin:0 0 25px; display:block;}
+.effect-lists li{ display:inline-block; vertical-align:top; margin:0 0 10px;}
+.effect-lists li a{ width:45px; height:40px; display:block; overflow:hidden; z-index:99;position:relative; padding:5px;
+ background-color:#EEEEEE;
+ }
+.effect-lists li a img{ width:100%;}
+.effect-lists li a, .effect-lists li a img, .effect-lists li i, .effect-lists li a:before, .effect-lists li a:after, .effect-lists li span{-moz-transition:all 0.5s ease 0s; -webkit-transition:all 0.5s ease 0s; -o-transition:all 0.5s ease 0s; -ms-transition:all 0.5s ease 0s; transition:all 0.8s ease 0s;}
+.effect-lists li a:before, .effect-lists li a:after{ content:''; position:absolute; z-index:-1;}
+
+.effect-lists li i{ width:35px; height:35px; display:block;}
+
+
+/*[facebook]
+.effect-lists li i.facebook{ background:url(../images/facebook-i.png) no-repeat -57px -57px;}
+.effect-lists li a:hover i.facebook{ background-position:-57px -57px;} 
+.effect-lists li a:hover i.facebook.left{ background-position:10px -57px;}
+.effect-lists li a:hover i.facebook.right{ background-position:-123px -57px;}
+.effect-lists li a:hover i.facebook.top{ background-position:-57px -57px;}
+*/
+.effect-lists li i.line-w{ background:url(../images/line-w-i.png) no-repeat -60px -116px;}
+.effect-lists li a:hover i.line-w{ background-position:-60px -56px;}
+.effect-lists li a:hover i.line-w.left{ background-position:10px -57px;}
+.effect-lists li a:hover i.line-w.right{ background-position:-123px -57px;}
+.effect-lists li a:hover i.line-w.top{ background-position:-57px 3px;}
+/*[/facebook]*//* -57px -116px; white  -57px -57px;*/
+
+.effect-lists li i.facebook-w{ background:url(../images/facebook-w-i.png) no-repeat -57px -116px;}
+.effect-lists li a:hover i.facebook-w{ background-position:-57px -56px;}
+.effect-lists li a:hover i.facebook-w.left{ background-position:10px -57px;}
+.effect-lists li a:hover i.facebook-w.right{ background-position:-123px -57px;}
+.effect-lists li a:hover i.facebook-w.top{ background-position:-57px 3px;}
+/*[/facebook]*//* -57px -116px; white  -57px -57px;*/
+
+/*[google-plus]*/
+.effect-lists li i.google-plus{ background:url(../images/google-plus-i.png) no-repeat -57px -56px;}
+.effect-lists li a:hover i.google-plus{ background-position:-57px -116px;}
+.effect-lists li a:hover i.google-plus.left{ background-position:2px -56px;}
+.effect-lists li a:hover i.google-plus.right{ background-position:-114px -56px;}
+.effect-lists li a:hover i.google-plus.top{ background-position:-57px 2px;}
+
+
+.effect-lists li i.google-plus-w{ background:url(../images/google-plus-w-i.png) no-repeat -57px -56px;}
+.effect-lists li a:hover i.google-plus-w{ background-position:-57px -116px;}
+.effect-lists li a:hover i.google-plus-w.left{ background-position:2px -56px;}
+.effect-lists li a:hover i.google-plus-w.right{ background-position:-114px -56px;}
+.effect-lists li a:hover i.google-plus-w.top{ background-position:-57px 2px;}
+/*[/google-plus]*/
+
+/*[twitter]*/
+.effect-lists li i.twitter{ background:url(../images/twitter-i.png) no-repeat -58px -56px;}
+.effect-lists li a:hover i.twitter{ background-position:-58px -116px;}
+.effect-lists li a:hover i.twitter.left{ background-position:2px -56px;}
+.effect-lists li a:hover i.twitter.right{ background-position:-115px -56px;}
+.effect-lists li a:hover i.twitter.top{ background-position:-58px 2px;}
+
+.effect-lists li i.twitter-w{ background:url(../images/twitter-w-i.png) no-repeat -58px -56px;}
+.effect-lists li a:hover i.twitter-w{ background-position:-58px -116px;}
+.effect-lists li a:hover i.twitter-w.left{ background-position:2px -56px;}
+.effect-lists li a:hover i.twitter-w.right{ background-position:-115px -56px;}
+.effect-lists li a:hover i.twitter-w.top{ background-position:-58px 2px;}
+/*[/twitter]*/
+
+/*[youtube]*/
+.effect-lists li i.youtube{ background:url(../images/youtube-i.png) no-repeat -57px -57px;}
+.effect-lists li a:hover i.youtube{ background-position:-57px -116px;}
+.effect-lists li a:hover i.youtube.left{ background-position:2px -57px;}
+.effect-lists li a:hover i.youtube.right{ background-position:-116px -57px;}
+.effect-lists li a:hover i.youtube.top{ background-position:-57px 2px;}
+
+.effect-lists li i.youtube-w{ background:url(../images/youtube-w-i.png) no-repeat -57px -116px;} /*edit */
+.effect-lists li a:hover i.youtube-w{ background-position:-57px -57px;}
+.effect-lists li a:hover i.youtube-w.left{ background-position:2px -57px;}
+.effect-lists li a:hover i.youtube-w.right{ background-position:-116px -57px;}
+.effect-lists li a:hover i.youtube-w.top{ background-position:-57px 2px;}
+/*[/youtube]*/
+
+/*[youtube-play]*/
+.effect-lists li i.youtube-play{ background:url(../images/youtube-play-i.png) no-repeat -57px -57px;}
+.effect-lists li a:hover i.youtube-play{ background-position:-57px -116px;}
+.effect-lists li a:hover i.youtube-play.left{ background-position:2px -57px;}
+.effect-lists li a:hover i.youtube-play.right{ background-position:-116px -57px;}
+.effect-lists li a:hover i.youtube-play.top{ background-position:-57px 2px;}
+
+.effect-lists li i.youtube-play-w{ background:url(../images/youtube-play-w-i.png) no-repeat -57px -57px;}
+.effect-lists li a:hover i.youtube-play-w{ background-position:-57px -116px;}
+.effect-lists li a:hover i.youtube-play-w.left{ background-position:2px -57px;}
+.effect-lists li a:hover i.youtube-play-w.right{ background-position:-116px -57px;}
+.effect-lists li a:hover i.youtube-play-w.top{ background-position:-57px 2px;}
+/*[/youtube-play]*/
+
+/*[pinterest]*/
+.effect-lists li i.pinterest{ background:url(../images/pinterest-i.png) no-repeat -57px -59px;}
+.effect-lists li a:hover i.pinterest{ background-position:-57px -116px;}
+.effect-lists li a:hover i.pinterest.left{ background-position:5px -59px;}
+.effect-lists li a:hover i.pinterest.right{ background-position:-117px -59px;}
+.effect-lists li a:hover i.pinterest.top{ background-position:-57px 2px;}
+
+.effect-lists li i.pinterest-w{ background:url(../images/pinterest-w-i.png) no-repeat -57px -59px;}
+.effect-lists li a:hover i.pinterest-w{ background-position:-57px -116px;}
+.effect-lists li a:hover i.pinterest-w.left{ background-position:5px -59px;}
+.effect-lists li a:hover i.pinterest-w.right{ background-position:-117px -59px;}
+.effect-lists li a:hover i.pinterest-w.top{ background-position:-57px 2px;}
+/*[/pinterest]*/
+
+/*[linkedin]*/
+.effect-lists li i.linkedin{ background:url(../images/linkedin-i.png) no-repeat -56px -58px;}
+.effect-lists li a:hover i.linkedin{ background-position:-56px -119px;}
+.effect-lists li a:hover i.linkedin.left{ background-position:4px -58px;}
+.effect-lists li a:hover i.linkedin.right{ background-position:-117px -58px;}
+.effect-lists li a:hover i.linkedin.top{ background-position:-56px 3px;}
+.effectex{ 	position: fixed; color:#FFF; font-size:2em; text-align:center; padding-top:15%; top: 0;	left: 0; width: 100%;	height: 100%;	background-color: black;    opacity: 0.8;	z-index: 9999;		}
+
+.effect-lists li i.linkedin-w{ background:url(../images/linkedin-w-i.png) no-repeat -56px -58px;}
+.effect-lists li a:hover i.linkedin-w{ background-position:-56px -119px;}
+.effect-lists li a:hover i.linkedin-w.left{ background-position:4px -58px;}
+.effect-lists li a:hover i.linkedin-w.right{ background-position:-117px -58px;}
+.effect-lists li a:hover i.linkedin-w.top{ background-position:-56px 3px;}
+/*[/linkedin]*/
+
+/*[instagram]*/
+.effect-lists li i.instagram{ background:url(../images/instagram-i.png) no-repeat -57px -57px;}
+.effect-lists li a:hover i.instagram{ background-position:-57px -119px;}
+.effect-lists li a:hover i.instagram.left{ background-position:3px -57px;}
+.effect-lists li a:hover i.instagram.right{ background-position:-118px -57px;}
+.effect-lists li a:hover i.instagram.top{ background-position:-57px 4px;}
+
+.effect-lists li i.instagram-w{ background:url(../images/instagram-w-i.png) no-repeat -57px -119px;}
+.effect-lists li a:hover i.instagram-w{ background-position:-57px -57px;}
+.effect-lists li a:hover i.instagram-w.left{ background-position:3px -57px;}
+.effect-lists li a:hover i.instagram-w.right{ background-position:-118px -57px;}
+.effect-lists li a:hover i.instagram-w.top{ background-position:-57px 4px;}
+/*[/instagram]*/
+
+/*[blogger]*/
+.effect-lists li i.blogger{ background:url(../images/blogger-i.png) no-repeat -57px -59px;}
+.effect-lists li a:hover i.blogger{ background-position:-57px -116px;}
+.effect-lists li a:hover i.blogger.left{ background-position:1px -59px;}
+.effect-lists li a:hover i.blogger.right{ background-position:-116px -59px;}
+.effect-lists li a:hover i.blogger.top{ background-position:-57px 1px;}
+
+.effect-lists li i.blogger-w{ background:url(../images/blogger-w-i.png) no-repeat -57px -59px;}
+.effect-lists li a:hover i.blogger-w{ background-position:-57px -116px;}
+.effect-lists li a:hover i.blogger-w.left{ background-position:1px -59px;}
+.effect-lists li a:hover i.blogger-w.right{ background-position:-116px -59px;}
+.effect-lists li a:hover i.blogger-w.top{ background-position:-57px 1px;}
+/*[/blogger]*/
+
+/*[yahoo]*/
+.effect-lists li i.yahoo{ background:url(../images/yahoo-i.png) no-repeat -57px -57px;}
+.effect-lists li a:hover i.yahoo{ background-position:-57px -120px;}
+.effect-lists li a:hover i.yahoo.left{ background-position:1px -57px;}
+.effect-lists li a:hover i.yahoo.right{ background-position:-114px -57px;}
+.effect-lists li a:hover i.yahoo.top{ background-position:-57px 6px;}
+
+.effect-lists li i.yahoo-w{ background:url(../images/yahoo-w-i.png) no-repeat -57px -57px;}
+.effect-lists li a:hover i.yahoo-w{ background-position:-57px -120px;}
+.effect-lists li a:hover i.yahoo-w.left{ background-position:1px -57px;}
+.effect-lists li a:hover i.yahoo-w.right{ background-position:-114px -57px;}
+.effect-lists li a:hover i.yahoo-w.top{ background-position:-57px 6px;}
+/*[/yahoo]*/
+
+/*[flickr]*/
+.effect-lists li i.flickr{ background:url(../images/flickr-i.png) no-repeat -58px -58px;}
+.effect-lists li a:hover i.flickr{ background-position:-58px -116px;}
+.effect-lists li a:hover i.flickr.left{ background-position:1px -58px;}
+.effect-lists li a:hover i.flickr.right{ background-position:-116px -58px;}
+.effect-lists li a:hover i.flickr.top{ background-position:-58px 2px;}
+
+.effect-lists li i.flickr-w{ background:url(../images/flickr-w-i.png) no-repeat -58px -60px;}
+.effect-lists li a:hover i.flickr-w{ background-position:-58px -116px;}
+.effect-lists li a:hover i.flickr-w.left{ background-position:1px -60px;}
+.effect-lists li a:hover i.flickr-w.right{ background-position:-116px -60px;}
+.effect-lists li a:hover i.flickr-w.top{ background-position:-58px 2px;}
+/*[/flickr]*/
+
+/*[skype]*/
+.effect-lists li i.skype{ background:url(../images/skype-i.png) no-repeat -56px -56px;}
+.effect-lists li a:hover i.skype{ background-position:center -116px;}
+.effect-lists li a:hover i.skype.left{ background-position:0px -56px;}
+.effect-lists li a:hover i.skype.right{ background-position:-112px -56px;}
+.effect-lists li a:hover i.skype.top{ background-position:center 1px;}
+
+.effect-lists li i.skype-w{ background:url(../images/skype-w-i.png) no-repeat -56px -56px;}
+.effect-lists li a:hover i.skype-w{ background-position:center -116px;}
+.effect-lists li a:hover i.skype-w.left{ background-position:0px -56px;}
+.effect-lists li a:hover i.skype-w.right{ background-position:-112px -56px;}
+.effect-lists li a:hover i.skype-w.top{ background-position:center 1px;}
+/*[/skype]*/
+
+/*[picasa]*/
+.effect-lists li i.picasa{ background:url(../images/picasa-i.png) no-repeat -58px -58px;}
+.effect-lists li a:hover i.picasa{ background-position:-58px -116px;}
+.effect-lists li a:hover i.picasa.left{ background-position:1px -56px;}
+.effect-lists li a:hover i.picasa.right{ background-position:-116px -56px;}
+.effect-lists li a:hover i.picasa.top{ background-position:-58px 2px;}
+
+.effect-lists li i.picasa-w{ background:url(../images/picasa-w-i.png) no-repeat -58px -58px;}
+.effect-lists li a:hover i.picasa-w{ background-position:-58px -116px;}
+.effect-lists li a:hover i.picasa-w.left{ background-position:1px -56px;}
+.effect-lists li a:hover i.picasa-w.right{ background-position:-116px -56px;}
+.effect-lists li a:hover i.picasa-w.top{ background-position:-58px 2px;}
+/*[/picasa]*/
+
+
+/*[ef1]*/
+.ef1 li a:hover, .ef1 li a:focus{ margin-top:-10px;}
+/*[/ef1]*/
+
+
+/*[ef2]*/
+.ef2 li a:hover img, .ef2 li a:focus img{ width:30px;}
+/*[/ef2]*/
+
+
+/*[ef3]*/
+.ef3 li a{ background:#e0e0e0; margin:0 5px;}
+.ef3 li a:hover, .ef3 li a:focus{ -moz-transform:rotate(45deg); -webkit-transform:rotate(45deg); transform:rotate(45deg); margin-top:-10px; background:#fff;}
+.ef3 li a:hover i, .ef3 li a:focus i{ -moz-transform:rotate(-45deg); -webkit-transform:rotate(-45deg); transform:rotate(-45deg);}
+/*[/ef3]*/
+
+
+/*[ef4]*/
+.ef4 li a{ position:relative;}
+.ef4 li a:before{ content:''; position:absolute; bottom:0; left:-100%; width:100%; height:2px; background:#000;}
+.ef4 li a:hover:before{ left:0px;}
+
+.ef4 li a.fb:before, 
+.ef5 li a.fb:before, .ef5 li a.fb:hover:before,
+.ef15 span.fb, .ef16 span.fb,
+.ef17 li a.fb:hover:before, .ef17 li a.fb:hover:after
+{ background:#415D9D;}
+
+.ef4 li a.gp:before, 
+.ef5 li a.gp:before, .ef5 li a.gp:hover:before,
+.ef15 span.gp, .ef16 span.gp,
+.ef17 li a.gp:hover:before, .ef17 li a.gp:hover:after
+{ background:#dd4c39;}
+
+.ef4 li a.tw:before, 
+.ef5 li a.tw:before, .ef5 li a.tw:hover:before,
+.ef15 span.tw, .ef16 span.tw,
+.ef17 li a.tw:hover:before, .ef17 li a.tw:hover:after
+{ background:#25a8e0;}
+
+.ef4 li a.yt:before, .ef4 li a.ytp:before, 
+.ef5 li a.yt:before, .ef5 li a.ytp:before,
+.ef5 li a.yt:hover:before, .ef5 li a.ytp:before,
+.ef15 span.yt, .ef15 span.ytp, .ef16 span.yt, .ef16 span.ytp,
+.ef17 li a.yt:hover:before, .ef17 li a.yt:hover:after, .ef17 li a.ytp:hover:before, .ef17 li a.ytp:hover:after
+{ background:#ba0100;}
+
+.ef4 li a.pin:before, 
+.ef5 li a.pin:before, .ef5 li a.pin:hover:before,
+.ef15 span.pin, .ef16 span.pin,
+.ef17 li a.pin:hover:before, .ef17 li a.pin:hover:after
+{ background:#cb2028;}
+
+.ef4 li a.ldin:before, 
+.ef5 li a.ldin:before, .ef5 li a.ldin:hover:before,
+.ef15 span.ldin, .ef16 span.ldin,
+.ef17 li a.ldin:hover:before, .ef17 li a.ldin:hover:after
+{ background:#127ab7;}
+
+.ef4 li a.ins:before, 
+.ef5 li a.ins:before, .ef5 li a.ins:hover:before,
+.ef15 span.ins, .ef16 span.ins,
+.ef17 li a.ins:hover:before, .ef17 li a.ins:hover:after
+{ background:#356b9a;}
+
+.ef4 li a.blr:before, 
+.ef5 li a.blr:before, .ef5 li a.blr:hover:before,
+.ef15 span.blr, .ef16 span.blr,
+.ef17 li a.blr:hover:before, .ef17 li a.blr:hover:after
+{ background:#ff8833;}
+
+.ef4 li a.yoo:before, 
+.ef5 li a.yoo:before, .ef5 li a.yoo:hover:before,
+.ef15 span.yoo, .ef16 span.yoo,
+.ef17 li a.yoo:hover:before, .ef17 li a.yoo:hover:after
+{ background:#6b0089;}
+
+.ef4 li a.flr:before, 
+.ef5 li a.flr:before, .ef5 li a.flr:hover:before,
+.ef15 span.flr, .ef16 span.flr,
+.ef17 li a.flr:hover:before, .ef17 li a.flr:hover:after
+{ background:#eeeeee;}
+
+.ef4 li a.sky:before, 
+.ef5 li a.sky:before, .ef5 li a.sky:hover:before,
+.ef15 span.sky, .ef16 span.sky,
+.ef17 li a.sky:hover:before, .ef17 li a.sky:hover:after
+{ background:#00adef;}
+/*[/ef4]*/
+
+/*[ef5]*/
+.ef5 li a{ position:relative; margin:0 5px;}
+.ef5 li a:before{ height:2px; bottom:0; left:0; width:100%; }
+.ef5 li a:hover:before{ height:100%;}
+/*[/ef5]*/
+
+/*[ef6]*/
+.ef6 li{ margin:0 0 10px -3px;}
+.ef6 li:first-child{ margin-left:0;}
+.ef6 li a{ position:relative; padding:5px; width:55px;}
+.ef6 li a i{ display:inline-block;}
+.ef6 li a:before{height:100%; background:#ccc; width:1px; left:0; top:0;}
+.ef6 li a:hover:before{ width:100%;}
+/*[/ef6]*/
+
+/*[ef7]*/
+.ef7 li{ margin:0 0 10px -4px;}
+.ef7 li:first-child{ margin-left:0;}
+.ef7 li a{ position:relative;  border:0px solid #FFF; padding:5px 10px;}
+.ef7 li a:before{height:100%;  width:100%; left:-100%; }
+.ef7 li a:hover:before{ left:50%;}
+/*.ef7 li{ margin:0 0 10px -4px;}
+.ef7 li:first-child{ margin-left:0;}
+.ef7 li a{ position:relative; padding:5px 10px;}
+.ef7 li a:before{height:100%; background:#b3b3b3; width:100%; left:-100%; }
+.ef7 li a:hover:before{ left:50%;}
+*/
+/*[/ef7]*/
+
+/*[ef8]*/
+.ef8 li{ margin:0 0 10px -4px;}
+.ef8 li:first-child{ margin-left:0;}
+.ef8 li a{ position:relative; padding:5px 10px;}
+.ef8 li a img{ margin:4px 0 0;}
+.ef8 li a:after{height:100%; background:#b3b3b3; width:100%; right:-100%; top:0;}
+.ef8 li a:hover:after{ right:50%;}
+/*[/ef8]*/
+
+/*[ef9]*/
+.ef9 li a{padding:5px 10px; width:55px;}
+.ef9 li a:before, .ef9 li a:after{height:100%; background:#737373; width:50%; top:0;}
+.ef9 li a:before{left:-100%;}
+.ef9 li a:hover:before{ left:50%;}
+.ef9 li a:after{right:-100%;}
+.ef9 li a:hover:after{ right:50%;}
+/*[/ef9]*/
+
+
+/*[ef10]*/
+.ef10 li a{text-align:center; overflow:hidden; width:55px; height:55px; -moz-border-radius:50%; -webkit-border-radius:50%; -o-border-radius:50%; -ms-border-radius:50%; border-radius:50%; background-clip:padding-box; background:#ccc;}
+.ef10 li a i{ margin:3px 0 0; display:inline-block;}
+.ef10 li a:hover{ -moz-transform:rotate(360deg); -webkit-transform:rotate(360deg); -o-transform:rotate(360deg); -ms-transform:rotate(360deg); transform:rotate(360deg);}
+/*[/ef10]*/
+
+/*[ef11]*/
+.ef11 li { margin:5px;}
+.ef11 li a{text-align:center; overflow:hidden; width:55px; height:55px; -moz-border-radius:50%; -webkit-border-radius:50%; -o-border-radius:50%; -ms-border-radius:50%; border-radius:50%; background-clip:padding-box; background:#ccc;}
+.ef11 li a i{ margin:3px 0 0; display:inline-block;}
+.ef11 li a:hover{ -moz-border-radius:0; -webkit-border-radius:0; -o-border-radius:0; -ms-border-radius:0; border-radius:0; }
+/*[/ef10]*/
+
+
+/*[ef12]*/
+.ef12 li { padding:5px;}
+.ef12 li a{text-align:center; overflow:hidden; width:55px; height:55px; -moz-border-radius:50%; -webkit-border-radius:50%; -o-border-radius:50%; -ms-border-radius:50%; border-radius:50%; background-clip:padding-box; background:#ccc;
+ border:2px solid #ccc;}
+.ef12 li a i{ margin:3px 0 0; display:inline-block;}
+.ef12 li a:hover{ border-color:#e0e0e0; -moz-box-shadow: 1px 3px 0 #acacac; -webkit-box-shadow: 1px 3px 0 #acacac; box-shadow: 1px 3px 0 #acacac;}
+/*[/ef12]*/
+
+
+/*[ef13]*/
+.ef13 li{ margin:8px;}
+.ef13 li a{ background:#dbdbdb; -moz-transform:rotate(45deg); -webkit-transform:rotate(45deg); transform:rotate(45deg); width:55px; height:55px; position:relative;}
+.ef13 li a i{ -moz-transform:rotate(-45deg); -webkit-transform:rotate(-45deg); transform:rotate(-45deg); margin:6px;}
+.ef13 li a:before{ left:0; top:-100%; width:100%; height:100%;}
+.ef13 li a:hover:before{ background:#cacaca;  left: 50%; top: 0; -moz-transform: rotate(-45deg); -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg);}
+/*[/ef13]*/
+
+/*[ef14]*/
+.ef14 li{ margin:8px;}
+.ef14 li a{ background:#dbdbdb; -moz-transform:rotate(45deg); -webkit-transform:rotate(45deg); transform:rotate(45deg); width:55px; height:55px; position:relative;}
+.ef14 li a i{ -moz-transform:rotate(-45deg); -webkit-transform:rotate(-45deg); transform:rotate(-45deg); margin:6px;}
+.ef14 li a:before{ left:0; top:-100%; width:0; height:100%; transform:rotate(0deg);}
+.ef14 li a:hover:before{ background:#cacaca; left: 10%; top: 9%; width:80%; height:80%;}
+/*[/ef14]*/
+
+
+/*[ef15]*/
+.ef15 li i{display:inline-block; vertical-align:middle;}
+.ef15 li span {display:inline-block; line-height:25px; padding:5px 35px; vertical-align:top; position:absolute; top:0; right:-100%; color:#fff; font-weight:400; opacity:0; z-index:999;}
+.ef15 li a:hover{ width:auto;}
+.ef15 li a:hover i{ display:none;}
+.ef15 li a:hover span{ right:0; position:relative; opacity:1;}
+/*[/ef15]*/
+
+/*[ef16]*/
+.ef16 li{ position:relative;}
+.ef16 li i{display:inline-block; vertical-align:middle;}
+.ef16 li span {display:inline-block; line-height:25px; padding:5px 10px; vertical-align:top; position:absolute; left:-50%; bottom:-120%; color:#fff; font-weight:400; width:120px; opacity:0; margin:0 0 0 -20px;}
+.ef16 li span:before{ content:''; position:absolute; top:-5px; left:50%;  border-bottom:5px solid #ccc; border-left:5px solid transparent; border-right:5px solid transparent;}
+.ef16 li:hover span{ bottom:-40px; opacity:1;}
+
+.ef16 li span.fb:before{ border-bottom-color:#415d9d;}
+.ef16 li span.gp:before{ border-bottom-color:#dd4c39;}
+.ef16 li span.tw:before{ border-bottom-color:#25a8e0;}
+.ef16 li span.yt:before, .ef16 li span.ytp:before{ border-bottom-color:#ba0100;}
+.ef16 li span.pin:before{ border-bottom-color:#cb2028;}
+.ef16 li span.ldin:before{ border-bottom-color:#127ab7;}
+.ef16 li span.ins:before{ border-bottom-color:#356b9a;}
+.ef16 li span.blr:before{ border-bottom-color:#ff8833;}
+.ef16 li span.yoo:before{ border-bottom-color:#6b0089;}
+.ef16 li span.flr:before{ border-bottom-color:#eeeeee;}
+.ef16 li span.sky:before{ border-bottom-color:#00adef;}
+/*[/ef16]*/
+
+
+/*[ef17]*/
+.ef17 li a{ width:55px; display:block;}
+.ef17 li a i{ display:inline-block;}
+.ef17 li a:hover{ margin-top:-10px;}
+.ef17 li a:before, .ef17 li a:after{ width:50%; height:2px; background:#333; bottom:0px;}
+.ef17 li a:before{ left:25%;}
+.ef17 li a:hover:before{ left:70%;}
+.ef17 li a:after{ right:25%;}
+.ef17 li a:hover:after{ right:70%;}
+/*[ef17]*/
+
+/*[ef18]*/
+.ef18 li{ margin:8px;}
+.ef18 li a{ text-align:center; overflow:hidden; width:55px; height:55px; -moz-border-radius:50%; -webkit-border-radius:50%; -o-border-radius:50%; -ms-border-radius:50%; border-radius:50%; background-clip:padding-box;}
+.ef18 li a i{ margin:3px 0 0; display:inline-block;background-position:center !important;}
+.ef18 li a:hover{ background:#ccc;}
+/*[/ef18]*/
+
+/*[ef19]*/
+.ef19 li{ margin:5px;}
+.ef19 li a{ text-align:center; overflow:hidden; width:55px; height:55px; -moz-border-radius:50%; -webkit-border-radius:50%; -o-border-radius:50%; -ms-border-radius:50%; border-radius:50%; background-clip:padding-box;}
+.ef19 li a i{ margin:3px 0 0; display:inline-block;background-position:center !important;}
+.ef19 li a:before{ width:0px; height:100%; left:0; top:0; background:#ccc;}
+.ef19 li a:hover:before{ width:100%;}
+/*[/ef19]*/
+
+
+/*[ef20]*/
+.eft20 li{ margin:5px;}
+.eft20 li a{ text-align:center; overflow:hidden; width:55px; height:55px; -moz-border-radius:50%; -webkit-border-radius:50%; -o-border-radius:50%; -ms-border-radius:50%; border-radius:50%; background-clip:padding-box; border:2px solid transparent;}
+.eft20 li a i{ margin:3px 0 0; display:inline-block;background-position:center !important; border:2px solid transparent;}
+.eft20 li a:hover{ border-color:#eee;}
+
+/*[/ef20]*/
+
+@media only screen and ( max-width:991px){
+.effect-cate{ margin:105px 0 25px;}
+.effects-sect{ height:500px;}
+}
+
+
+@media only screen and ( max-width:767px){
+header .logo{ width:auto;}	
+header .logo img{ width:55px;}
+header h2{ font-size:18px;}
+header .right_nav i{ font-size:18px; margin-right: 10px;}	
+.effect-cate{ margin:25px 0;}
+.effects-sect{ height:400px;}
+.eff-content{ vertical-align:top;}
+.title{ font-size:25px;}
+}
+
+
+
+
+
+
+

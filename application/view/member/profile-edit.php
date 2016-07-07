@@ -6,7 +6,7 @@
 	<form class="form-horizontal" action="<?=URL;?>member/get_editprofile" method="POST" id="edit-form" name="edit-form" enctype="multipart/form-data">
 		
 		<input type="hidden" id="input-id" name="input-id" value="<?=$sid;?>" >
-		<input type="hidden" id="hidimg" name="hidimg" value="<?=$logos;?>">
+		<input type="hidden" id="hidimg" name="hidimg" value="<?=$user["logos"];?>">
 
 		<div class="col-md-4 col-sm-6 col-xs-12">
 			<div class="text-center">
@@ -19,7 +19,13 @@
 		<!-- edit column -->
 		<div class="col-md-8 col-sm-6 col-xs-12 personal-info ">
 			
-			<h1 class="quark-font1">Personal info</h1>
+			<div class="col-xs-6 text-left">
+				<h1 class="quark-font1">Personal info</h1>
+			</div>
+			<div class="col-xs-6 text-right">
+				<h3 class="quark-font1" style="margin-top: 32px;"><a href="<?=$_URL;?>member/profile">Back to Profile</a></h3>
+			</div>
+			
 			<div class="row sep-line"></div>
 			<br>
 			
@@ -32,9 +38,7 @@
 			<div class="form-group">
 				<label class="col-lg-3 control-label">Address:</label>
 				<div class="col-lg-8">
-					<textarea id="input-add" name="input-add" rows="4" class="form-control" autocomplete="off">
-						<?=$user["address"];?>
-					</textarea>
+					<textarea id="input-add" name="input-add" rows="4" class="form-control" autocomplete="off"><?=$user["address"];?></textarea>
 				</div>
 			</div>
 

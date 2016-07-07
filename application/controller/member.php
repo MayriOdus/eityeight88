@@ -21,14 +21,19 @@ class Member extends Controller
 		$cid = $_SESSION["member_ns"];
 		$sid = $_SESSION["member_id"];
 		$type =  $_SESSION["type_user"];
-			
+		
+		if( $type == 'admin' )
+		{
+			header("Location: " . URL . "adminp/backoffice-adm.php");
+		}
+
 		$user = $this->model->getUserContact($sid);	
 		$buyer = $this->model->getBuyer($cid);	
 
 		$logos = URL . "img/unknow.gif";
 		if( !empty($user["logos"]) )
 		{
-			$logos = $user["logos"];
+			$logos = URL . "upload/" . $user["logos"];
 		}
 
         // load views
@@ -145,8 +150,9 @@ class Member extends Controller
 				$errors = array();
 				foreach($_FILES['input-mlogo']['tmp_name'] as $key => $tmp_name )
 				{
-					$file_name = $_FILES['input-mlogo']['name'][$key];
-				 
+					//$file_name = $_FILES['input-mlogo']['name'][$key];
+					$file_name = "user_" . $cid . $sid;
+
 					$file_size = $_FILES['input-mlogo']['size'][$key];
 					$file_tmp = $_FILES['input-mlogo']['tmp_name'][$key];
 					$file_type = $_FILES['input-mlogo']['type'][$key];	

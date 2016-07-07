@@ -38,7 +38,7 @@
 <div class="modal fade soci-line" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
   <div class="modal-dialog modal-sm">
 	<div class="modal-content">
-	  <input type="image" src="<?=URL;?>img/line-code.jpg">
+		<div class="col-xs-12"><input type="image" src="<?=URL;?>img/line-code.jpg"></div>
 	</div>
   </div>
 </div>
