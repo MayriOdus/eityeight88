@@ -13,6 +13,7 @@ require APP . 'config/config.php';
 // If you want to load pdoDebug via Composer, then have a look here: https://github.com/panique/pdo-debug
 require APP . 'libs/helper.php';
 require APP . 'libs/img_handle.php';
+require APP . 'libs/resize_image.php';
 require APP . 'libs/phpmailer/class.sendmail.php';
 
 

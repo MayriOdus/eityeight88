@@ -19,10 +19,13 @@ var ete = (function( $, dc, w ) {
 			var self = this;
 
 			$(function() {
+			
+				self.init_login();
+				self.init_register();
+				self.init_editprofile();
 				
-				
-				self.login_init();
-				
+				$('.carousel').bcSwipe({ threshold: 50 });
+
 				//Function to animate slider captions 
 				function doAnimations(elems)
 				{
@@ -97,25 +100,73 @@ var ete = (function( $, dc, w ) {
 			});
 		},
 
-		login_init : function()
+		init_login : function()
 		{
 			var self = this;
-
+			
+			// set binding event
 			if( $("#login-form").length )
 			{
 				$("#login-form").on("submit", function(e) {
 					
 					e.preventDefault();
 
-					self.getlogin();
+					self.do_login();
 
 				});
 			}
 		},
 
-		getlogin : function()
+		init_register : function()
+		{
+			var self = this;
+			
+			// set binding event
+			if( $("#regis-form").length )
+			{
+				$("#regis-form").on("submit", function(e) {
+					
+					e.preventDefault();
+
+					self.do_regis();
+
+				});
+			}
+		},
+
+		init_editprofile : function()
+		{
+			var bar = $('.bar');
+			var percent = $('.percent');
+			var status = $('#status');
+
+			$('#edit-form').ajaxForm({
+				complete: function(xhr) {
+					status.html(xhr.responseText);
+					console.log('sss');
+				}
+			}); 
+		},
+
+		do_login : function()
 		{
 			$.post(_URL+"member/ajax_getlogin", $("#login-form").serialize(), function(msg) {
+				
+				if( msg.SUCCESS )
+				{
+					window.location = _URL + "member/profile";
+				}
+				else
+				{
+					alert("email or password is wrong");
+				}
+
+			}, 'json');
+		},
+
+		do_regis : function()
+		{
+			$.post(_URL+"member/ajax_getregis", $("#regis-form").serialize(), function(msg) {
 				
 				if( msg.SUCCESS )
 				{
@@ -123,7 +174,7 @@ var ete = (function( $, dc, w ) {
 				}
 				else
 				{
-					alert("email or password is wrong");
+					alert("cannot process registeration");
 				}
 
 			}, 'json');

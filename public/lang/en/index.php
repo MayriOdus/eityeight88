@@ -18,3 +18,6 @@ define("_SUBJECT", "Subject");
 define("_MESSAGE", "Message");
 define("_SEND_MESSAGE", "Send Message");
 define("_SHIPPING_BAG", "Shipping Bag");
+define("_PAYMENT_ID", "Payment Id");
+define("_PRICE", "Price");
+define("_DATE_PAY", "Date Pay");

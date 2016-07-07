@@ -60,10 +60,10 @@ define('SITE_TITLE', "eityeight88");
 
 date_default_timezone_set("Asia/Bangkok");
 
-$host = "mysql-5.5.chaiyohosting.com";
-$username ="adm_eityeight"; 
-$password ="&1Xx5rs7"; 
-$dbname ="eityeight_web"; 
+$host = "localhost";
+$username ="root"; 
+$password =""; 
+$dbname ="eityeight_local_db"; 
 
 
 define('DB_TYPE', 'mysql');

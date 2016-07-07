@@ -109,15 +109,17 @@
 
 							<li>
 								<ul class="qtrans_language_chooser" id="qtranslate-chooser">
-									<li class="active"><a href="<?="http://".$_SERVER['HTTP_HOST'].str_replace("th", "en", $_SERVER['REQUEST_URI']);?>" class="qtrans_flag_en qtrans_flag_and_text" title="English"><span>English</span></a>
+									<?php
+									$RequestURI = ( $_SERVER['REQUEST_URI'] == "/" )? "/en/" : $_SERVER['REQUEST_URI'];
+									?>
+									<li class="active"><a href="<?="http://".$_SERVER['HTTP_HOST'].str_replace("th", "en", $RequestURI);?>" class="qtrans_flag_en qtrans_flag_and_text" title="English"><span>English</span></a>
 									</li>
-									<li><a href="<?="http://".$_SERVER['HTTP_HOST'].str_replace("en", "th", $_SERVER['REQUEST_URI']);?>" class="qtrans_flag_th qtrans_flag_and_text" title="ภาษาไทย"><span>ภาษาไทย</span></a>
+									<li><a href="<?="http://".$_SERVER['HTTP_HOST'].str_replace("en", "th", $RequestURI);?>" class="qtrans_flag_th qtrans_flag_and_text" title="ภาษาไทย"><span>ภาษาไทย</span></a>
 									</li>
 								</ul>
 								<div class="qtrans_widget_end"></div>
 							</li>
 						</ul>
-						
 
 						<div class="nav hnavi">
 							<ul class="menu">
@@ -132,7 +134,6 @@
 								<li class="cat-item cat-item-26 text-center"><a href="<?=$_URL;?>products" title="<?=_SECURITY_CODE_CHECKING;?>"><?=_SECURITY_CODE_CHECKING;?></a>
 								</li>
 							</ul>
-
 
 						</div>
 					</div>
