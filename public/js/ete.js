@@ -23,6 +23,8 @@ var ete = (function( $, dc, w ) {
 				self.init_login();
 				self.init_register();
 				self.init_editprofile();
+				self.init_proddetail();
+				self.init_payment();
 				
 				$('.carousel').bcSwipe({ threshold: 50 });
 
@@ -164,6 +166,112 @@ var ete = (function( $, dc, w ) {
 			}); 
 		},
 
+		init_proddetail : function()
+		{
+			var self = this;
+			
+			// set binding event
+			if( $("#basket-form").length )
+			{
+				$("#basket-form").on("submit", function(e) {
+					
+					e.preventDefault();
+
+					self.add_basket();
+
+				});
+			}
+
+			if( $('.spinner .data-up').length && $('.spinner .data-dwn').length )
+			{
+				$('.spinner .data-up').unbind().click(function() {
+
+					var 
+						$spin = $(this).parents('.spinner').find('input[type=text]'),
+						smin = $spin.attr('sp-min'),
+						smax = $spin.attr('sp-max'),
+						sval = parseInt($spin.val(), 10);
+				
+					if( ! $spin.prop("disabled") )
+					{
+						smax > sval ? $spin.val( sval + 1) : sval;
+						$spin.change();
+					}
+				});
+
+				$('.spinner .data-dwn').unbind().click(function() {
+
+					var 
+						$spin = $(this).parents('.spinner').find('input[type=text]'),
+						smin = $spin.attr('sp-min'),
+						smax = $spin.attr('sp-max'),
+						sval = parseInt($spin.val(), 10);
+					
+					if( ! $spin.prop("disabled") )
+					{
+						smin < sval ? $spin.val( sval - 1) : sval;
+						$spin.change();
+					}
+				});
+
+				var action;
+				$('.spinner .data-up').mousedown(function () {
+
+					var self = this; 
+
+					action = setInterval(function(){
+						var 
+							$spin = $(self).parents('.spinner').find('input[type=text]'),
+							smax = $spin.attr('sp-max'),
+							sval = parseInt($spin.val(), 10);
+						
+						if( ! $spin.prop("disabled") )
+						{
+							smax > sval ? $spin.val( sval + 1) : sval;
+							$spin.change();
+						}
+					}, 250);
+
+				}).mouseup(function(){
+					clearInterval(action);
+				});
+
+				$('.spinner .data-dwn').mousedown(function () {
+
+					var self = this;
+
+					action = setInterval(function(){
+						var 
+							$spin = $(self).parents('.spinner').find('input[type=text]'),
+							smin = $spin.attr('sp-min'),
+							sval = parseInt($spin.val(), 10);
+						
+						if( ! $spin.prop("disabled") )
+						{
+							smin < sval ? $spin.val( sval - 1) : sval;
+							$spin.change();
+						}
+					}, 250);
+				}).mouseup(function(){
+					clearInterval(action);
+				});	
+			}
+		},
+
+		init_payment : function()
+		{
+			var self = this;
+
+			if( $("button[name=btn-delete-item]").length )
+			{
+				$("button[name=btn-delete-item]").click(function(){
+
+					self.del_basket(this);
+
+				});
+			}
+		},
+
 		do_login : function()
 		{
 			$.post(_URL+"member/ajax_getlogin", $("#login-form").serialize(), function(msg) {
@@ -191,6 +299,38 @@ var ete = (function( $, dc, w ) {
 				else
 				{
 					alert("cannot process registeration");
+				}
+
+			}, 'json');
+		},
+
+		add_basket : function()
+		{
+			$.post(_URL+"products/ajax_addbasket", $("#basket-form").serialize(), function(msg) {
+				
+				if( msg.SUCCESS )
+				{
+					window.location = _URL + "shipping/payment";
+				}
+				else
+				{
+					alert("cannot process basket");
+				}
+
+			}, 'json');
+		},
+
+		del_basket : function(obj)
+		{
+			$.post(_URL+"shipping/ajax_delbasket/"+obj.id, {}, function(msg) {
+				
+				if( msg.SUCCESS )
+				{
+					$(obj).parents("tr").hide('fast', function(){ $(this).remove(); });
+				}
+				else
+				{
+					alert("cannot process delete");
 				}
 
 			}, 'json');

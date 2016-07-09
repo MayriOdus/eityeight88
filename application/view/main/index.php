@@ -118,29 +118,39 @@
 <br>
 
 <div class="row">
+	<?php
+	foreach ($products as $i => $prod) 
+	{
+		$name = ($_SESSION["Lang"] == "en")? "name_eng" : "name_th";
+		$detail = ($_SESSION["Lang"] == "en")? "details" : "detail_th";
+		$img = explode(",", str_replace(" ", "%20", $prod["img_file"]));
 
-	<div class="col-sm-4 col-lg-3 col-md-4">
-		<div class="thumbnail">
-			<a href="<?=$_URL;?>products/product_detail"><img src="<?=URL;?>img/Gif-Cushion.gif" alt=""></a>
-			<div class="caption text-center">
-				<h4><a href="<?=$_URL;?>products/product_detail">VER. 88 BOUNCE UP PACT</a></h4>
-				<h4>฿490</h4>
-				<p>SPF 50 PA+++</p>
-				<p><button type="button" class="btn btn-black btn-sm">ADD TO CART</button></p>
+		?>
+		<div class="col-sm-4 col-lg-3 col-md-4">
+			<div class="thumbnail">
+				<a href="<?=$_URL;?>products/product_detail/<?=$prod["code_product"];?>"><img src="<?=URL;?>images/upload/<?=$img[0];?>" alt=""></a>
+				<div class="caption text-center">
+					<h4><a href="<?=$_URL;?>products/product_detail/<?=$prod["code_product"];?>" class="text-elip"><?=$prod[$name];?></a></h4>
+					<h4><?=$prod["costs"];?></h4>
+					<p class="text-elip"><?=$prod[$detail];?></p>
+					<p><button type="button" class="btn btn-black btn-sm"><?=_ADD_TO_BAG;?></button></p>
+				</div>
+				<!-- <div class="ratings">
+					<p class="pull-right">15 reviews</p>
+					<p>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+					</p>
+				</div> -->
 			</div>
-			<!-- <div class="ratings">
-				<p class="pull-right">15 reviews</p>
-				<p>
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star"></span>
-				</p>
-			</div> -->
 		</div>
-	</div>
-
+		<?php
+	}
+	?>
+	<!--
 	<div class="col-sm-4 col-lg-3 col-md-4">
 		<div class="thumbnail">
 			<img src="<?=URL;?>img/Gif-Dewy-2.gif" alt="">
@@ -187,7 +197,7 @@
 				<p><button type="button" class="btn btn-black btn-sm" disabled>ADD TO CART</button></p>
 			</div>
 		</div>
-	</div>
+	</div>-->
 
 
 </div>

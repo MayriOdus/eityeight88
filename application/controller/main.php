@@ -18,15 +18,11 @@ class Main extends Controller
     {
 		$_URL = URL . $_SESSION["Lang"] . "/";
 
+        $products = $this->model->getproducts();
+
         // load views
 		$content = 'view/main/index.php';
         require APP . 'view/_templates/layout.php';
-    }	
-
-
-    public function test()
-    {
-        // load views
-        echo 'xx';
-    }	
+    }
+    	
 }

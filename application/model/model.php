@@ -13,7 +13,105 @@ class Model
             exit('Database connection could not be established.');
         }
     }
-	
+
+
+	public function getproducts()
+	{
+		$sql = " SELECT p.*, group_concat(u.file_name) as img_file FROM product p LEFT JOIN upload_data u ON p.code_product = u.prod_id WHERE p.shows = '1' GROUP BY p.id ";
+		$query = $this->db->prepare($sql);
+
+		$query->execute();
+
+		return $product = $query->fetchAll(PDO::FETCH_ASSOC);
+	}
+
+	public function add_basket($pos)
+	{
+		$r = array("SUCCESS" => false);
+
+		$pid = $pos["hidid"];
+		$qty = $pos['input-qty'];
+		$color_code = $pos['color_code'];
+
+		if( !empty($qty) )
+		{
+			$sess_user = $_SESSION['member_id'] . date('ymd');
+			$timepost =  date('d-M-y h.i.s');
+			
+			//echo "Save Your Compare";
+			$sql = " INSERT INTO compare(id_product,cokie,qty,color_code,timepost) VALUES( :pid, :sess, :qty, :color, :timepost) "; 
+
+			$query = $this->db->prepare($sql);
+
+			$parameters = array(
+				":pid" => $pid,
+				":sess" => $sess_user,
+				":qty" => $qty,
+				":color" => $color_code,
+				":timepost" => $timepost
+			);
+
+			if( $query->execute($parameters) )
+			{
+				$r["SUCCESS"] = true;
+			}
+
+		}
+
+		return $r;
+	}
+
+	public function deletebasket($id)
+	{
+		$r = array("SUCCESS" => false);
+
+		$sql = " DELETE FROM compare WHERE id = :id ";
+
+		$query = $this->db->prepare($sql);
+
+		$parameters = array(
+			":id" => $id
+		);
+
+		if( $query->execute($parameters) )
+		{
+			$r["SUCCESS"] = true;
+		}
+
+		return $r;
+	}
+
+	public function getcomparebasket()
+	{
+		$sess_user = $_SESSION['member_id'] . date('ymd');
+
+		$sql = " SELECT p.name_th, p.name_eng, p.costs, p.sale_cost, c.*, (SELECT file_name FROM upload_data WHERE prod_id = c.id_product LIMIT 1 ) as img FROM product p, compare c WHERE p.code_product = c.id_product AND c.cokie = :sess ";
+
+		$query = $this->db->prepare($sql);
+
+		$parameters = array(
+			":sess" => $sess_user
+		);
+
+		$query->execute($parameters);
+
+		return $basket = $query->fetchAll(PDO::FETCH_ASSOC);
+	}
+
+	public function getproduct_detail($prod_id)
+	{
+		$sql = " SELECT p.*, group_concat(u.file_name) AS img_file, (SELECT group_concat(code_color) FROM color_select WHERE prod_id = p.code_product) AS color_prod  FROM product p LEFT JOIN upload_data u ON p.code_product = u.prod_id WHERE p.shows = '1' AND prod_id = :prod_id GROUP BY p.id ";
+		$query = $this->db->prepare($sql);
+
+		$parameters = array(
+			":prod_id" => $prod_id
+		);
+
+		$query->execute($parameters);
+
+		return $product = $query->fetch(PDO::FETCH_ASSOC);
+	}
+
 	public function getUserContact($sid)
 	{
 		$sql = " SELECT u.username as name , u.lastname as lastname, u.email, c.address, c.tele, c.logos FROM users u, contact_user c WHERE u.id_user = c.id_user AND u.id_user = :sid ";

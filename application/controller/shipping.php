@@ -18,10 +18,18 @@ class Shipping extends Controller
     {
 		$_URL = URL . $_SESSION["Lang"] . "/";
 
+         $basket = $this->model->getcomparebasket();
+
         // load views
 		$content = 'view/shipping/payment.php';
         require APP . 'view/_templates/layout.php';
     }	
 
+    public function ajax_delbasket($p, $id)
+    {
+        $basket = $this->model->deletebasket($id);
+
+        echo json_encode($basket);
+    }
 
 }

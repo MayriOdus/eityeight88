@@ -26,7 +26,7 @@
 			<img class="img-responsive" src="<?=URL;?>img/white-logo.gif" style="width: 310px;margin: auto;">
 		</div>
 		<p>
-		EITY EIGHT took the first step in the business as an importer of well-known makeup and skincare brands from South Korea to launch in Thai market. EITY EIGHT has later become an official manufacturer and introduced our first product in 2015 with the following business transaction ideas:</p>
+		<strong>EITY EIGHT</strong> took the first step in the business as an importer of well-known makeup and skincare brands from South Korea to launch in Thai market. <strong>EITY EIGHT</strong> has later become an official manufacturer and introduced our first product in 2015 with the following business transaction ideas:</p>
 		
 		<h5>Knowledge and Competency:</h5>
 

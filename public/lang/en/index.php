@@ -21,3 +21,4 @@ define("_SHIPPING_BAG", "Shipping Bag");
 define("_PAYMENT_ID", "Payment Id");
 define("_PRICE", "Price");
 define("_DATE_PAY", "Date Pay");
+define("_ADD_TO_BAG", "Add To Bag");

@@ -18,18 +18,29 @@ class Products extends Controller
     {
 		$_URL = URL . $_SESSION["Lang"] . "/";
 
+        $products = $this->model->getproducts();
+
         // load views
 		$content = 'view/products/index.php';
         require APP . 'view/_templates/layout.php';
     }	
 
-	public function product_detail()
+	public function product_detail($p, $id)
 	{
 		$_URL = URL . $_SESSION["Lang"] . "/";
+
+        $product = $this->model->getproduct_detail($id);
 
         // load views
 		$content = 'view/products/detail.php';
         require APP . 'view/_templates/layout.php';
 	}
+
+    public function ajax_addbasket()
+    {
+        $res = $this->model->add_basket($_POST);
+        
+        echo json_encode($res);
+    }
 
 }

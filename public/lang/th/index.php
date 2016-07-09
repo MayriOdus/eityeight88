@@ -21,3 +21,4 @@ define("_SHIPPING_BAG", "ระบบสั่งจอง");
 define("_PAYMENT_ID", "รหัสการจ่าย");
 define("_PRICE", "ราคา");
 define("_DATE_PAY", "วันที่จ่าย");
+define("_ADD_TO_BAG", "หยิบใส่ตระกร้า");
