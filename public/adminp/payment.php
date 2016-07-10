@@ -210,7 +210,7 @@ while($compare = mysqli_fetch_array($objQuery))
 		//$itme_pay[] = $idcompare;
 		 
 //compare table arning: Illegal string offset 'timep' indistant
-	   $productSQL ="SELECT * FROM product WHERE  id ='$id_pro'";
+	  $productSQL ="SELECT * FROM product WHERE  id ='$id_pro'";
 		$uQuery = mysqli_query($connect, $productSQL) or die ($error);
 		while($info = mysqli_fetch_array($uQuery))
 		{
@@ -274,7 +274,7 @@ while($compare = mysqli_fetch_array($objQuery))
 			 
 			 
 		}else{
-			$pric ="<p>".number_format($iprice)."</p>";
+			$pric ="<p>".number_format((int)$iprice)."</p>";
 			$ipr = $iprice*$cqty;
 			$totalcost1[] = $ipr;
 			//	echo  $totalcost1[0];

@@ -21,7 +21,7 @@ class Member extends Controller
 		$cid = $_SESSION["member_ns"];
 		$sid = $_SESSION["member_id"];
 		$type =  $_SESSION["type_user"];
-		
+	
 		if( $type == 'admin' )
 		{
 			header("Location: " . URL . "adminp/backoffice-adm.php");
@@ -39,6 +39,16 @@ class Member extends Controller
         // load views
 		$content = 'view/member/profile.php';
         require APP . 'view/_templates/layout.php';
+	}
+
+	public function paymentbill($p, $payid)
+	{
+		$_URL = URL . $_SESSION["Lang"] . "/";
+
+		$bill = $this->model->getpaymentbill($payid);	
+
+		$content = 'view/member/payment.php';
+        require APP . 'view/_templates/layout_payment.php';
 	}
 
 	public function profile_edit()
@@ -96,6 +106,7 @@ class Member extends Controller
 		unset($_SESSION["member_ns"]);
 		unset($_SESSION["member_name"]);
 		unset($_SESSION["type_user"]);
+		unset($_SESSION["authen_session"]);
 
 		header("Location: " . URL);
 	}
@@ -121,7 +132,11 @@ class Member extends Controller
 		$type = $_SESSION["type_user"];
 		$hid = $_POST['input-id'];
 		$nameimages1 = '';
-		$data = array();
+		$data = array(
+			"tele" => "",
+			"address" => "",
+			"logos" => ""
+		);
 		$data["iid"] = $hid;
 
 		if( !empty($sid) && !empty($cid) )

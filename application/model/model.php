@@ -35,7 +35,7 @@ class Model
 
 		if( !empty($qty) )
 		{
-			$sess_user = $_SESSION['member_id'] . date('ymd');
+			$sess_user = $_SESSION["authen_session"];
 			$timepost =  date('d-M-y h.i.s');
 			
 			//echo "Save Your Compare";
@@ -83,19 +83,202 @@ class Model
 
 	public function getcomparebasket()
 	{
-		$sess_user = $_SESSION['member_id'] . date('ymd');
+		$sess_user = $_SESSION['authen_session'];
 
-		$sql = " SELECT p.name_th, p.name_eng, p.costs, p.sale_cost, c.*, (SELECT file_name FROM upload_data WHERE prod_id = c.id_product LIMIT 1 ) as img FROM product p, compare c WHERE p.code_product = c.id_product AND c.cokie = :sess ";
+		$sql = " SELECT p.code_product, p.name_th, p.name_eng, p.costs, p.sale_cost, c.*, (SELECT file_name FROM upload_data WHERE prod_id = p.code_product LIMIT 1 ) as img FROM product p, compare c WHERE p.id = c.id_product AND c.cokie = :sess ";
 
 		$query = $this->db->prepare($sql);
 
 		$parameters = array(
 			":sess" => $sess_user
 		);
-
+		 // echo '[ PDO DEBUG ]: ' . Helper::debugPDO($sql, $parameters);  exit();
 		$query->execute($parameters);
 
 		return $basket = $query->fetchAll(PDO::FETCH_ASSOC);
+	}
+
+	public function getmember_contact()
+	{
+		$id = $_SESSION["member_ns"];
+
+		$sql = " SELECT u.*, c.tele, c.address FROM users u , contact_user c WHERE u.id_user = c.id_user AND u.id = :id  ";
+
+		$query = $this->db->prepare($sql);
+
+		$parameters = array(
+			":id" => $id
+		);
+		 // echo '[ PDO DEBUG ]: ' . Helper::debugPDO($sql, $parameters);  exit();
+		$query->execute($parameters);
+
+		return $basket = $query->fetch(PDO::FETCH_ASSOC);
+	}
+
+	public function getpaymentid()
+	{
+		$sql = " SELECT COUNT(id) as cnt FROM buyer ";
+		$query = $this->db->prepare($sql);
+
+		 // echo '[ PDO DEBUG ]: ' . Helper::debugPDO($sql, $parameters);  exit();
+		$query->execute();
+		$pid = $query->fetch(PDO::FETCH_ASSOC);
+
+		return date("dmyis") . ( $pid["cnt"] + 1 );
+	}
+
+	public function addpayment($pos)
+	{
+		$r = array("SUCCESS" => false);
+
+		$sess_user = $_SESSION['authen_session'];
+
+		$sql =" UPDATE compare SET chk_pay = :payid WHERE cokie = :sess ";
+		$query = $this->db->prepare($sql);
+
+		$parameters = array(
+			":payid" => $pos["input-idpost"],
+			":sess" => $sess_user
+		);
+
+		if( $query->execute($parameters) )
+		{
+			$sql = " INSERT INTO buyer(cokie,id_pay,namep,lname,addressp,telep,email,img,timep,cost) VALUES(:sess, :payid, :name, :lastname, :address, :tel, :email, :image, :timep, :cost);";
+			$query = $this->db->prepare($sql);
+
+			$parameters = array(
+				":payid" => $pos["input-idpost"],
+				":sess" => $sess_user,
+				":name" => $pos["userName"],
+				":lastname" => $pos["lname"],
+				":address" => $pos["input-add"],
+				":tel" => $pos["userTele"],
+				":email" => $pos["userEmail"],
+				":image" => $pos["img_payment"],
+				":timep" => date('d-M-y h.i.s'),
+				":cost" => $pos["input-val"]
+			);
+
+			if( $query->execute($parameters) )
+			{
+				unset($_SESSION['authen_session']);
+
+				$r["SUCCESS"] = true;
+			}
+		}
+
+		return $r;
+	}
+
+	public function addcontactmessage($pos)
+	{
+		$r = array("SUCCESS" => false);
+
+		$sql = " INSERT INTO custo_contact(nameu,email,subject,Message,timep) VALUES(:name, :email, :subject, :message, :timepost) ";
+		$query = $this->db->prepare($sql);
+
+		$timepost =  date('d-M-y h.i.s');
+		$parameters = array(
+			":name" => $pos["userName"],
+			":email" => $pos["email"],
+			":subject" => $pos["subject"],
+			":message" => $pos["message"],
+			":timepost" => $timepost
+		);
+
+		if( $query->execute($parameters) )
+		{
+			$r["SUCCESS"] = true;
+		}
+
+		return $r;
+	}
+
+	public function getpaymentbill($payid)
+	{
+		$sql = " SELECT  c.*, p.costs, p.sale_cost, p.code_product FROM compare c, product p WHERE c.id_product = p.id AND c.chk_pay = :payid ";
+		$query = $this->db->prepare($sql);
+
+		$parameters = array(
+			":payid" => $payid
+		);
+
+		$query->execute($parameters);
+
+		return $product = $query->fetchAll(PDO::FETCH_ASSOC);
+	}
+
+	public function chk_serial($pos)
+	{
+		$r = array("FAKE" => true);
+
+		$sql = "SELECT count(ps.code_product) as ctn, p.name_eng as name FROM product_serials ps, product p WHERE p.id = ps.code_product AND ps.code_product= :id and ps.code_serial= :serials "; 
+		$query = $this->db->prepare($sql);
+
+		$parameters = array(
+			":id" => $pos["pid"],
+			":serials" => $pos["pdata"]
+		);
+
+		$query->execute($parameters);
+		$chk = $query->fetch(PDO::FETCH_ASSOC);
+
+		if( $chk["ctn"] > 0 )
+		{
+			$r["FAKE"] = false;
+			$r["PRODNAME"]  = $chk["name"];
+		}
+
+		return $r;
+	}
+
+	public function chk_serial_all($pos)
+	{
+		$r = array("FAKE" => true);
+
+		$sql = "SELECT count(ps.code_product) as ctn, p.name_eng as name FROM product_serials ps, product p WHERE p.id = ps.code_product AND ps.code_serial= :serials "; 
+		$query = $this->db->prepare($sql);
+
+		$parameters = array(
+			":serials" => $pos["pdata"]
+		);
+
+		$query->execute($parameters);
+		$chk = $query->fetch(PDO::FETCH_ASSOC);
+
+		if( $chk["ctn"] > 0 )
+		{
+			$r["FAKE"] = false;
+			$r["PRODNAME"]  = $chk["name"];
+		}
+
+		return $r;
+	}
+
+	public function getbanner($page)
+	{
+		$sql = " SELECT img FROM banners WHERE descript = :page ";
+		$query = $this->db->prepare($sql);
+
+		$parameters = array(
+			":page" => $page
+		);
+
+		$query->execute($parameters);
+		
+		return $img = $query->fetchAll(PDO::FETCH_ASSOC);
+	}
+
+	public function getaboutus()
+	{
+		$sel = ($_SESSION["Lang"] == "en")? "txt1" : "txt2";
+		$sql = " SELECT ".$sel." as txt FROM about WHERE id = '1' ";
+		$query = $this->db->prepare($sql);
+
+		$query->execute();
+		$txtabout = $query->fetch(PDO::FETCH_ASSOC);
+
+		return $txtabout["txt"];
 	}
 
 	public function getproduct_detail($prod_id)
@@ -130,11 +313,11 @@ class Model
 
 	public function getBuyer($cid)
 	{
-		$sql = " SELECT * FROM buyer WHERE cokie = :cid ";
+		$sql = " SELECT * FROM buyer WHERE namep = :cid ";
         $query = $this->db->prepare($sql);
 		
 		$parameters = array(
-			":cid" => $cid
+			":cid" => $_SESSION["member_name"]
 		);
         // echo '[ PDO DEBUG ]: ' . Helper::debugPDO($sql, $parameters);  exit();
 		

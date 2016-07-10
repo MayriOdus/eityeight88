@@ -11,7 +11,7 @@ $detail = ($_SESSION["Lang"] == "en")? "details" : "detail_th";
 
 	<form id="basket-form" name="basket-form">
 
-		<input type="hidden" name="hidid" id="hidid" value="<?=$id;?>">
+		<input type="hidden" name="hidid" id="hidid" value="<?=$product["id"];?>">
 		<div class="  col-sm-6 col-md-6 text-center">
 			
 			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="5000">	
@@ -19,9 +19,17 @@ $detail = ($_SESSION["Lang"] == "en")? "details" : "detail_th";
 				<div class="carousel-inner" role="listbox">            
 					
 					<?php
+					$j = 0;
 					foreach ($img_prod as $i => $img) 
 					{	
-						$act = ($i == 0)? "active" : "";
+						$j++;
+
+						if($j == 1)
+						{
+							continue;
+						}
+
+						$act = ($i == 1)? "active" : "";
 						?>
 						<div class="item <?=$act;?>">
 							<div align="center" class="img-slide-res">
@@ -76,17 +84,23 @@ $detail = ($_SESSION["Lang"] == "en")? "details" : "detail_th";
 						</h3>
 					</div>
 					<div class="the-list">
-						<div class="col-xs-4">Availability</div>
+						<div class="col-xs-4"><?=_AVAILABILITY;?></div>
 						<div class="col-xs-8">
 							<!-- <span class="red">OUT OF STOCK</span> -->
 
-							<span class="green"><?=$product["stocks"];?> items in stock</span>
+							<span class="green"><?=$product["stocks"];?> <?=_ITEMS_IN_STOCK;?></span>
 						</div>
 					</div>
-					<div class="the-list">
+					<?php
+					if( empty($color_prod[0]) )
+					{
+						$dsp = "display:none;";
+					}
+					?>
+					<div class="the-list" style="<?=$dsp;?>">
 						<div class="col-xs-4">Color</div>
 						<div class="col-xs-8">
-							<select class="form-control" name="color_code" id="color_code" required>
+							<select class="form-control" name="color_code" id="color_code">
 								<option value=""> -- Select Color -- </option>
 								<?php
 								foreach ($color_prod as $color) 
@@ -108,7 +122,7 @@ $detail = ($_SESSION["Lang"] == "en")? "details" : "detail_th";
 						
 						<div class="col-xs-12">
 
-							<b>Weight : <?=$product["weights"];?> / <?php echo !empty($product["stocks"]) && $product["stocks"] != 0? "In Stock" : "Sold Out";?> </b>
+							<b><?=_WEIGHT;?> : <?=$product["weights"];?> / <?php echo !empty($product["stocks"]) && $product["stocks"] != 0? _IN_STOCK : _SOLD_OUT;?> </b>
 						</div>
 					</div>
 					<br>
@@ -127,6 +141,19 @@ $detail = ($_SESSION["Lang"] == "en")? "details" : "detail_th";
 						</div>
 						<button type="submit" class="btn btn-white pull-left"><i class="fa fa-shopping-cart"></i> <?=_ADD_TO_BAG;?></button>
 					</div>
+					<br><br>
+					<hr>
+					<br>
+					<div class="col-xs-12 input-qty-detail">
+						<div class="col-xs-4 col-md-offset-2" style="margin-top: 5px;"><?=_ENTER_SERIAL_NUMBER;?></div>
+						<div class="input-group col-xs-6 col-md-4">
+							<input type="text" class="form-control text-center" name="input-serial" id="input-serial">
+							<span class="input-group-btn data-up">
+								<button class="btn btn-white" id="btn-chk-serial" type="button"><?=_GO;?>!</button>
+							</span>
+						</div>
+					</div>
+
 					<div class="clearfix"></div><br>
 					
 				</div>

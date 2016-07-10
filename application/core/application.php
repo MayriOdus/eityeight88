@@ -24,6 +24,11 @@ class Application
 
 		$_SESSION["Lang"] = $this->lang;
 
+        if( !isset($_SESSION["authen_session"]) )
+        {
+            $_SESSION["authen_session"] = session_id() . date("ymdhis");
+        }
+
 		require 'lang/'.strtolower($this->lang).'/index.php';
 
         // check for controller: no controller given ? then load start-page

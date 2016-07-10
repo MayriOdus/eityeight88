@@ -18,6 +18,8 @@ class About extends Controller
     {
 		$_URL = URL . $_SESSION["Lang"] . "/";
 
+        $txtaboutus = $this->model->getaboutus();   
+
         // load views
 		$content = 'view/about/index.php';
         require APP . 'view/_templates/layout.php';

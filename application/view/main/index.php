@@ -23,49 +23,18 @@
 						<iframe class="embed-responsive-item" id="video3" src="//www.youtube.com/embed/zHnTKKZu4sM?playlist=zHnTKKZu4sM&enablejsapi=1"></iframe>
 					</div>
 				</div>
-
-				<div class="item">
-					<div align="center" class="img-slide-res">
-						  <img class="img-responsive" src="<?=URL;?>img/88_main01.gif">
+				<?php
+				foreach ($banner as $bn) 
+				{
+					?>
+					<div class="item">
+						<div align="center" class="img-slide-res">
+							  <img class="img-responsive" src="<?=URL;?>images/banner/<?=$bn["img"];?>">
+						</div>
 					</div>
-				</div>
-
-				<div class="item">
-					<div align="center" class="img-slide-res">
-						  <img class="img-responsive" src="<?=URL;?>img/88_main002.gif">
-					</div>
-				</div>
-
-				<div class="item">
-					<div align="center" class="img-slide-res">
-						  <img class="img-responsive" src="<?=URL;?>img/88_main003.gif">
-					</div>
-				</div>
-
-				<div class="item">
-					<div align="center" class="img-slide-res">
-						  <img class="img-responsive" src="<?=URL;?>img/88_main04.jpg">
-					</div>
-				</div>
-
-				<div class="item">
-					<div align="center" class="img-slide-res">
-						  <img class="img-responsive" src="<?=URL;?>img/88_main05.gif">
-					</div>
-				</div>
-
-				<div class="item">
-					<div align="center" class="img-slide-res">
-						  <img class="img-responsive" src="<?=URL;?>img/88_main06.gif">
-					</div>
-				</div>
-
-				<div class="item">
-					<div align="center" class="img-slide-res">
-						  <img class="img-responsive" src="<?=URL;?>img/88_main07.gif">
-					</div>
-				</div>
-
+					<?php
+				}
+				?>
 			</div>
 		</div>
 
@@ -133,7 +102,7 @@
 					<h4><a href="<?=$_URL;?>products/product_detail/<?=$prod["code_product"];?>" class="text-elip"><?=$prod[$name];?></a></h4>
 					<h4><?=$prod["costs"];?></h4>
 					<p class="text-elip"><?=$prod[$detail];?></p>
-					<p><button type="button" class="btn btn-black btn-sm"><?=_ADD_TO_BAG;?></button></p>
+					<p><button type="button" class="btn btn-black btn-sm" name="btn-add-prod" id="prod<?=$prod["id"];?>"><?=_ADD_TO_BAG;?></button></p>
 				</div>
 				<!-- <div class="ratings">
 					<p class="pull-right">15 reviews</p>

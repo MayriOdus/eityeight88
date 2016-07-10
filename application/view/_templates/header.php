@@ -114,7 +114,7 @@
 									?>
 									<li class="active"><a href="<?="http://".$_SERVER['HTTP_HOST'].str_replace("th", "en", $RequestURI);?>" class="qtrans_flag_en qtrans_flag_and_text" title="English"><span>English</span></a>
 									</li>
-									<li><a href="<?="http://".$_SERVER['HTTP_HOST'].str_replace("en", "th", $RequestURI);?>" class="qtrans_flag_th qtrans_flag_and_text" title="ภาษาไทย"><span>ภาษาไทย</span></a>
+									<li><a href="<?="http://".$_SERVER['HTTP_HOST'].str_replace("/en", "/th", $RequestURI);?>" class="qtrans_flag_th qtrans_flag_and_text" title="ภาษาไทย"><span>ภาษาไทย</span></a>
 									</li>
 								</ul>
 								<div class="qtrans_widget_end"></div>
@@ -131,7 +131,7 @@
 								</li>
 								<li class="cat-item"><a href="<?=$_URL;?>contact" title="<?=_CONTACT_US;?>"><?=_CONTACT_US;?></a>
 								</li>
-								<li class="cat-item cat-item-26 text-center"><a href="<?=$_URL;?>products" title="<?=_SECURITY_CODE_CHECKING;?>"><?=_SECURITY_CODE_CHECKING;?></a>
+								<li class="cat-item cat-item-26 text-center"><a href="<?=$_URL;?>products/checkserial" title="<?=_SECURITY_CODE_CHECKING;?>"><?=_SECURITY_CODE_CHECKING;?></a>
 								</li>
 							</ul>
 

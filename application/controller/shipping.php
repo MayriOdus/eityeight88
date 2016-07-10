@@ -18,7 +18,25 @@ class Shipping extends Controller
     {
 		$_URL = URL . $_SESSION["Lang"] . "/";
 
-         $basket = $this->model->getcomparebasket();
+        $basket = $this->model->getcomparebasket();
+        $paymentId = $this->model->getpaymentid();
+
+        $firstname = "";
+        $lastname = "";
+        $tel = "";
+        $email = "";
+        $address = "";
+
+        if( isset($_SESSION["member_ns"]) && !empty($_SESSION["member_ns"]) )
+        {
+            $contact = $this->model->getmember_contact();
+
+            $firstname = $contact["username"];
+            $lastname = $contact["lastname"];
+            $tel = $contact["tele"];
+            $email = $contact["email"];
+            $address = $contact["address"];
+        }
 
         // load views
 		$content = 'view/shipping/payment.php';
@@ -30,6 +48,42 @@ class Shipping extends Controller
         $basket = $this->model->deletebasket($id);
 
         echo json_encode($basket);
+    }
+
+    public function add_payment()
+    {
+        $cid = $_SESSION["member_ns"];
+        $sid = $_SESSION["member_id"];
+        $type = $_SESSION["type_user"];
+        $data = $_POST;
+        $data["img_payment"] = "";
+
+        if( !empty($sid) && !empty($cid) )
+        {
+            if( !empty($_FILES['files']['name'][0]) )
+            {
+                $n_title = '';//$_POST['name_clone'][0];
+                $errors = array();
+                foreach($_FILES['files']['tmp_name'] as $key => $tmp_name )
+                {
+                    //$file_name = $_FILES['input-mlogo']['name'][$key];
+                    $file_name = "payment_" . $cid . $sid . $data["input-idpost"];
+
+                    $file_size = $_FILES['files']['size'][$key];
+                    $file_tmp = $_FILES['files']['tmp_name'][$key];
+                    $file_type = $_FILES['files']['type'][$key];  
+                    /* name title */
+                    $n_title  = '';// $_POST['name_clone'][$key];
+                }
+        
+                $desired_dir = "../public/images/upload/payment/";
+                $data["img_payment"] = resize($file_name,$file_type,$file_tmp,$desired_dir,180);
+            }
+            
+            $pay = $this->model->addpayment($data);
+            
+            echo json_encode($pay);
+        } 
     }
 
 }

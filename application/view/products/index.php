@@ -15,7 +15,7 @@
 					<h4><a href="<?=$_URL;?>products/product_detail/<?=$prod["code_product"];?>" class="text-elip"><?=$prod[$name];?></a></h4>
 					<h4><?=$prod["costs"];?></h4>
 					<p class="text-elip"><?=$prod[$detail];?></p>
-					<p><button type="button" class="btn btn-black btn-sm"><?=_ADD_TO_BAG;?></button></p>
+					<p><button type="button" class="btn btn-black btn-sm" name="btn-add-prod" id="prod<?=$prod["id"];?>"><?=_ADD_TO_BAG;?></button></p>
 				</div>
 				<!-- <div class="ratings">
 					<p class="pull-right">15 reviews</p>

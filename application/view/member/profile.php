@@ -49,9 +49,9 @@
 
 						?>
 						<tr>
-						  <td class="col-xs-1 text-center"><a href="<?=$_URL;?>/member/payment/<?=$idc;?>"><span class='glyphicon glyphicon-search'></a></td>
+						  <td class="col-xs-1 text-center"><a href="<?=$_URL;?>member/paymentbill/<?=$id_pay;?>" target="_blank"><span class='glyphicon glyphicon-search'></a></td>
 						  <td class="col-xs-6 text-left"><?=$id_pay;?></td>
-						  <td class="col-xs-2 text-left">฿ <?=number_format($cost);?></td>
+						  <td class="col-xs-2 text-left">฿ <?=number_format($cost, 2, '.', ',');?></td>
 						  <td class="col-xs-3 text-left"><?=$time;?></td>
 						</tr>
 						<?php

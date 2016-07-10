@@ -25,9 +25,18 @@ var ete = (function( $, dc, w ) {
 				self.init_editprofile();
 				self.init_proddetail();
 				self.init_payment();
+				self.init_contact();
 				
 				$('.carousel').bcSwipe({ threshold: 50 });
 
+
+				if( $("button[name=btn-add-prod]").length )
+				{
+					$("button[name=btn-add-prod]").click(function() {
+						
+						self.add_basket_sp(this.id);
+					});
+				}
 				//Function to animate slider captions 
 				function doAnimations(elems)
 				{
@@ -138,10 +147,6 @@ var ete = (function( $, dc, w ) {
 
 		init_editprofile : function()
 		{
-			var bar = $('.bar');
-			var percent = $('.percent');
-			var status = $('#status');
-
 			$('#edit-form').ajaxForm({
 				beforeSend: function() {
 					waitingDialog.show('Processing...', {dialogSize: 'sm', progressType: 'warning'});
@@ -150,7 +155,6 @@ var ete = (function( $, dc, w ) {
 					waitingDialog.hide();
 				},
 				complete: function(xhr) {
-					status.html(xhr.responseText);
 					
 					var res = $.parseJSON(xhr.responseText);
 
@@ -180,6 +184,26 @@ var ete = (function( $, dc, w ) {
 					self.add_basket();
 
 				});
+			}
+
+			if( $("#btn-chk-serial").length )
+			{
+				$("#btn-chk-serial").click(function(){
+
+					self.chk_serial( $("#input-serial").val(), $("#hidid").val() );
+
+				});
+				
+			}
+
+			if( $("#btn-chkall-serial").length )
+			{
+				$("#btn-chkall-serial").click(function(){
+
+					self.chk_serial_all( $("#input-serial").val() );
+
+				});
+				
 			}
 
 			if( $('.spinner .data-up').length && $('.spinner .data-dwn').length )
@@ -270,6 +294,52 @@ var ete = (function( $, dc, w ) {
 
 				});
 			}
+
+			if( $('#payment-form').length )
+			{
+				$('#payment-form').ajaxForm({
+					beforeSend: function() {
+						waitingDialog.show('Processing...', {dialogSize: 'sm', progressType: 'warning'});
+					},	
+					success: function() {
+						//waitingDialog.hide();
+					},
+					complete: function(xhr) {
+						
+						var res = $.parseJSON(xhr.responseText);
+
+						if( res.SUCCESS )
+						{
+							waitingDialog.show('Thank you For Payment', {dialogSize: 'sm', progressType: 'success'});
+							setTimeout(function(){
+
+								window.location = _URL + "member/profile";
+
+							}, 2000);
+						}
+						else
+						{
+							alert("cannot add payment");
+						}
+					}
+				}); 
+			}
+		},
+
+		init_contact : function()
+		{
+			var self = this;
+
+			if( $("#contact-form").length )
+			{
+				$("#contact-form").on("submit", function(e) {
+					
+					e.preventDefault();
+
+					self.add_custo_message();
+
+				});
+			}
 		},
 
 		do_login : function()
@@ -315,6 +385,76 @@ var ete = (function( $, dc, w ) {
 				else
 				{
 					alert("cannot process basket");
+				}
+
+			}, 'json');
+		},
+
+		add_basket_sp : function(id)
+		{
+			$.post(_URL+"products/ajax_addbasket", { "hidid" : id.replace("prod", ""), "input-qty" : 1, "color_code" : ''}, function(msg) {
+				
+				if( msg.SUCCESS )
+				{
+					window.location = _URL + "shipping/payment";
+				}
+				else
+				{
+					alert("cannot process basket");
+				}
+
+			}, 'json');	
+		},
+
+		add_custo_message : function()
+		{
+			$.post(_URL+"contact/ajax_addmessage", $("#contact-form").serialize(), function(msg) {
+				
+				if( msg.SUCCESS )
+				{
+					$("#contact-form")[0].reset();
+					waitingDialog.show('Thank you For Message', {dialogSize: 'sm', progressType: 'success'});
+					setTimeout(function(){
+
+						window.location = "";
+
+					}, 2000);
+				}
+				else
+				{
+					alert("cannot process contact");
+				}
+
+			}, 'json');	
+		},
+
+		chk_serial : function(data, id)
+		{
+			$.post(_URL+"products/ajax_chkserial", { pdata : data, pid : id }, function(msg) {
+				
+				if( msg.FAKE )
+				{
+					alert("Fake !!")
+				}
+				else
+				{
+					alert("Real !!")
+				}
+
+			}, 'json');
+		},
+
+		chk_serial_all : function(data)
+		{
+			$.post(_URL+"products/ajax_chkserial_all", { pdata : data }, function(msg) {
+				
+				if( msg.FAKE )
+				{
+					alert("Fake !!")
+				}
+				else
+				{
+					alert( "This is " + msg.PRODNAME )
 				}
 
 			}, 'json');

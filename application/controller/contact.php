@@ -23,4 +23,10 @@ class Contact extends Controller
         require APP . 'view/_templates/layout.php';
     }	
 
+    public function ajax_addmessage()
+    {
+        $contact = $this->model->addcontactmessage($_POST);   
+
+        echo json_encode($contact);
+    }
 }
