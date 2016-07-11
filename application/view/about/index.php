@@ -23,7 +23,7 @@
 		
 
 		<div class="txt-center">
-			<img class="img-responsive" src="<?=URL;?>img/white-logo.gif" style="width: 310px;margin: auto;">
+			<img class="img-responsive" src="<?=URL;?>img/logo.gif" style="max-width: 130px;margin: 20px auto;">
 		</div>
 		<?=$txtaboutus;?>
 

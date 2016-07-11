@@ -6,7 +6,7 @@
 <!-- Footer -->
 <footer class="footer footer-basic-centered">
 
-		<p class="footer-company-motto">Eityeight88</p>
+		<p class="footer-company-motto"><img alt="<?=$_URL;?>" class="logo" src="<?=URL;?>img/logo.gif" style="max-width:95px;"></p>
 		
 		<p class="footer-links">
 			<ul class="social-network social-circle ">
@@ -26,7 +26,7 @@
 		</p>
 
 		<p class="footer-company-name">
-			© <script>document.write(new Date().getFullYear())</script>, EITYEIGHT88. ALL RIGHTS RESERVED.
+			© <script>document.write(new Date().getFullYear())</script>, EITY EIGHT BY VER.88 ALL RIGHTS RESERVED.
 		</p>
 
 </footer><!--End footer 2-->

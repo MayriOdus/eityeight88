@@ -40,6 +40,7 @@ textarea {
 	width: 100%;
 	margin-right: 0px;
 	margin-left: 0px;
+	margin-top: 40px;
 }
 
 .qtrans_flag_en {
@@ -58,11 +59,11 @@ textarea {
 }
 .hoption {
 	margin: 0px;
-	padding: 0px;
-	float: right;
-	height: 13px;
-	margin-top: 15px;
-	list-style-type: none;
+    padding: 0px;
+    float: right;
+    height: 18px;
+    margin-top: 10px;
+    list-style-type: none;
 }
 .hoption li {
 	font-size: 10px;
@@ -84,6 +85,7 @@ ul.hoption li a:not(:last-child){
 	margin-right: 14px;
 }
 ul.hoption li a{
+	color:#fff;
 	float: left;
 }
 ul.hoption li a.hth {
@@ -96,21 +98,21 @@ ul.hoption li a.hsc {
 	padding: 0px;
 	float: left;
 	width: 100%;
-	margin-top: 73px;
+	margin-top: 20px;
 	margin-right: 0px;
-	margin-bottom: 0px;
+	margin-bottom: 20px;
 	margin-left: 0px;
-	height: 19px;
 	font-family: 'Oswald', sans-serif;
 	font-weight: lighter;
 }
 .menu {
 	font-size: 19px;
 	line-height: 19px;
+	float: none;
+    display: inline-block;
 	text-transform: uppercase;
 	margin: 0px;
 	padding: 0px;
-	float: left;
 	height: 19px;
 	list-style-type: none;
 }
@@ -120,7 +122,7 @@ ul.hoption li a.hsc {
 		padding: 0px;
 		float: left;
 		height: 19px;
-		margin: 0px 18px 0px 0px;
+		margin: 5px 50px 5px 0px;
 		position: relative;
 	}
 
@@ -130,7 +132,6 @@ ul.hoption li a.hsc {
 
 	.logo {
 		padding: 0px;
-		float: left;
 		margin-bottom: 0px;
 	}
 
@@ -148,6 +149,10 @@ ul.hoption li a.hsc {
 		margin: 15px 0px;
 		font-family: 'Oswald', sans-serif;
 		text-align: left;
+	}
+
+	ul.hoption li a{
+		color:#000;
 	}
 
 	.res-logo {
@@ -1406,4 +1411,16 @@ hr {
     text-overflow: ellipsis;
     display: block;
     white-space: nowrap;
+}
+
+.fix-top-hd {
+	background: #000;
+    position: fixed;
+    width: 100%;
+    padding: 0;
+    margin: 0px;
+	top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 40;
 }

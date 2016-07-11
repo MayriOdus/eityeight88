@@ -533,7 +533,7 @@ var lbd = {
 
             ul_content = '<ul class="nav navbar-nav">' + ul_content + '</ul>';
 
-            navbar_content = logo_content + ul_content;
+            navbar_content = '<div class="col-xs-12" style="text-align: center;margin-bottom: 15px;margin-top: 10px;">' + logo_content + '</div>' + ul_content;
             navbar_content = '<div class="sidebar-wrapper">' + navbar_content + '</div>';
 
             $off_canvas_sidebar.html(navbar_content);
