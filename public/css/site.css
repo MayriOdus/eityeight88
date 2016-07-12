@@ -112,12 +112,15 @@ ul.hoption li a.hsc {
     display: inline-block;
 	text-transform: uppercase;
 	margin: 0px;
-	padding: 0px;
+	padding-left: 55px;
 	height: 19px;
 	list-style-type: none;
 }
 
 @media (min-width: 992px) {
+
+	
+
 	.menu>li {
 		padding: 0px;
 		float: left;
@@ -142,6 +145,11 @@ ul.hoption li a.hsc {
 }
 
 @media (max-width: 991px) {
+
+	.menu {
+		padding: 0px;
+	}
+
  .menu>li {
 		padding: 0px;
 		display: block;

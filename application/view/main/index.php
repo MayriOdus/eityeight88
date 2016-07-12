@@ -8,19 +8,19 @@
 
 				<div class="item active">
 					<div class="embed-responsive embed-responsive-16by9">
-						<iframe class="embed-responsive-item" id="video1" src="//www.youtube.com/embed/V9G5vil03-s?playlist=V9G5vil03-s&enablejsapi=1"></iframe>
+						<iframe class="embed-responsive-item" id="video1" src="//www.youtube.com/embed/V9G5vil03-s?playlist=V9G5vil03-s&enablejsapi=1&rel=0"></iframe>
 					</div>
 				</div> 
 
 				<div class="item">
 					<div class="embed-responsive embed-responsive-16by9">
-						<iframe class="embed-responsive-item" id="video2" src="//www.youtube.com/embed/hcysusFTpdU?playlist=hcysusFTpdU&enablejsapi=1"></iframe>
+						<iframe class="embed-responsive-item" id="video2" src="//www.youtube.com/embed/hcysusFTpdU?playlist=hcysusFTpdU&enablejsapi=1&rel=0"></iframe>
 					</div>
 				</div>
 
 				<div class="item">
 					<div class="embed-responsive embed-responsive-16by9">
-						<iframe class="embed-responsive-item" id="video3" src="//www.youtube.com/embed/zHnTKKZu4sM?playlist=zHnTKKZu4sM&enablejsapi=1"></iframe>
+						<iframe class="embed-responsive-item" id="video3" src="//www.youtube.com/embed/zHnTKKZu4sM?playlist=zHnTKKZu4sM&enablejsapi=1&rel=0"></iframe>
 					</div>
 				</div>
 				<?php

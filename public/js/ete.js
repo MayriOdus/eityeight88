@@ -58,6 +58,7 @@ var ete = (function( $, dc, w ) {
 				var $myCarousel = $('#carousel-top'),
 					$firstAnimatingElems = $myCarousel.find('.item:first').find("[data-animation ^= 'animated']");
 
+
 				//Initialize carousel 
 				$myCarousel.carousel();
 
@@ -91,8 +92,8 @@ var ete = (function( $, dc, w ) {
 					lbd.initRightMenu();
 				}
 				
-				$("#carousel-top").css("height", $(".embed-responsive-item").eq(0).height());
-
+				//$("#carousel-top").css("height", $(".embed-responsive-item").eq(0).height());
+				$('#carousel-top').css("height", "439px");
 			});
 
 			// activate collapse right menu when the windows is resized
@@ -623,7 +624,8 @@ function onYouTubeIframeAPIReady() {
 			controls: 0,
 			showinfo: 0,
 			autohide: 1,
-			modestbranding: 1
+			modestbranding: 1,
+			rel: 0
 		},
 		events: {
 			'onReady': onPlayerReady/*,
