@@ -2,7 +2,7 @@
     <div class="col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3">
         <form action="p_login.php" method="post">
             <fieldset>
-                <p class="quark-font2 h2"><?=_FORGOT_PASSWORD;?></p>
+                <div class="h4 text-left text-uppercase"><?=_FORGOT_PASSWORD;?></div>
 
                 <!-- <hr class="colorgraph"> -->
                 <hr>

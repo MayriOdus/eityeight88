@@ -2,9 +2,11 @@
     <div class="col-xs-12 col-md-6  col-md-offset-3">
 
 		<form method="post" id="regis-form" name="regis-form">
-            <p class="h3 text-center"><?=_SIGNUP_FORM;?></p>
+
+            <div class="h4 text-left text-uppercase"><?=_SIGNUP_FORM;?></div>
+
             <hr>
-            <div class="row  margin-b">
+            <div class="row margin-b">
                 <div class="col-xs-12  col-md-12">
 					<div class="form-group">
 						<label><?=_EMAIL_ADDRESS;?></label><span id="userEmail-info" class="info"></span>

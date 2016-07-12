@@ -2,11 +2,11 @@
 
 <div class="row">
 	<div class="col-xs-12 col-sm-6">
-		<div class=" h1 quark-font1">CONTACT US</div>
+		<div class=" h3"><strong>CONTACT US</strong></div>
 
 		<div class="row">
             <div class=" col-sm-12 col-md-12">
-                <h2 class="quark-font1">88(THAILAND) CO.,LTD.</h2>
+                <h2 class="h4"><strong>88(THAILAND) CO.,LTD.</strong></h2>
             </div>
         </div>
 

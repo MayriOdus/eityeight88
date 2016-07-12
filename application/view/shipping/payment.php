@@ -111,10 +111,10 @@ $name = ($_SESSION["Lang"] == "en")? "name_eng" : "name_th";
 
 
 
-
+<br>
 <div class="row maring-wishlist">
     <div class="col-md-10 col-md-offset-1">
-        <p class="h1 quark-font1"><?=_TRANSFER_PAYMENT;?></p>
+        <p class="h4 text-uppercase"><?=_TRANSFER_PAYMENT;?></p>
         #<?=_ID_PAYMENT;?> :<?=$paymentId;?>
         <form id="payment-form" name="payment-form" action="<?=URL;?>shipping/add_payment" method="POST" enctype="multipart/form-data">
 

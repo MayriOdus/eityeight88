@@ -92,8 +92,8 @@ var ete = (function( $, dc, w ) {
 					lbd.initRightMenu();
 				}
 				
-				//$("#carousel-top").css("height", $(".embed-responsive-item").eq(0).height());
-				$('#carousel-top').css("height", "439px");
+				$("#carousel-top").css("height", $(".embed-responsive-item").eq(0).height() + 12);
+				//$('#carousel-top').css("height", "439px");
 			});
 
 			// activate collapse right menu when the windows is resized

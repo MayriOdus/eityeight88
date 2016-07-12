@@ -19,11 +19,13 @@
 		<!-- edit column -->
 		<div class="col-md-8 col-sm-6 col-xs-12 personal-info ">
 			
-			<div class="col-xs-6 text-left">
-				<h1 class="quark-font1">Personal info</h1>
-			</div>
-			<div class="col-xs-6 text-right">
-				<h3 class="quark-font1" style="margin-top: 32px;"><a href="<?=$_URL;?>member/profile">Back to Profile</a></h3>
+			<div class="row">
+				<div class="col-xs-6 text-left">
+					<h1 class="h4 text-uppercase" style="margin-top: 30px;"><strong>Personal info</strong></h1>
+				</div>
+				<div class="col-xs-6 text-right">
+					<h3 class="h5 text-uppercase" style="margin-top: 32px;"><a href="<?=$_URL;?>member/profile"><strong>Back to Profile</strong></a></h3>
+				</div>
 			</div>
 			
 			<div class="row sep-line"></div>

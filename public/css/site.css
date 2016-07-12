@@ -3,11 +3,21 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
 @import url(/fonts/pslxChalindaCon.css);
 
+
+@font-face {
+	 font-family: 'JasmineUPC';
+	 src: url("/fonts/JasmineUPC.ttf");
+	 font-weight: normal;
+	 font-style: normal;
+}
+
+
 body {
 	margin: 0px;
 	color: #000;
 	background: #fff;
-	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-family: "Arial Narrow", "JasmineUPC", Arial, sans-serif;
+
 }
 
 img {
@@ -16,6 +26,7 @@ img {
 	border-bottom-style: none;
 	border-left-style: none;
 }
+
 a {
 	text-decoration: none;
 	color: #000;
@@ -66,7 +77,7 @@ textarea {
     list-style-type: none;
 }
 .hoption li {
-	font-size: 10px;
+	font-size: 13px;
 	line-height: 11px;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -79,21 +90,23 @@ textarea {
 	margin-left: 25px;
 }
 
-
-
 ul.hoption li a:not(:last-child){
 	margin-right: 14px;
 }
+
 ul.hoption li a{
 	color:#fff;
 	float: left;
 }
+
 ul.hoption li a.hth {
 /*	margin-right: 10px;*/
 }
+
 ul.hoption li a.hsc {
 /*	margin-right: 25px;*/
 }
+
 .hnavi {
 	padding: 0px;
 	float: left;
@@ -102,8 +115,8 @@ ul.hoption li a.hsc {
 	margin-right: 0px;
 	margin-bottom: 20px;
 	margin-left: 0px;
-	font-family: 'Oswald', sans-serif;
-	font-weight: lighter;
+	font-family: "Arial Narrow", "JasmineUPC", Arial, sans-serif;
+	font-weight: bold;
 }
 .menu {
 	font-size: 19px;
@@ -155,7 +168,8 @@ ul.hoption li a.hsc {
 		display: block;
 		position: relative;
 		margin: 15px 0px;
-		font-family: 'Oswald', sans-serif;
+		font-family: "Arial Narrow", "JasmineUPC", Arial, sans-serif;
+		font-weight: bold;
 		text-align: left;
 	}
 
@@ -181,7 +195,9 @@ ul.hoption li a.hsc {
 	}
 }
 
-
+.btn {
+	text-transform:uppercase;
+}
 
 .btn:hover, .btn:focus, .btn.focus, a:hover {
     color: #c7bdbd;
@@ -521,7 +537,7 @@ i.line-w {
 	color:#000000;	 
 	background-color: #FFFFFF;	
 	border :1px solid #000;
-	font-family:Arial;
+	font-family: "Arial Narrow", "JasmineUPC", Arial, sans-serif;
 	 
 }
  
@@ -565,24 +581,25 @@ i.line-w {
 }  
 
 
-.quark-font1{
-	 font-family: 'PSLxChalindaCon_Bold'; 
-    font-weight: normal;
-    font-style: normal;
+.quark-font1 {
+	font-family: 'PSLxChalindaCon_Bold'; 
+	font-weight: normal;
+	font-style: normal;
 	text-transform:uppercase;
+}
 
-}
-.quark-font2{
-	 font-family: 'PSLxChalindaCon';    
-    font-weight: normal;
-    font-style: normal;
+.quark-font2 {
+	font-family: 'PSLxChalindaCon';    
+	font-weight: normal;
+	font-style: normal;
 	text-transform:uppercase;
 }
-.best1{
-		 font-family: 'PSLxChalindaCon_Bold'; 
-    font-weight: normal;
-    font-style: normal;
-	}
+
+.best1 {
+	font-family: 'PSLxChalindaCon_Bold'; 
+	font-weight: normal;
+	font-style: normal;
+}
 
   
 /*Breadcrumbs v3
@@ -861,9 +878,6 @@ hr {
 .cartListInner .table-responsive .table tbody tr td,.orderBox .table-responsive .table tbody tr td {
     vertical-align: middle;
     text-transform: uppercase;
-    font-weight: 700;
-    border-bottom: 3px solid #f0f0f0;
-    border-top: none;
 }
 
 .cartListInner .table-responsive .table tbody tr td .close,.orderBox.myAddress .table-responsive .table tbody tr td .close {

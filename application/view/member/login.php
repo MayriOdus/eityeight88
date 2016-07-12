@@ -2,8 +2,8 @@
     <div class="col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3">
         <form method="post" id="login-form" name="login-form">
             <fieldset>
-                <p class="quark-font2 h2"><?=_WELCOME_BACK;?> <?=_SIGN_IN_TO_ACCESS;?></p>
-                <p class="h3 quark-font1"><?=_PLEASE_SIGN_IN;?></p>
+                <p class="h4 text-uppercase"><?=_WELCOME_BACK;?> <?=_SIGN_IN_TO_ACCESS;?></p>
+                <p class="h5 text-uppercase"><?=_PLEASE_SIGN_IN;?></p>
 
                 <!-- <hr class="colorgraph"> -->
                 <hr>
