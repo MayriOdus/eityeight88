@@ -64,6 +64,10 @@
 <div class="row">
 	
 	<div class="col-md-8 col-md-offset-2 nopadd">
+
+		<div class="col-xs-6 col-sm-3 col-md-3 small-bx">
+			<a href="<?=$_URL;?>products"><img src="<?=URL;?>img/AW-88-Button-Wed-04.gif" class="img-list"></a>
+		</div>
 		<div class="col-xs-6 col-sm-3 col-md-3 small-bx">
 			<a href="<?=$_URL;?>products"><img src="<?=URL;?>img/AW-88-Button-Wed-01.gif" class="img-list"></a>
 		</div>
@@ -73,9 +77,7 @@
 		<div class="col-xs-6 col-sm-3 col-md-3 small-bx">
 			<a href="<?=$_URL;?>products"><img src="<?=URL;?>img/AW-88-Button-Wed-03.gif" class="img-list"></a>
 		</div>
-		<div class="col-xs-6 col-sm-3 col-md-3 small-bx">
-			<a href="<?=$_URL;?>products"><img src="<?=URL;?>img/AW-88-Button-Wed-04.gif" class="img-list"></a>
-		</div>
+		
 	</div>
 
 </div>

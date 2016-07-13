@@ -6,7 +6,7 @@
 <!-- Footer -->
 <footer class="footer footer-basic-centered">
 
-		<p class="footer-company-motto"><img alt="<?=$_URL;?>" class="logo" src="<?=URL;?>img/logo.gif" style="max-width:95px;"></p>
+		<!-- <p class="footer-company-motto"><img alt="<?=$_URL;?>" class="logo" src="<?=URL;?>img/logo.gif" style="max-width:95px;"></p> -->
 		
 		<p class="footer-links">
 			<ul class="social-network social-circle ">
