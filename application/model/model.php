@@ -17,7 +17,7 @@ class Model
 
 	public function getproducts()
 	{
-		$sql = " SELECT p.*, group_concat(u.file_name) as img_file FROM product p LEFT JOIN upload_data u ON p.code_product = u.prod_id WHERE p.shows = '1' GROUP BY p.id ";
+		$sql = " SELECT p.*, group_concat(u.file_name) as img_file FROM product p LEFT JOIN upload_data u ON p.code_product = u.prod_id WHERE p.shows = '1' GROUP BY p.id order by p.code_product ";
 		$query = $this->db->prepare($sql);
 
 		$query->execute();
