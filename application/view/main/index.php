@@ -100,9 +100,9 @@
 		<div class="col-sm-4 col-lg-3 col-md-4">
 			<div class="thumbnail">
 				<a href="<?=$_URL;?>products/product_detail/<?=$prod["code_product"];?>"><img src="<?=URL;?>images/upload/<?=$img[0];?>" alt=""></a>
-				<div class="caption text-center">
-					<h4><a href="<?=$_URL;?>products/product_detail/<?=$prod["code_product"];?>" class="text-elip"><?=$prod[$name];?></a></h4>
-					<h4><?=$prod["costs"];?></h4>
+				<div class="caption cap-prod text-center">
+					<a href="<?=$_URL;?>products/product_detail/<?=$prod["code_product"];?>" class="text-elip"><?=$prod[$name];?></a>
+					<?=$prod["costs"];?>
 					<p class="text-elip"><?=$prod[$detail];?></p>
 					<p><button type="button" class="btn btn-black btn-sm text-uppercase" name="btn-add-prod" id="prod<?=$prod["id"];?>"><?=_ADD_TO_BAG;?></button></p>
 				</div>

@@ -3,7 +3,7 @@
 
 	<!-- left column -->
 
-	<form class="form-horizontal" action="<?=URL;?>member/get_editprofile" method="POST" id="edit-form" name="edit-form" enctype="multipart/form-data">
+	<form class="form-horizontal sform" action="<?=URL;?>member/get_editprofile" method="POST" id="edit-form" name="edit-form" enctype="multipart/form-data">
 		
 		<input type="hidden" id="input-id" name="input-id" value="<?=$sid;?>" >
 		<input type="hidden" id="hidimg" name="hidimg" value="<?=$user["logos"];?>">
@@ -11,7 +11,7 @@
 		<div class="col-md-4 col-sm-6 col-xs-12">
 			<div class="text-center">
 				<img src="<?=$logos;?>" class="avatar img-thumbnail" alt="avatar">
-				<h6>Upload a different photo...</h6>
+				<h4>Upload a different photo...</h4>
 				<input type="file" name="input-mlogo[]" id="input-mlogo" class="text-center center-block well well-sm">
 			</div>
 		</div>
@@ -21,10 +21,10 @@
 			
 			<div class="row">
 				<div class="col-xs-6 text-left">
-					<h1 class="h4 text-uppercase" style="margin-top: 30px;"><strong>Personal info</strong></h1>
+					<h1 class="h3 text-uppercase" style="margin-top: 30px;"><strong>Personal info</strong></h1>
 				</div>
 				<div class="col-xs-6 text-right">
-					<h3 class="h5 text-uppercase" style="margin-top: 32px;"><a href="<?=$_URL;?>member/profile"><strong>Back to Profile</strong></a></h3>
+					<h3 class="h4 text-uppercase" style="margin-top: 32px;"><a href="<?=$_URL;?>member/profile"><strong>Back to Profile</strong></a></h3>
 				</div>
 			</div>
 			

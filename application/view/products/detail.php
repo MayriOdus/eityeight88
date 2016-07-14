@@ -9,7 +9,7 @@ $detail = ($_SESSION["Lang"] == "en")? "details" : "detail_th";
 
 <div class="row">
 
-	<form id="basket-form" name="basket-form">
+	<form id="basket-form" name="basket-form" class="sform">
 
 		<input type="hidden" name="hidid" id="hidid" value="<?=$product["id"];?>">
 		<div class="  col-sm-6 col-md-6 text-center">
@@ -62,10 +62,10 @@ $detail = ($_SESSION["Lang"] == "en")? "details" : "detail_th";
 		<div class="col-lg-6 col-md-6 col-sm-6">
 			<div class="well product-short-detail">
 				<div class="row">
-					<div class="the-list">
-						<h3 class="col-xs-12">
+					<div class="the-list prod_name">
+						<h1 class="col-xs-12">
 							<?=$product[$name];?>
-						</h3>
+						</h1>
 					</div>
 					<div class="the-list">
 						<h3 class="col-xs-12">
@@ -141,11 +141,10 @@ $detail = ($_SESSION["Lang"] == "en")? "details" : "detail_th";
 						</div>
 						<button type="submit" class="btn btn-white pull-left"><i class="fa fa-shopping-cart"></i> <?=_ADD_TO_BAG;?></button>
 					</div>
-					<br><br>
-					<hr>
 					<br>
+					<hr>
 					<div class="col-xs-12 input-qty-detail">
-						<div class="col-xs-4 col-md-offset-2" style="margin-top: 5px;"><?=_ENTER_SERIAL_NUMBER;?></div>
+						<div class="col-xs-4 col-md-offset-2"><?=_ENTER_SERIAL_NUMBER;?></div>
 						<div class="input-group col-xs-6 col-md-4">
 							<input type="text" class="form-control text-center" name="input-serial" id="input-serial">
 							<span class="input-group-btn data-up">

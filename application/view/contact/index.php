@@ -1,16 +1,16 @@
 
 
 <div class="row">
-	<div class="col-xs-12 col-sm-6">
-		<div class=" h3"><strong>CONTACT US</strong></div>
+	<div class="col-xs-12 col-sm-6 contact">
+		<div class="hd">CONTACT US</div>
 
 		<div class="row">
             <div class=" col-sm-12 col-md-12">
-                <h2 class="h4"><strong>88(THAILAND) CO.,LTD.</strong></h2>
+                <h2 class=""><strong>88(THAILAND) CO.,LTD.</strong></h2>
             </div>
         </div>
 
-        <div class="row ">
+        <div class="row">
             <div class=" col-sm-5 col-md-5 ">
                 <p><i class="fa fa-phone"></i>CALL CENTER 085-5516196</p>
             </div>
@@ -40,7 +40,7 @@
 
 	<div class="col-xs-12 col-sm-6">
 		<div>
-			<form id="contact-form" name="contact-form">
+			<form id="contact-form" name="contact-form" class="contact-form">
 				<div class="row">
 					<div class="col-md-12" style="fonts-size:24px;">
 						<div class="form-group ">

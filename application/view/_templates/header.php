@@ -58,7 +58,7 @@
 					<ul class="hoption">
 						
 						<li>
-							<ul class="qtrans_social_chooser" id="qtranslate-chooser">
+							<ul class="qtrans_social_chooser" id="qsocial-chooser">
 
 								<li class="active" style="border:none;">
 									<a href="https://www.facebook.com/ver.88officialThai?ref=bookmarks"  target="_blank" class="btn btn-social-icon btn-facebook">

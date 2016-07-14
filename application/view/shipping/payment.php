@@ -1,4 +1,4 @@
-<?php
+\<?php
 //$img = explode(",", str_replace(" ", "%20", $basket["img"]));
 $name = ($_SESSION["Lang"] == "en")? "name_eng" : "name_th";
 ?>
@@ -114,9 +114,11 @@ $name = ($_SESSION["Lang"] == "en")? "name_eng" : "name_th";
 <br>
 <div class="row maring-wishlist">
     <div class="col-md-10 col-md-offset-1">
-        <p class="h4 text-uppercase"><?=_TRANSFER_PAYMENT;?></p>
-        #<?=_ID_PAYMENT;?> :<?=$paymentId;?>
-        <form id="payment-form" name="payment-form" action="<?=URL;?>shipping/add_payment" method="POST" enctype="multipart/form-data">
+        
+        <form id="payment-form" name="payment-form" action="<?=URL;?>shipping/add_payment" method="POST" enctype="multipart/form-data" class="sform">
+
+            <p class="text-uppercase hd h3"><?=_TRANSFER_PAYMENT;?></p>
+            #<?=_ID_PAYMENT;?> :<?=$paymentId;?>
 
             <input name="input-idpost" id="input-idpost" type="hidden" class="form-control" value="<?=$paymentId;?>">
             <input name="input-val" id="input-val" type="hidden" class="form-control" value="<?=$totalval;?>">

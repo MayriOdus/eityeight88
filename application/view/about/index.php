@@ -19,12 +19,13 @@
 </div>
 
 <div class="row">
-	<div class="col-xs-12 h4">
+	<div class="col-xs-12 h3 txt-about">
 		
 
 		<div class="txt-center">
 			<img class="img-responsive" src="<?=URL;?>img/logo.gif" style="max-width: 130px;margin: 20px auto;">
 		</div>
+
 		<?=$txtaboutus;?>
 
 

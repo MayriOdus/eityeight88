@@ -1,23 +1,9 @@
 
-@import url(https://fonts.googleapis.com/css?family=Anton);
-@import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
-@import url(/fonts/pslxChalindaCon.css);
-
-
-@font-face {
-	 font-family: 'JasmineUPC';
-	 src: url("/fonts/JasmineUPC.ttf");
-	 font-weight: normal;
-	 font-style: normal;
-}
-
-
 body {
 	margin: 0px;
 	color: #000;
 	background: #fff;
-	font-family: "Arial Narrow", "JasmineUPC", Arial, sans-serif;
-
+	font-family: "DBHelvet-Li";
 }
 
 img {
@@ -39,19 +25,21 @@ a {
 textarea {
 	resize:none;
 }
+
 #wrapper {
 	width: 1050px;
 	margin: 0px auto;
 	padding: 0px;
 	float: none;
 }
+
 #header {
 	padding: 0px;
 	float: left;
 	width: 100%;
 	margin-right: 0px;
 	margin-left: 0px;
-	margin-top: 40px;
+	margin-top: 60px;
 }
 
 .qtrans_flag_en {
@@ -62,12 +50,12 @@ textarea {
     background: url(/img/th.png) no-repeat;
 }
 
-
 .hright {
 	margin: 0px;
 	padding: 0px;
 	float: left;
 }
+
 .hoption {
 	margin: 0px;
     padding: 0px;
@@ -76,10 +64,10 @@ textarea {
     margin-top: 10px;
     list-style-type: none;
 }
+
 .hoption li {
-	font-size: 13px;
+	font-size: 16px;
 	line-height: 11px;
-	font-weight: bold;
 	text-transform: uppercase;
 	padding: 0px;
 	float: left;
@@ -115,11 +103,12 @@ ul.hoption li a.hsc {
 	margin-right: 0px;
 	margin-bottom: 20px;
 	margin-left: 0px;
-	font-family: "Arial Narrow", "JasmineUPC", Arial, sans-serif;
-	font-weight: bold;
+	font-family: "DBHelvet-Li";
+	font-size:23px;
 }
+
 .menu {
-	font-size: 19px;
+	font-size: 23px;
 	line-height: 19px;
 	float: none;
     display: inline-block;
@@ -131,8 +120,6 @@ ul.hoption li a.hsc {
 }
 
 @media (min-width: 992px) {
-
-	
 
 	.menu>li {
 		padding: 0px;
@@ -163,18 +150,22 @@ ul.hoption li a.hsc {
 		padding: 0px;
 	}
 
- .menu>li {
+ 	.menu>li {
 		padding: 0px;
 		display: block;
 		position: relative;
 		margin: 15px 0px;
-		font-family: "Arial Narrow", "JasmineUPC", Arial, sans-serif;
-		font-weight: bold;
+		font-family: "DBHelvet-Li";
 		text-align: left;
+	}
+
+	.qtrans_flag_and_text {
+		font-size: 33px;
 	}
 
 	ul.hoption li a{
 		color:#000;
+		font-size: 20px;
 	}
 
 	.res-logo {
@@ -195,8 +186,21 @@ ul.hoption li a.hsc {
 	}
 }
 
+.cap-prod {
+	font-size: 20px;
+	font-family: "DBHelvet";
+}
+
+.cap-prod a {
+	font-size: 20px;
+	font-family: "DBHelvet-Md";
+}
+
 .btn {
 	text-transform:uppercase;
+	font-size: 20px;
+    font-family: "DBHelvet-Md";
+	padding: 0px 10px;
 }
 
 .btn:hover, .btn:focus, .btn.focus, a:hover {
@@ -263,6 +267,10 @@ ul.hoption li a.hsc {
 
 #qtranslate-chooser li span{
 	margin: 20px;
+}
+
+.qtrans_social_chooser {
+	margin-top: 5px;
 }
 
 .qtrans_widget_end{
@@ -497,8 +505,7 @@ i.line-w {
     box-sizing: border-box;
     width: 100%;
     text-align: center;
-    font: normal 18px sans-serif;
-    padding: 45px;
+    font: normal 18px DBHelvet-Md;
     margin-top: 10px;
 }
 
@@ -516,7 +523,8 @@ i.line-w {
 }
 
 .footer-basic-centered .footer-company-name {
-    font-size: 14px;
+    font-size: 24px;
+    padding-bottom: 15px;
     margin: 0;
 }
 
@@ -533,12 +541,9 @@ i.line-w {
 }
 
 .btn-white  {
-	 
 	color:#000000;	 
 	background-color: #FFFFFF;	
 	border :1px solid #000;
-	font-family: "Arial Narrow", "JasmineUPC", Arial, sans-serif;
-	 
 }
  
 .btn-white:hover, .btn-white:focus, .btn-white:active, .btn-white.active, .open .dropdown-toggle.btn-white {
@@ -547,12 +552,21 @@ i.line-w {
 	 
 }
 
+.sform {
+	font-size: 20px;
+}
+
+.sform .hd {
+	font-family: "DBHelvet";
+}
+
 .form-control {
     display: block;
     width: 100%;
     height: 34px;
     padding: 6px 12px;
-    font-size: 14px;
+    font-size: 18px;
+    font-family: "DBHelvet";
     line-height: 1.42857;
     color: #555;
     background-color: #FFF;
@@ -837,6 +851,26 @@ hr {
 }
 
 
+.table {
+	font-size: 20px;
+}
+
+.totalAmountArea {
+	font-size: 20px;
+}
+
+.prod_name {
+	font-family: "DBHelvet-Md";
+	font-size: 25px;
+}
+
+.spinner input {
+	height: 30px;
+}
+
+.input-qty-detail input {
+	height: 30px;
+}
 
 .cartListInner .updateArea .input-group .form-control,.cartListInner .updateArea .input-group .input-group-addon,.cartListInner .updateArea .btn {
     border-radius: 0;
@@ -868,7 +902,7 @@ hr {
     height: 40px;
     vertical-align: middle;
     text-align: left;
-    font-size: 15px;
+    font-size: 20px;
     color: #ffffff;
     padding-left: 20px;
     border-right: 1px solid rgba(255,255,255,0.2);
@@ -1411,7 +1445,7 @@ hr {
 
 .card.hovercard .info .desc {
     overflow: hidden;
-    font-size: 12px;
+    font-size: 20px;
     line-height: 20px;
     color: #737373;
     text-overflow: ellipsis;
@@ -1446,3 +1480,73 @@ hr {
     right: 0px;
     z-index: 40;
 }
+
+.txt-about {
+	font-size: 20px;
+}
+
+.contact {
+	font-family: "DBHelvet";
+	font-size: 20px;
+}
+
+.contact .hd {
+	font-family: "DBHelvet-Md";
+	font-size: 45px;
+}
+
+.contact-form {
+	font-family: "DBHelvet-Li";
+	font-size: 20px;
+}
+
+
+@font-face {
+    font-family: DBHelvet-Blk;
+    src: url(/fonts/DBHeaventv3.201/DB_Heavent_Condensed/DB_Heavent_Blk_Cond_v3.2.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: DBHelvet-Bd;
+    src: url(/fonts/DBHeaventv3.201/DB_Heavent_Condensed/DB_Heavent_Bd_Cond_v3.2.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: DBHelvet-Md;
+    src: url(/fonts/DBHeaventv3.201/DB_Heavent_Condensed/DB_Heavent_Med_Cond_v3.2.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: DBHelvet;
+    src: url(/fonts/DBHeaventv3.201/DB_Heavent_Condensed/DB_Heavent_Cond_v3.2.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: DBHelvet-Li;
+    src: url(/fonts/DBHeaventv3.201/DB_Heavent_Condensed/DB_Heavent_Li_Cond_v3.2.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: DBHelvet-Th;
+    src: url(/fonts/DBHeaventv3.201/DB_Heavent_Condensed/DB_Heavent_Thin_Cond_v3.2.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: DBHelvet-UlLi;
+    src: url(/fonts/DBHeaventv3.201/DB_Heavent_Condensed/DB_Heavent_UlLi_Cond_v3.2.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+

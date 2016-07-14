@@ -1,9 +1,9 @@
 <div class="row item-product-margin">
     <div class="col-xs-12 col-md-6  col-md-offset-3">
 
-		<form method="post" id="regis-form" name="regis-form">
+		<form method="post" id="regis-form" name="regis-form" class="sform">
 
-            <div class="h4 text-left text-uppercase"><?=_SIGNUP_FORM;?></div>
+            <div class="text-left text-uppercase hd h3"><?=_SIGNUP_FORM;?></div>
 
             <hr>
             <div class="row margin-b">

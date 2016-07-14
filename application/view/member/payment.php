@@ -10,23 +10,23 @@
 				</div>
 			</div>
 			<div class="col-sm-10 col-md-10">
-				<h1 class="quark-font1">88(THAILAND) CO.,LTD.</h1>
-				<h3><p class="quark-font2">795 Folsom Ave, Suite 600 San Francisco, CA 94107<br/>Mon-Fri 10.00 am – 6.00 pm / Lunch Hours 12.00 pm – 1.00 pm<br/>Closed on Sat, Sun and Holidays&nbsp;(Thailand Standard Time)</p></h3>
+				<h1 class=""><strong>88(THAILAND) CO.,LTD.</strong></h1>
+				<h3><p class="">795 Folsom Ave, Suite 600 San Francisco, CA 94107<br/>Mon-Fri 10.00 am – 6.00 pm / Lunch Hours 12.00 pm – 1.00 pm<br/>Closed on Sat, Sun and Holidays&nbsp;(Thailand Standard Time)</p></h3>
 			</div>
 		</div>
 		<br/>
 
-		<p class='h2 quark-font1'>Payment Bill</p>
+		<p class='h2'><strong>Payment Bill</strong></p>
 
 		<div class="table-responsive">
 			<table class="table">
 				<thead>
 					<tr>
-						<th class="h3 quark-font1">Code Payment</th>
-						<th class="h3 quark-font1">Code Product</th>
-						<th class="h3 quark-font1">Color</th>
-						<th class="h3 quark-font1">QTY</th>
-						<th class="h3 quark-font1">Sale</th>
+						<th class="h3 prod_name">Code Payment</th>
+						<th class="h3 prod_name">Code Product</th>
+						<th class="h3 prod_name">Color</th>
+						<th class="h3 prod_name">QTY</th>
+						<th class="h3 prod_name">Sale</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -101,7 +101,7 @@
 	</div>
 
 	<div class="col-md-12">
-		<a href="#" onclick="window.print();"><span class="glyphicon glyphicon-print"></span>&nbsp;print</a>
+		<h3><a href="#" onclick="window.print();"><span class="glyphicon glyphicon-print"></span>&nbsp;Print</a></h3>
 	</div>
 
 </div> <!-- right -->
