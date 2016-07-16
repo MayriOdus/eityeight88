@@ -3,7 +3,7 @@ body {
 	margin: 0px;
 	color: #000;
 	background: #fff;
-	font-family: "DBHelvet-Li";
+	font-family: "DBHelvetEXT-Li";
 }
 
 img {
@@ -139,7 +139,7 @@ ul.hoption li a.hsc {
 	}
 
 	#Layer_1 {
-		width: 15px; 
+		width: 18px;
 		margin-top: 2px;
 	}
 }
@@ -155,13 +155,11 @@ ul.hoption li a.hsc {
 		display: block;
 		position: relative;
 		margin: 15px 0px;
-		font-family: "DBHelvet-Li";
+		font-family: "DBHelvetEXT-Li";
 		text-align: left;
 	}
 
-	.qtrans_flag_and_text {
-		font-size: 33px;
-	}
+
 
 	ul.hoption li a{
 		color:#000;
@@ -181,7 +179,7 @@ ul.hoption li a.hsc {
 	}
 
 	#Layer_1 {
-		width: 16px; 
+		width: 18px; 
 		margin-top: 2px;
 	}
 }
@@ -505,7 +503,7 @@ i.line-w {
     box-sizing: border-box;
     width: 100%;
     text-align: center;
-    font: normal 18px DBHelvet-Md;
+    font: DBHelvet;
     margin-top: 10px;
 }
 
@@ -523,8 +521,9 @@ i.line-w {
 }
 
 .footer-basic-centered .footer-company-name {
-    font-size: 24px;
+    font-size: 20px;
     padding-bottom: 15px;
+    font: normal 18px DBHelvet;
     margin: 0;
 }
 
@@ -566,7 +565,7 @@ i.line-w {
     height: 34px;
     padding: 6px 12px;
     font-size: 18px;
-    font-family: "DBHelvet";
+    font-family: "DBHelvetEXT-Li";
     line-height: 1.42857;
     color: #555;
     background-color: #FFF;
@@ -1496,10 +1495,36 @@ hr {
 }
 
 .contact-form {
-	font-family: "DBHelvet-Li";
+	font-family: "DBHelvetEXT-Li";
 	font-size: 20px;
 }
 
+.securitycode {
+	background: #eee;
+	font-weight: bold;
+}
+
+.padd8 {
+    padding: 0px 8px;
+}
+
+.prod-price {
+	margin-top: 10px;
+}
+
+.mocking {
+	background: #73CCBA;
+	height: 100%;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.res-language a {
+	height: 12px;
+	width: 18px;
+	display: block;
+}
 
 @font-face {
     font-family: DBHelvet-Blk;
@@ -1546,6 +1571,20 @@ hr {
 @font-face {
     font-family: DBHelvet-UlLi;
     src: url(/fonts/DBHeaventv3.201/DB_Heavent_Condensed/DB_Heavent_UlLi_Cond_v3.2.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: DBHelvetORI-Li;
+    src: url(/fonts/DBHeaventv3.201/DB_Heavent_Original/DB_Heavent_Li_v3.2.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: DBHelvetEXT-Li;
+    src: url(/fonts/DBHeaventv3.201/DB_Heavent_Extended/DB_Heavent_Li_Ext_v3.2.ttf) format('truetype');
     font-weight: 400;
     font-style: normal
 }

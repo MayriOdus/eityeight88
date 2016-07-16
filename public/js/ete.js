@@ -93,6 +93,7 @@ var ete = (function( $, dc, w ) {
 				}
 				
 				$("#carousel-top").css("height", $(".embed-responsive-item").eq(0).height() + 12);
+				$("#mocking").height( $(".prod-bx").eq(0).height() );
 				//$('#carousel-top').css("height", "439px");
 			});
 
@@ -107,6 +108,8 @@ var ete = (function( $, dc, w ) {
 					$("#full-tital").show();
 				}
 
+
+				$("#mocking").height( $(".prod-bx").eq(0).height() );
 				//$("#carousel-top").css("height", $(".embed-responsive-item").eq(0).height());
 
 			});
@@ -520,17 +523,20 @@ var lbd = {
                 ul_content = ul_content + content_buff;
             });
 
-			ul_content = "<div style='margin:15px 0 40px 0;'>" + ul_content + "</div>";
+			ul_content = "<div class='row'>" + ul_content + "</div>";
 
+			content_buff = '';
             $off_canvas_sidebar.find(".qtrans_language_chooser a").each(function ()
             {
-                content_buff = "<div class='col-xs-2 col-sm-2' style='font-size: 20px;margin-top:10px;'>" + $(this)[0].outerHTML + "</div>";
-                ul_content = ul_content + content_buff.replace(/(<span>).*(<\/span>)/i,"&nbsp;&nbsp;&nbsp;");
+                content_buff += ("<div class='col-xs-2 col-sm-2 res-language' style='font-size: 20px;margin-top:10px;'>" + $(this)[0].outerHTML + "</div>").replace(/(<span>).*(<\/span>)/i,"&nbsp;&nbsp;&nbsp;");
+                //ul_content = ul_content + content_buff.replace(/(<span>).*(<\/span>)/i,"&nbsp;&nbsp;&nbsp;");
             });
+
+            ul_content += "<div class='row'>" + content_buff + "</div>";
 
             // add the content from the sidebar to the right menu
             content_buff = $sidebar.find('.nav').html();
-            ul_content = ul_content + '<li class="divider"></li>' + content_buff;
+            ul_content = ul_content  + content_buff;
 
             ul_content = '<ul class="nav navbar-nav">' + ul_content + '</ul>';
 

@@ -28,7 +28,7 @@
         <div class="row ">
             <div class=" col-sm-12 col-md-12 ">
                 <p>OFFICIAL LINE ACCOUNT</p>
-                <div>LINE ID: <a href="http://line.me/ti/p/@eityeight88"><span class="helvethaica_xcond_med">eityeight88</span></a></div>
+                <div>LINE ID: <a href="http://line.me/ti/p/@VER.88OFFICIAL"><span class="helvethaica_xcond_med">eityeight88</span></a></div>
             </div>
         </div>
         <div class="row ">

@@ -64,7 +64,8 @@
 									<a href="https://www.facebook.com/ver.88officialThai?ref=bookmarks"  target="_blank" class="btn btn-social-icon btn-facebook">
 										<i class="fa fa-facebook"></i>
 									</a>
-									<a href="#" data-toggle="modal" data-target=".soci-line" class="btn btn-social-icon btn-twitter">
+									<!-- <a href="#" data-toggle="modal" data-target=".soci-line" class="btn btn-social-icon btn-twitter"> -->
+									<a href="http://line.me/ti/p/@VER.88OFFICIAL" target="_blank" class="btn btn-social-icon" title="Line">
 										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 377.764 377.764" enable-background="new 0 0 377.764 377.764" xml:space="preserve">
 										  <path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M77.315 0h223.133c42.523 0 77.315 34.792 77.315 77.315v223.133c0 42.523-34.792 77.315-77.315 77.315H77.315C34.792 377.764 0 342.972 0 300.448V77.315C0 34.792 34.792 0 77.315 0z"/>
 										  <path fill-rule="evenodd" clip-rule="evenodd" fill="#000" d="M188.515 62.576c76.543 0 138.593 49.687 138.593 110.979 0 21.409-7.576 41.398-20.691 58.351 -0.649 0.965-1.497 2.031-2.566 3.209l-0.081 0.088c-4.48 5.36-9.525 10.392-15.072 15.037 -38.326 35.425-101.41 77.601-109.736 71.094 -7.238-5.656 11.921-33.321-10.183-37.925 -1.542-0.177-3.08-0.367-4.605-0.583l-0.029-0.002v-0.002c-64.921-9.223-114.222-54.634-114.222-109.267C49.921 112.263 111.972 62.576 188.515 62.576z"/>
@@ -141,7 +142,7 @@
 								</li>
 								<li class="cat-item"><a href="<?=$_URL;?>contact" title="<?=_CONTACT_US;?>"><?=_CONTACT_US;?></a>
 								</li>
-								<li class="cat-item cat-item-26 text-center"><a href="<?=$_URL;?>products/checkserial" title="<?=_SECURITY_CODE_CHECKING;?>"><?=_SECURITY_CODE_CHECKING;?></a>
+								<li class="cat-item cat-item-26 text-center securitycode"><a href="<?=$_URL;?>products/checkserial" title="<?=_SECURITY_CODE_CHECKING;?>"><?=_SECURITY_CODE_CHECKING;?></a>
 								</li>
 							</ul>
 
