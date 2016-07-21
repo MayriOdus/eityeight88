@@ -34,7 +34,7 @@ var ete = (function( $, dc, w ) {
 				{
 					$("button[name=btn-add-prod]").click(function() {
 						
-						self.add_basket_sp(this.id);
+						//self.add_basket_sp(this.id);
 					});
 				}
 				//Function to animate slider captions 
@@ -185,7 +185,7 @@ var ete = (function( $, dc, w ) {
 					
 					e.preventDefault();
 
-					self.add_basket();
+					//self.add_basket();
 
 				});
 			}

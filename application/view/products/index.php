@@ -7,14 +7,14 @@
 		$img = explode(",", str_replace(" ", "%20", $prod["img_file"]));
 
 		?>
-		<div class="col-sm-4 col-lg-3 col-md-4">
+		<div class="col-sm-4 col-lg-4 col-md-4 prod-bx">
 			<div class="thumbnail">
 				<a href="<?=$_URL;?>products/product_detail/<?=$prod["code_product"];?>"><img src="<?=URL;?>images/upload/<?=$img[0];?>" alt=""></a>
 				<div class="caption cap-prod text-center">
 					<a href="<?=$_URL;?>products/product_detail/<?=$prod["code_product"];?>" class="text-elip"><?=$prod[$name];?></a>
-					<h2 class="prod-price"><?=$prod["costs"];?></h2>
-					
-					<p><button type="button" class="btn btn-black btn-sm text-uppercase" name="btn-add-prod" id="prod<?=$prod["id"];?>"><?=_ADD_TO_BAG;?></button></p>
+					<div class="d-read-more">
+					<a href="<?=$_URL;?>products/product_detail/<?=$prod["code_product"];?>"><button type="button" class="btn btn-black btn-sm text-uppercase btn-read-more" name="btn-add-prod" id="prod<?=$prod["id"];?>"><?=_READ_MORE;?></button>
+					</div></a>
 				</div>
 				<!-- <div class="ratings">
 					<p class="pull-right">15 reviews</p>
@@ -31,6 +31,8 @@
 		<?php
 	}
 	?>
+
+	<div class="col-sm-4 col-lg-4 col-md-4 mocking" id="mocking"></div>
 	<!--
 	<div class="col-sm-4 col-lg-3 col-md-4">
 		<div class="thumbnail">

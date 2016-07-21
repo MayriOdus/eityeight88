@@ -3,7 +3,7 @@ body {
 	margin: 0px;
 	color: #000;
 	background: #fff;
-	font-family: "DBHelvetEXT-Li";
+	font-family: "DBHelvetEXT-Li", "DBHelvetORI-Li";
 }
 
 img {
@@ -61,7 +61,8 @@ textarea {
     padding: 0px;
     float: right;
     height: 18px;
-    margin-top: 10px;
+	position: relative;
+    margin: 15px;
     list-style-type: none;
 }
 
@@ -103,7 +104,7 @@ ul.hoption li a.hsc {
 	margin-right: 0px;
 	margin-bottom: 20px;
 	margin-left: 0px;
-	font-family: "DBHelvet-Li";
+	font-family: "DBHelvet-Li", "DBHelvetORITH-Li";
 	font-size:23px;
 }
 
@@ -190,19 +191,29 @@ ul.hoption li a.hsc {
 }
 
 .cap-prod a {
-	font-size: 20px;
-	font-family: "DBHelvet-Md";
+	font-size: 25px;
+    font-family: "DBHelvet-Li";
 }
 
 .btn {
 	text-transform:uppercase;
 	font-size: 20px;
-    font-family: "DBHelvet-Md";
+    font-family: "DBHelvet";
 	padding: 0px 10px;
+	border-radius: 0px;
+}
+
+.big-btn {
+	font-size: 21px;
+	padding: 4px 40px;
+}
+
+.d-read-more {
+	padding-top: 25px;
 }
 
 .btn:hover, .btn:focus, .btn.focus, a:hover {
-    color: #c7bdbd;
+    color: #ec4a2c;
 }
 
 .menu>li a{
@@ -563,18 +574,28 @@ i.line-w {
     display: block;
     width: 100%;
     height: 34px;
-    padding: 6px 12px;
-    font-size: 18px;
-    font-family: "DBHelvetEXT-Li";
+    padding: 0px;
+    font-size: 1.1em;
+    font-family: "DBHelvetORI-Li";
     line-height: 1.42857;
-    color: #555;
+    color: #000;
     background-color: #FFF;
     background-image: none;
-    border: 1px solid #000;
-    border-radius:0px;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+
+	outline: none;
+	border: none !important;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+
 }
+
+.form-group {
+    border-bottom: 1px solid #000;
+    padding: 0.8em 0 0 0;
+}
+
 .form-control:focus {
     border-color: #CCC;
     outline: 0px none;
@@ -1478,6 +1499,20 @@ hr {
     left: 0px;
     right: 0px;
     z-index: 40;
+    height: 40px;
+    font-size: 17px;
+    font-family: "DBHelvetORI-Md";
+}
+
+.contact-info {
+	padding-top: 18px;
+	font-size: 22px;
+	font-family: "DBHelvetORI-Li";
+}
+
+.contact-icon {
+	color:#aaa;
+	font-size: 37px;
 }
 
 .txt-about {
@@ -1487,6 +1522,11 @@ hr {
 .contact {
 	font-family: "DBHelvet";
 	font-size: 20px;
+}
+
+.contact h2 {
+	font-family: "DBHelvetORI-Li";
+	font-size: 22px;
 }
 
 .contact .hd {
@@ -1583,9 +1623,75 @@ hr {
 }
 
 @font-face {
+    font-family: DBHelvetORITH-Li;
+    src: url(/fonts/DBHeaventv3.201/DB_Heavent_Original/DB_Heavent_Li_v3.2.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    unicode-range: U+0E00–U+0E7F;
+}
+
+@font-face {
+    font-family: DBHelvetORI-Md;
+    src: url(/fonts/DBHeaventv3.201/DB_Heavent_Original/DB_Heavent_Med_v3.2.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: DBHelvetEXT-Blk;
+    src: url(/fonts/DBHeaventv3.201/DB_Heavent_Extended/DB_Heavent_Blk_Ext_v3.2.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: DBHelvetEXT-Bd;
+    src: url(/fonts/DBHeaventv3.201/DB_Heavent_Extended/DB_Heavent_Bd_Ext_v3.2.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: DBHelvetEXT-Md;
+    src: url(/fonts/DBHeaventv3.201/DB_Heavent_Extended/DB_Heavent_Med_Ext_v3.2.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: DBHelvetEXT;
+    src: url(/fonts/DBHeaventv3.201/DB_Heavent_Extended/DB_Heavent_Ext_v3.2.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
     font-family: DBHelvetEXT-Li;
     src: url(/fonts/DBHeaventv3.201/DB_Heavent_Extended/DB_Heavent_Li_Ext_v3.2.ttf) format('truetype');
     font-weight: 400;
     font-style: normal
 }
+
+@font-face {
+    font-family: DBHelvetEXT-Th;
+    src: url(/fonts/DBHeaventv3.201/DB_Heavent_Extended/DB_Heavent_Thin_Ext_v3.2.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: DBHelvetEXT-UlLi;
+    src: url(/fonts/DBHeaventv3.201/DB_Heavent_Extended/DB_Heavent_UlLi_Ext_v3.2.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: DBHelvetROU-Md;
+    src: url(/fonts/DBHeaventv3.201/DB_Heavent_Extended/DB_HeaventRounded_Med_v3.2.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+
 

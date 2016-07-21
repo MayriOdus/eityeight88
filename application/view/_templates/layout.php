@@ -13,6 +13,14 @@
 
 	<title><?=SITE_TITLE;?></title>
 
+	<link href="<?=URL;?>img/logo.gif" rel="apple-touch-icon" />
+	<link href="<?=URL;?>img/logo.gif" rel="apple-touch-icon" sizes="76x76" />
+	<link href="<?=URL;?>img/logo.gif" rel="apple-touch-icon" sizes="120x120" />
+	<link href="<?=URL;?>img/logo.gif" rel="apple-touch-icon" sizes="152x152" />
+	<link href="<?=URL;?>img/logo.gif" rel="apple-touch-icon" sizes="180x180" />
+	<link href="<?=URL;?>img/logo.gif" rel="icon" sizes="192x192" />
+	<link href="<?=URL;?>img/logo.gif" rel="icon" sizes="128x128" />
+
 	<?php require APP . 'view/_templates/style.php'; ?>
 
 </head>

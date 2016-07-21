@@ -102,9 +102,13 @@
 				<a href="<?=$_URL;?>products/product_detail/<?=$prod["code_product"];?>"><img src="<?=URL;?>images/upload/<?=$img[0];?>" alt=""></a>
 				<div class="caption cap-prod text-center">
 					<a href="<?=$_URL;?>products/product_detail/<?=$prod["code_product"];?>" class="text-elip"><?=$prod[$name];?></a>
-					<h2 class="prod-price"><?=$prod["costs"];?></h2>
-					
-					<p><button type="button" class="btn btn-black btn-sm text-uppercase" name="btn-add-prod" id="prod<?=$prod["id"];?>"><?=_ADD_TO_BAG;?></button></p>
+					<div class="d-read-more">
+					<a href="<?=$_URL;?>products/product_detail/<?=$prod["code_product"];?>">
+						<button type="button" class="btn btn-black btn-sm text-uppercase btn-read-more" name="btn-add-prod" id="prod<?=$prod["id"];?>">
+							<?=_READ_MORE;?>
+						</button>
+					</a>
+					</div>
 				</div>
 				<!-- <div class="ratings">
 					<p class="pull-right">15 reviews</p>

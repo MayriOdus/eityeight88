@@ -54,3 +54,6 @@ define("_PASSWORD", "รหัสผ่าน");
 define("_PLEASE_SIGN_IN", "กรุณา ลงชื่อ");
 define("_SIGNUP_FORM", "สมัครสมาชิก");
 define("_CREATE_ACCOUNT", "สร้างบัญชี");
+define("_READ_MORE", "ข้อมูลเพิ่มเติม");
+define("_CANCEL", "ยกเลิก");
+define("_ANY_QUESTION", "หากต้องการสอบถามข้อมูลเพิ่มเติม หรือมีข้อเสนอแนะใดๆ เพียงกรอกรายละเอียด หรือติดต่อผ่านช่องทางดังนี้");

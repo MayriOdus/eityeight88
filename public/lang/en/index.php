@@ -54,3 +54,6 @@ define("_PASSWORD", "Password");
 define("_PLEASE_SIGN_IN", "Please Sign In");
 define("_SIGNUP_FORM", "SignUp Form");
 define("_CREATE_ACCOUNT", "Create Account");
+define("_READ_MORE", "Read More");
+define("_CANCEL", "Cancel");
+define("_ANY_QUESTION", "Any extra informaiton request or suggestion, you can fill the details or contact via these provided");
