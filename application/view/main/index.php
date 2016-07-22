@@ -1,7 +1,7 @@
 
 	
 <div class="row">
-	<div class="col-md-8 col-md-offset-2">
+	<div class="col-md-10 col-md-offset-1">
 		<div id="carousel-top" class="carousel slide"  data-interval="15000">	
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner" role="listbox">            
@@ -63,18 +63,18 @@
 
 <div class="row">
 	
-	<div class="col-md-8 col-md-offset-2 nopadd">
+	<div class="col-md-10 col-md-offset-1 nopadd">
 
-		<div class="col-xs-6 col-sm-3 col-md-3 small-bx padd8">
+		<div class="col-xs-6 col-sm-3 col-md-3 small-bx padd16">
 			<a href="<?=$_URL;?>products"><img src="<?=URL;?>img/AW-88-Button-Wed-04.gif" class="img-list"></a>
 		</div>
-		<div class="col-xs-6 col-sm-3 col-md-3 small-bx padd8 ">
+		<div class="col-xs-6 col-sm-3 col-md-3 small-bx padd16 ">
 			<a href="<?=$_URL;?>products"><img src="<?=URL;?>img/AW-88-Button-Wed-01.gif" class="img-list"></a>
 		</div>
-		<div class="col-xs-6 col-sm-3 col-md-3 small-bx padd8">
+		<div class="col-xs-6 col-sm-3 col-md-3 small-bx padd16">
 			<a href="<?=$_URL;?>products"><img src="<?=URL;?>img/AW-88-Button-Wed-02.gif" class="img-list"></a>
 		</div>
-		<div class="col-xs-6 col-sm-3 col-md-3 small-bx padd8">
+		<div class="col-xs-6 col-sm-3 col-md-3 small-bx padd16">
 			<a href="<?=$_URL;?>products"><img src="<?=URL;?>img/AW-88-Button-Wed-03.gif" class="img-list"></a>
 		</div>
 		

@@ -57,3 +57,8 @@ define("_CREATE_ACCOUNT", "สร้างบัญชี");
 define("_READ_MORE", "ข้อมูลเพิ่มเติม");
 define("_CANCEL", "ยกเลิก");
 define("_ANY_QUESTION", "หากต้องการสอบถามข้อมูลเพิ่มเติม หรือมีข้อเสนอแนะใดๆ เพียงกรอกรายละเอียด หรือติดต่อผ่านช่องทางดังนี้");
+define("_COLOR", "");
+define("_SHADE_IS_AVAILABLE", "เฉดสีให้เลือก");
+define("_SPECIAL_FEATURES", "คุณสมบัติโดดเด่น");
+define("_HOW_TO_USE", "วิธีการใช้งาน");
+define("_INGREDIENTS", "ส่วนประกอบสำคัญ");

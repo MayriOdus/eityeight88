@@ -1,16 +1,21 @@
 <?php
 
 $img_prod = explode(",", str_replace(" ", "%20", $product["img_file"]));
-$color_prod = explode(",", $product["color_prod"]);
+$lang = ($_SESSION["Lang"] == "en")? "_eng" : "_th";
 $name = ($_SESSION["Lang"] == "en")? "name_eng" : "name_th";
 $detail = ($_SESSION["Lang"] == "en")? "details" : "detail_th";
+$color_prod = explode(",", $product["color_" . $name]);
 
+$shortinfo = $product["shortinfo" . $lang];
+$spfeatures = $product["spfeatures" . $lang];
+$howtouse = $product["howtouse" . $lang];
+$ingredients = $product["ingredients" . $lang];
 ?>
 
 
 <div class="row">
     <div class="col-sm-6">
-        <div id="carousel" class="carousel slide" data-ride="carousel">
+        <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="15000">
 
         	<div class="top-nav-slider">
 	        	<a class="" data-target="#carousel" href="#carousel" role="button" data-slide="prev">
@@ -22,42 +27,44 @@ $detail = ($_SESSION["Lang"] == "en")? "details" : "detail_th";
 	        </div>
 
             <div class="carousel-inner product-image">
-                <div class="item active" data-thumb="0">
-                    <img src="<?=URL;?>images/upload/<?=$img_prod[0];?>">
-                </div>
-                <div class="item" data-thumb="0">
-                    <img src="http://placehold.it/350x250/00ffff/000&amp;text=Product+Image+2">
-                </div>
-                <div class="item" data-thumb="0">
-                    <img src="http://placehold.it/350x250/ff00ff/fff&amp;text=Product+Image+3">
-                </div>
-                <div class="item" data-thumb="0">
-                    <img src="http://placehold.it/350x250/ffff00/000&amp;text=Product+Image+4">
-                </div>
-                <div class="item" data-thumb="1">
-                    <img src="http://placehold.it/350x250/7B1C8E/fff&amp;text=Product+Image+5">
-                </div>
-                <div class="item" data-thumb="1">
-                    <img src="http://placehold.it/350x250/9EF383/000&amp;text=Product+Image+6">
-                </div>
-                <div class="item" data-thumb="1">
-                    <img src="http://placehold.it/350x250/D64908/fff&amp;text=Product+Image+7">
-                </div>
-                <div class="item" data-thumb="1">
-                    <img src="http://placehold.it/350x250/E3A3A1/000&amp;text=Product+Image+8">
-                </div>
+            	<?php
+				foreach ($img_prod as $i => $img) 
+				{	
+					$act = '';
+					if( $i == 0 )
+					{
+						$act = "active";
+					}
+				?>
+	                <div class="item <?=$act;?>" data-thumb="0">
+	                    <img src="<?=URL;?>images/upload/<?=$img;?>" class="img-responsive">
+	                </div>
+                <?php
+				}
+                ?>
             </div>
         </div> 
 	    <div class="clearfix">
 	        <div id="thumbcarousel" class="carousel slide" data-interval="false">
 	            <div class="carousel-inner">
 	                <div class="item active">
-	                    <div data-target="#carousel" data-slide-to="0" class="thumb"><img src="http://placehold.it/100/e8117f/fff&amp;text=Product+Main"></div>
-	                    <div data-target="#carousel" data-slide-to="1" class="thumb"><img src="http://placehold.it/100/00ffff/000&amp;text=Product+Image+2"></div>
-	                    <div data-target="#carousel" data-slide-to="2" class="thumb"><img src="http://placehold.it/100/ff00ff/fff&amp;text=Product+Image+3"></div>
-	                    <div data-target="#carousel" data-slide-to="3" class="thumb"><img src="http://placehold.it/100/ffff00/000&amp;text=Product+Image+4"></div>
-	                </div><!-- /item -->
-	                <div class="item">
+	                	<?php
+						foreach ($img_prod as $i => $img) 
+						{	
+							$act = '';
+							if( $i == 0 )
+							{
+								$act = "active";
+							}
+						?>
+			                <div data-target="#carousel" data-slide-to="<?=$i;?>" class="thumb">
+		                    	<img src="<?=URL;?>images/upload/<?=$img;?>" class="img-responsive">
+		                    </div>
+		                <?php
+						}
+		                ?>
+	                </div>
+	                <!-- <div class="item">
 	                    <div data-target="#carousel" data-slide-to="4" class="thumb"><img src="http://placehold.it/100/7B1C8E/fff&amp;text=Product+Image+5"></div>
 	                    <div data-target="#carousel" data-slide-to="5" class="thumb"><img src="http://placehold.it/100/9EF383/000&amp;text=Product+Image+6"></div>
 	                    <div data-target="#carousel" data-slide-to="6" class="thumb"><img src="http://placehold.it/100/D64908/fff&amp;text=Product+Image+7"></div>
@@ -75,66 +82,78 @@ $detail = ($_SESSION["Lang"] == "en")? "details" : "detail_th";
 	</div> <!-- /col-sm-6 -->
 
     <div class="col-sm-6 product-detail-box">
-        <h1 class="p-bb"><?=$product[$name];?></h1>
+        <h2 class="p-bb"><?=$product[$name];?></h2>
+        <h3><?=$shortinfo;?></h3>
 
-        <div class="amount p-bb h1">฿&nbsp;270</div>
+        <div class="amount p-bb h2">฿&nbsp;
+        	<?php
+			if( !empty($product["sale_cost"]) )
+			{ 
+				echo "<span  style='text-decoration:line-through; color:#CCC;'>".$product["costs"]."</span>";
+				echo "&nbsp;<span  style=''> Sale ".$product["sale_cost"].'</span>';	
+			}
+			else
+			{ 
+				echo "<span style=''>".$product["costs"]."</span>";
+			}
+			?>
+        </div>
 
-        <div class="p-detail">Some product subhead
-      		<p>Product description goes here.  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-	        <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
+        <div class="p-detail">
+      		<p><?=$product[$detail];?></p>
 		</div>
+
+		<?php
+		$dsp = ( !empty($color_prod[0]) )? "" : "display:none;";
+		?>
+		<div class="col-xs-12 col-sm-8" style="<?=$dsp;?>">
+			<div class="form-group">
+				<div class="input-group" style="width: 100%;"">
+					<select class="form-control" name="color_code" id="color_code">
+						<option value=""> <?=_COLOR;?> <?=count($color_prod);?> <?=_SHADE_IS_AVAILABLE;?> </option>
+						<?php
+						foreach ($color_prod as $color) 
+						{
+							echo '<option value="'.$color.'" style="background-color:'.$color.'">'.$color.'</option>';
+						}
+						?>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-sm-8 product-tag">
+			Tags <?=$product["tag"];?>
+		</div>
+
+
 	</div> <!-- /col-sm-6 -->
 </div> <!-- /row -->
 
 
 <div class="col-md-12 product-tabs">
 	<ul id="myTab" class="nav nav-tabs">
-      <li class=""><a href="#info" data-toggle="tab">More Info</a></li>
-      <li class=""><a href="#review" data-toggle="tab">Review</a></li>
-      <li class="active"><a href="#related" data-toggle="tab">Related Items</a></li>
+      <li class="active"><a href="#spfeatures" data-toggle="tab"><?=_SPECIAL_FEATURES;?></a></li>
+      <li class=""><a href="#howto" data-toggle="tab"><?=_HOW_TO_USE;?></a></li>
+      <li class=""><a href="#ingredients" data-toggle="tab"><?=_INGREDIENTS;?></a></li>
     </ul>
+
     <div id="myTabContent" class="tab-content">
-      <div class="tab-pane fade" id="info">
-		<p>Howdy, I'm in Section 1. Etiam luctus, tellus sed varius facilisis, turpis nisl mollis metus, adipiscing scelerisque felis dui ac lacus.
-		Etiam luctus, tellus sed varius facilisis, turpis nisl mollis metus, adipiscing scelerisque felis dui ac lacus.</p>
+
+      <div class="tab-pane fade active in" id="spfeatures">
+		<?=$spfeatures;?>
       </div>
-      <div class="tab-pane fade" id="review">
-		<p>Howdy, I'm in Section 2. Etiam luctus, tellus sed varius facilisis, turpis nisl mollis metus, adipiscing scelerisque felis dui ac lacus.
-		Etiam luctus, tellus sed varius facilisis, turpis nisl mollis metus, adipiscing scelerisque felis dui ac lacus.</p>
+
+      <div class="tab-pane fade" id="howto">
+		<?=$howtouse;?>
       </div>
-      <div class="tab-pane fade active in" id="related">
+
+      <div class="tab-pane fade" id="ingredients">
         <div class="row">
-			<ul class="thumbnails list-unstyled">
-			  <li class="col-md-4 col-sm-4">
-				<div class="thumbnail">
-				  <a href="detail.html"><img src="img/manuk.jpg" class="img-responsive" alt="detail dodolan manuk"></a>
-				  <div class="caption-details">
-					<h5>Border Canary</h5>
-					<span class="price">$200</span>
-				  </div>
-				</div>
-			  </li>
-			  <li class="col-md-4 col-sm-4">
-				<div class="thumbnail">
-				  <a href="detail.html"><img src="img/manuk.jpg" class="img-responsive" alt="detail dodolan manuk"></a>
-				  <div class="caption-details">
-					<h5>Border Canary</h5>
-					<span class="price">$200</span>
-				  </div>
-				</div>
-			  </li>
-			  <li class="col-md-4 col-sm-4">
-				<div class="thumbnail">
-				  <a href="detail.html"><img src="img/manuk.jpg" class="img-responsive" alt="detail dodolan manuk"></a>
-				  <div class="caption-details">
-					<h5>Border Canary</h5>
-					<span class="price">$200</span>
-				  </div>
-				</div>
-			  </li>
-			</ul>
+		<?=$ingredients;?>
 		</div>
       </div>
+
     </div>
 
 </div>
@@ -144,7 +163,9 @@ $detail = ($_SESSION["Lang"] == "en")? "details" : "detail_th";
 
 
 
-
+<?php 
+/*
+?>
 <div class="row">
 
 	<form id="basket-form" name="basket-form" class="sform">
@@ -298,3 +319,7 @@ $detail = ($_SESSION["Lang"] == "en")? "details" : "detail_th";
 	</form>
 
 </div>
+
+<?php
+*/
+?>

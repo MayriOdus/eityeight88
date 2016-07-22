@@ -283,7 +283,7 @@ class Model
 
 	public function getproduct_detail($prod_id)
 	{
-		$sql = " SELECT p.*, group_concat(u.file_name) AS img_file, (SELECT group_concat(code_color) FROM color_select WHERE prod_id = p.code_product) AS color_prod  FROM product p LEFT JOIN upload_data u ON p.code_product = u.prod_id WHERE p.shows = '1' AND prod_id = :prod_id GROUP BY p.id ";
+		$sql = " SELECT p.*, group_concat(u.file_name) AS img_file, (SELECT group_concat(cp.name_eng) FROM color_select c, color_product cp WHERE c.code_color = cp.id AND c.prod_id = p.id) AS color_name_eng, (SELECT group_concat(cp.name_th) FROM color_select c, color_product cp WHERE c.code_color = cp.id AND c.prod_id = p.id) AS color_name_th  FROM product p LEFT JOIN upload_data u ON p.code_product = u.prod_id WHERE p.shows = '1' AND prod_id = :prod_id GROUP BY p.id ";
 		$query = $this->db->prepare($sql);
 
 		$parameters = array(

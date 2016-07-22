@@ -57,3 +57,8 @@ define("_CREATE_ACCOUNT", "Create Account");
 define("_READ_MORE", "Read More");
 define("_CANCEL", "Cancel");
 define("_ANY_QUESTION", "Any extra informaiton request or suggestion, you can fill the details or contact via these provided");
+define("_COLOR", "Color");
+define("_SHADE_IS_AVAILABLE", "Shade Is Available");
+define("_SPECIAL_FEATURES", "Speacial Features");
+define("_HOW_TO_USE", "How To Use");
+define("_INGREDIENTS", "Ingredients");

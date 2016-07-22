@@ -106,7 +106,7 @@ ul.hoption li a.hsc {
 	padding: 0px;
 	float: left;
 	width: 100%;
-	margin-top: 20px;
+	margin-top: 25px;
 	margin-right: 0px;
 	margin-bottom: 20px;
 	margin-left: 0px;
@@ -115,7 +115,7 @@ ul.hoption li a.hsc {
 }
 
 .menu {
-	font-size: 23px;
+	font-size: 28px;
 	line-height: 19px;
 	float: none;
     display: inline-block;
@@ -161,8 +161,8 @@ ul.hoption li a.hsc {
 		padding: 0px;
 		display: block;
 		position: relative;
-		margin: 15px 0px;
-		font-family: "DBHelvetEXT-Li";
+		margin: 30px 0px;
+		font-family: "DBHelvet-Li";
 		text-align: left;
 	}
 
@@ -311,6 +311,26 @@ ul.hoption li a.hsc {
     overflow: hidden;
 }
 
+.product-tag {
+	padding: 10px 0px;
+    margin-top: 10px;
+    font-size: 1.4em;
+    font-family: "DBHelvetORI-Md";
+}
+
+.amount {
+	margin-bottom: 20px;
+}
+
+#thumbcarousel .thumb img {
+	width: 73%;
+    margin: auto;
+}
+
+#color_code {
+	font-size: 20px;
+}
+
 .product-detail-box {
 	font-family: "DBHelvetORI-Li";
 }
@@ -332,6 +352,34 @@ ul.hoption li a.hsc {
 	z-index: 1;
 	right: 0px;
 	padding: 10px;
+}
+
+.product-tabs {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	font-size: 22px;
+	font-family: "DBHelvetORI-Li";
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #000;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+
+    border: 1px solid #000;
+}
+
+.tab-pane .row {
+	padding: 0 20px;
+}
+
+.tab-content {
+	padding-top: 20px;
+}
+
+.product-tabs .nav-tabs {
+	font-family: "DBHelvetORI";
 }
 
 .top-nav-slider a:hover {
@@ -1589,6 +1637,10 @@ hr {
     padding: 0px 8px;
 }
 
+.padd16 {
+    padding: 0px 16px;
+}
+
 .prod-price {
 	margin-top: 10px;
 }
@@ -1671,6 +1723,13 @@ hr {
 @font-face {
     font-family: DBHelvetORI-Li;
     src: url(/fonts/DBHeaventv3.201/DB_Heavent_Original/DB_Heavent_Li_v3.2.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: DBHelvetORI;
+    src: url(/fonts/DBHeaventv3.201/DB_Heavent_Original/DB_Heavent_v3.2.ttf) format('truetype');
     font-weight: 400;
     font-style: normal
 }
