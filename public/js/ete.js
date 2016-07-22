@@ -95,6 +95,14 @@ var ete = (function( $, dc, w ) {
 				$("#carousel-top").css("height", $(".embed-responsive-item").eq(0).height() + 12);
 				$("#mocking").height( $(".prod-bx").eq(0).height() );
 				//$('#carousel-top').css("height", "439px");
+
+
+
+				
+
+
+
+
 			});
 
 			// activate collapse right menu when the windows is resized

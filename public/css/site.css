@@ -18,6 +18,12 @@ a {
 	color: #000;
 }
 
+@media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+
 .caption a {
 	color: #000;
 }
@@ -298,6 +304,41 @@ ul.hoption li a.hsc {
 	margin-top: 10px;
 }
 
+.product-image {
+	border: #ececec 1px solid;
+	position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.product-detail-box {
+	font-family: "DBHelvetORI-Li";
+}
+
+.product-detail-box .p-bb {
+	font-family: "DBHelvetORI-Md";
+}
+
+.product-detail-box .p-detail {
+	font-size: 22px;
+}
+
+.product-image .item img {
+	height: 550px;
+}
+
+.top-nav-slider {
+	position: absolute;
+	z-index: 1;
+	right: 0px;
+	padding: 10px;
+}
+
+.top-nav-slider a:hover {
+	color:#333;
+	text-decoration: none;
+}
+
 .carousel-indicators {
 	bottom: 0;
 }
@@ -306,7 +347,7 @@ ul.hoption li a.hsc {
 	background-image: none;
 }
 .carousel .item {
-	min-height: 350px; 
+	
 	height: 100%;
 	width:100%; 
 }
@@ -1565,6 +1606,18 @@ hr {
 	width: 18px;
 	display: block;
 }
+
+/* CSS used here will be applied after bootstrap.css */
+
+.item .thumb {
+	width: 25%;
+	cursor: pointer;
+	float: left;
+}
+.item .thumb img, .item img {
+	width: 100%;	
+}
+
 
 @font-face {
     font-family: DBHelvet-Blk;
