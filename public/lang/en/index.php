@@ -63,3 +63,5 @@ define("_SPECIAL_FEATURES", "Speacial Features");
 define("_HOW_TO_USE", "How To Use");
 define("_INGREDIENTS", "Ingredients");
 define("_LINE", "LINE");
+define("_EMAIL_US", "Email Us");
+define("_PHONE", "Phone");

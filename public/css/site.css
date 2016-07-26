@@ -115,7 +115,7 @@ ul.hoption li a.hsc {
 }
 
 .menu {
-	font-size: 28px;
+	font-size: 26px;
 	line-height: 19px;
 	float: none;
     display: inline-block;
@@ -337,10 +337,16 @@ ul.hoption li a.hsc {
 
 .product-detail-box .p-bb {
 	font-family: "DBHelvetORI-Md";
+	font-size: 1.5em;
+	margin-bottom: 15px;
+}
+
+.product-detail-box .p-bb-s {
+	font-size: 1.5em;
 }
 
 .product-detail-box .p-detail {
-	font-size: 22px;
+	font-size: 1.5em;
 }
 
 .product-image .item img {
@@ -357,7 +363,7 @@ ul.hoption li a.hsc {
 .product-tabs {
 	margin-top: 25px;
 	margin-bottom: 25px;
-	font-size: 22px;
+	font-size: 1.5em;
 	font-family: "DBHelvetORI-Li";
 }
 
@@ -599,7 +605,6 @@ i.line-w {
 }
 
 .footer-basic-centered {
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
     width: 100%;
     text-align: center;
@@ -621,9 +626,8 @@ i.line-w {
 }
 
 .footer-basic-centered .footer-company-name {
-    font-size: 20px;
     padding-bottom: 15px;
-    font: normal 18px DBHelvet;
+	font: normal 1.3em DBHelvet;
     margin: 0;
 }
 
@@ -780,8 +784,21 @@ i.line-w {
     font-size: 18px;
   }
 
-  .contact .hd {
+	.contact .hd {
 		text-align: center;	
+	}
+
+	.subm-button-group {
+		text-align: center;	
+	}
+
+	.product-detail-box {
+
+		margin-top:25px;
+	}
+
+	.footer-basic-centered .footer-company-name {
+		font: normal 1.0em DBHelvet;
 	}
 
 }
@@ -1584,6 +1601,14 @@ hr {
 	line-height: 24px;
 }
 
+.r-title span {
+	font-family: "DBHelvetORI";
+}
+
+.r-line span {
+	font-family: "DBHelvet-Md";
+}
+
 .clear {
 	clear : both;
 }
@@ -1602,9 +1627,9 @@ hr {
 }
 
 .contact-icon {
-	color:#aaa;
-	font-size: 37px;
-	position: absolute;
+    color: #818285;
+    font-size: 35px;
+    position: absolute;
 }
 
 .contact-r-detail {
@@ -1613,7 +1638,8 @@ hr {
 }
 
 .txt-about {
-	font-size: 20px;
+	font-size: 1.5em;
+    font-family: "DBHelvetORI-Li";
 }
 
 .contact {
@@ -1634,11 +1660,24 @@ hr {
 .contact-form {
 	font-family: "DBHelvetEXT-Li";
 	font-size: 20px;
+	margin-top: 20px;
 }
 
 .securitycode {
-	background: #eee;
-	font-weight: bold;
+    background: #000;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-o-border-radius: 20px;
+    padding: 7px 20px;
+    margin-top: -8px;
+}
+
+.sec-a {
+
+	color:#fff !important;
 }
 
 .padd8 {

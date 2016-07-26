@@ -17,17 +17,22 @@ $ingredients = $product["ingredients" . $lang];
     <div class="col-sm-6">
         <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="15000">
 
-        	<div class="top-nav-slider">
+        	<!--<div class="top-nav-slider">
 	        	<a class="" data-target="#carousel" href="#carousel" role="button" data-slide="prev">
 		            <span class="glyphicon glyphicon-chevron-left"></span>
 		        </a>
 		        <a class="" data-target="#carousel" href="#carousel" role="button" data-slide="next">
 		            <span class="glyphicon glyphicon-chevron-right"></span>
 		        </a>
-	        </div>
+	        </div>-->
 
             <div class="carousel-inner product-image">
+            	<div class="item active" data-thumb="0">
+                    <img src="<?=URL;?>images/upload/<?=$img_prod[0];?>" style=" max-width: 293px;max-height: 396px;margin: auto;">
+                </div>
+
             	<?php
+            	/*
 				foreach ($img_prod as $i => $img) 
 				{	
 					$act = '';
@@ -41,9 +46,14 @@ $ingredients = $product["ingredients" . $lang];
 	                </div>
                 <?php
 				}
+				*/
                 ?>
             </div>
         </div> 
+
+        <?php
+        /*  
+        ?>
 	    <div class="clearfix">
 	        <div id="thumbcarousel" class="carousel slide" data-interval="false">
 	            <div class="carousel-inner">
@@ -79,12 +89,17 @@ $ingredients = $product["ingredients" . $lang];
 	            </a>
 	        </div> <!-- /thumbcarousel -->
 	    </div><!-- /clearfix -->
+		 <?php 
+		 */ 
+		 ?>
+
 	</div> <!-- /col-sm-6 -->
 
     <div class="col-sm-6 product-detail-box">
-        <h2 class="p-bb"><?=$product[$name];?></h2>
-        <h3><?=$shortinfo;?></h3>
+        <div class="p-bb"><?=$product[$name];?></div>
+        <div class="p-bb-s"><?=$shortinfo;?></div>
 
+        <!--
         <div class="amount p-bb h2">฿&nbsp;
         	<?php
 			if( !empty($product["sale_cost"]) )
@@ -97,7 +112,7 @@ $ingredients = $product["ingredients" . $lang];
 				echo "<span style=''>".$product["costs"]."</span>";
 			}
 			?>
-        </div>
+        </div>-->
 
         <div class="p-detail">
       		<p><?=$product[$detail];?></p>
@@ -133,9 +148,9 @@ $ingredients = $product["ingredients" . $lang];
 
 <div class="col-md-12 product-tabs">
 	<ul id="myTab" class="nav nav-tabs">
-      <li class="active"><a href="#spfeatures" data-toggle="tab"><?=_SPECIAL_FEATURES;?></a></li>
-      <li class=""><a href="#howto" data-toggle="tab"><?=_HOW_TO_USE;?></a></li>
-      <li class=""><a href="#ingredients" data-toggle="tab"><?=_INGREDIENTS;?></a></li>
+      <li class="active col-xs-12 col-sm-3 text-center nopadd"><a href="#spfeatures" data-toggle="tab"><?=_SPECIAL_FEATURES;?></a></li>
+      <li class="col-xs-12 col-sm-3 text-center nopadd"><a href="#howto" data-toggle="tab"><?=_HOW_TO_USE;?></a></li>
+      <li class="col-xs-12 col-sm-3 text-center nopadd"><a href="#ingredients" data-toggle="tab"><?=_INGREDIENTS;?></a></li>
     </ul>
 
     <div id="myTabContent" class="tab-content">
