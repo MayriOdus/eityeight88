@@ -3,7 +3,7 @@ body {
 	margin: 0px;
 	color: #000;
 	background: #fff;
-	font-family: "DBHelvetEXT-Li", "DBHelvetORI-Li";
+	font-family: "DBHelvetORI";
 }
 
 img {
@@ -193,12 +193,12 @@ ul.hoption li a.hsc {
 
 .cap-prod {
 	font-size: 20px;
-	font-family: "DBHelvet";
+	font-family: "DBHelvetORI";
 }
 
 .cap-prod a {
 	font-size: 25px;
-    font-family: "DBHelvet-Li";
+    font-family: "DBHelvetORI-Li";
 }
 
 .btn {
@@ -702,28 +702,6 @@ i.line-w {
 	/*1px solid #E2E2E2*/
     border-radius: 0px;
 }  
-
-
-.quark-font1 {
-	font-family: 'PSLxChalindaCon_Bold'; 
-	font-weight: normal;
-	font-style: normal;
-	text-transform:uppercase;
-}
-
-.quark-font2 {
-	font-family: 'PSLxChalindaCon';    
-	font-weight: normal;
-	font-style: normal;
-	text-transform:uppercase;
-}
-
-.best1 {
-	font-family: 'PSLxChalindaCon_Bold'; 
-	font-weight: normal;
-	font-style: normal;
-}
-
   
 /*Breadcrumbs v3
 ------------------------------------*/
@@ -801,6 +779,11 @@ i.line-w {
   .breadcrumbs-v3 p {
     font-size: 18px;
   }
+
+  .contact .hd {
+		text-align: center;	
+	}
+
 }
 
 
@@ -959,7 +942,6 @@ hr {
 	border:1px solid #948a8a;
 }
 
-
 .table {
 	font-size: 20px;
 }
@@ -1047,6 +1029,10 @@ hr {
     .cartListInner .table-responsive .table tbody tr td .close,.orderBox.myAddress .table-responsive .table tbody tr td .close {
         margin-right:5px;
     }
+
+    .cartListInner .table-responsive {
+        overflow-x:visible;
+    }
 }
 
 @media (min-width: 992px) {
@@ -1062,12 +1048,6 @@ hr {
 @media (min-width: 480px) {
     .cartListInner .table-responsive {
         overflow-x:auto;
-    }
-}
-
-@media (min-width: 768px) {
-    .cartListInner .table-responsive {
-        overflow-x:visible;
     }
 }
 
@@ -1595,13 +1575,41 @@ hr {
 
 .contact-info {
 	padding-top: 18px;
-	font-size: 22px;
+	font-size: 1.1em;
 	font-family: "DBHelvetORI-Li";
+}
+
+.r-line {
+	font-family: "DBHelvet-Li";
+	line-height: 24px;
+}
+
+.clear {
+	clear : both;
+}
+
+.r-title {
+	line-height: 24px;
+	float:left;
+}
+
+.r-line b {
+
+}
+
+.line_qr_code {
+    max-width: 200px;
 }
 
 .contact-icon {
 	color:#aaa;
 	font-size: 37px;
+	position: absolute;
+}
+
+.contact-r-detail {
+	float:left;
+	margin-left: 55px;
 }
 
 .txt-about {
@@ -1615,12 +1623,12 @@ hr {
 
 .contact h2 {
 	font-family: "DBHelvetORI-Li";
-	font-size: 22px;
+	font-size: 1.1em;
 }
 
 .contact .hd {
 	font-family: "DBHelvet-Md";
-	font-size: 45px;
+	font-size: 40px;
 }
 
 .contact-form {

@@ -62,3 +62,4 @@ define("_SHADE_IS_AVAILABLE", "Shade Is Available");
 define("_SPECIAL_FEATURES", "Speacial Features");
 define("_HOW_TO_USE", "How To Use");
 define("_INGREDIENTS", "Ingredients");
+define("_LINE", "LINE");

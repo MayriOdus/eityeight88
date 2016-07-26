@@ -32,8 +32,8 @@
 	}
 	?>
 
-	<div class="col-sm-4 col-lg-4 col-md-4 mocking" id="mocking"></div>
-	<!--
+	<!--<div class="col-sm-4 col-lg-4 col-md-4 mocking" id="mocking"></div>
+	
 	<div class="col-sm-4 col-lg-3 col-md-4">
 		<div class="thumbnail">
 			<img src="<?=URL;?>img/Gif-Dewy-2.gif" alt="">

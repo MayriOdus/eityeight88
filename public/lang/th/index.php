@@ -62,3 +62,4 @@ define("_SHADE_IS_AVAILABLE", "เฉดสีให้เลือก");
 define("_SPECIAL_FEATURES", "คุณสมบัติโดดเด่น");
 define("_HOW_TO_USE", "วิธีการใช้งาน");
 define("_INGREDIENTS", "ส่วนประกอบสำคัญ");
+define("_LINE", "รับข่าวสารผ่านไลน์");
