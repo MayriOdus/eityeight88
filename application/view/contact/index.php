@@ -27,7 +27,7 @@
                 	<div class="r-line">LINE ID: <a href="http://line.me/ti/p/@eityeight"><span class="">@eityeight</span></a></div>
 
                 	<div class="r-line">
-                		<input type="image" src="<?=URL;?>img/line-code.jpg" class="img-responsive line_qr_code">
+                		<input type="image" src="<?=URL;?>img/line-code.png" class="img-responsive line_qr_code">
                 	</div>
                 </div>
             </div>
