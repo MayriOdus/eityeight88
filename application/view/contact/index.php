@@ -2,7 +2,7 @@
 
 <div class="row">
 	<div class="col-xs-12 col-sm-6 contact">
-		<div class="hd">CONTACT US</div>
+		<div class="hd text-uppercase"><?=_CONTACT_US;?></div>
 
 		<div class="row">
             <div class=" col-sm-12 col-md-12">
@@ -24,7 +24,7 @@
             	<div class="contact-r-detail">
                 	<div class="r-title"><?=_LINE;?>&nbsp;&nbsp;</div><div class="r-title">(OFFICIAL ACCOUNT)</div>
                 	<div class="clear"></div>
-                	<div class="r-line">LINE ID: <a href="http://line.me/ti/p/@eityeight"><span class="">eityeight</span></a></div>
+                	<div class="r-line">LINE ID: <a href="http://line.me/ti/p/@eityeight"><span class="">@eityeight</span></a></div>
 
                 	<div class="r-line">
                 		<input type="image" src="<?=URL;?>img/line-code.jpg" class="img-responsive line_qr_code">
