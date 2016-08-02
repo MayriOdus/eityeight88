@@ -188,10 +188,44 @@ class Model
 
 		if( $query->execute($parameters) )
 		{
+			$this->sendmailcontact($pos);
+
 			$r["SUCCESS"] = true;
 		}
 
 		return $r;
+	}
+
+	public function sendmailcontact($pos)
+	{
+		$mail = new mail();
+	   
+	    $to_name = "administrator";
+	    $to_email = "oom34299@gmail.com"; //$email;//"fon_0151@hotmail.com"; //
+	    $sender_name = "alert@eityeight.com";
+	    $sender_email = "alert@eityeight.com"; 
+	    $sender_pass = "Ycg137g?";
+	    // dev@eityeight.com
+	   	// Tv13z$a7
+
+	    $body_html = "";
+	    $body_html .= "Contact Us Alert ";
+	    $body_html .= "<br/>Name :".$pos["userName"];
+		$body_html .= "<br/>Email : ".$pos["email"];
+		$body_html .= "<br/>Subject : ".$pos["subject"];
+		$body_html .= "<br/>Message : ".$pos["message"];
+	
+	    $subject = "Contact Us Alert";
+
+	    $mail->to_name = $to_name;
+	    $mail->to_email = $to_email;
+	    $mail->subject = $subject;
+	    $mail->body_html = $body_html; 
+	    $mail->body_text  = "";
+	    
+	    //echo $body_html;
+	  
+	    $mail->send();
 	}
 
 	public function getpaymentbill($payid)

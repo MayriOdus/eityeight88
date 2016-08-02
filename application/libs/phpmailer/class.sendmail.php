@@ -18,15 +18,15 @@ class mail extends PHPMailer
 
 		$this->sender_name		= "EityEight.com"; //
 
-		$this->sender_email		= "info@eityeight.com"; //
+		$this->sender_email		= "alert@eityeight.com"; //
 
-		$this->sender_pass		= "Y^fu544x";
+		$this->sender_pass		= "Ycg137g?";
 		///admintodo@todothailand.com todo@1234@56 todo
 		//allcarread@carread.com car@0151@read
 
-		$this->sender_email_1	= md5("info@eityeight.com ");
+		$this->sender_email_1	= md5("alert@eityeight.com");
 
-		$this->seneder_host		= "mail.eityeight.com ";  // "ssl://mail.avisthailand.com,mail.avisthailand.com";
+		$this->seneder_host		= "mail.eityeight.com";  // "ssl://mail.avisthailand.com,mail.avisthailand.com";
 
 		$this->seneder_port		= 25;  //change 465 -> 25
 
@@ -60,7 +60,9 @@ class mail extends PHPMailer
 
 		
 
-		$this->email->IsSMTP(); // before IsMail()
+		//$this->email->IsSMTP(); // before IsMail()
+
+		$this->email->IsMail();
 
 		//$mail->Host = 'ssl://smtp.gmail.com';
 
