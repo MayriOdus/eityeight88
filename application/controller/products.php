@@ -41,7 +41,8 @@ class Products extends Controller
         $_URL = URL . $_SESSION["Lang"] . "/";
 
         // load views
-        $content = 'view/products/checkserial.php';
+        //$content = 'view/products/checkserial.php';
+        $content = 'view/main/index.php';
         require APP . 'view/_templates/layout.php';
     }
 
