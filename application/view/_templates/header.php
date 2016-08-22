@@ -144,8 +144,8 @@
 								</li>
 								<li class="cat-item"><a href="<?=$_URL;?>contact" title="<?=_CONTACT_US;?>"><?=_CONTACT_US;?></a>
 								</li>
-								<!--<li class="cat-item cat-item-26 text-center"><div class="securitycode"><a class="sec-a" href="<?=$_URL;?>products/checkserial" title="<?=_SECURITY_CODE_CHECKING;?>"><?=_SECURITY_CODE_CHECKING;?></a></div>
-								</li>-->
+								<li class="cat-item cat-item-26 text-center"><div class="securitycode"><a class="sec-a" href="<?=$_URL;?>products/checkserial" title="<?=_SECURITY_CODE_CHECKING;?>"><?=_SECURITY_CODE_CHECKING;?></a></div>
+								</li>
 							</ul>
 
 						</div>

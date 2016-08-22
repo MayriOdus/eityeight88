@@ -1717,6 +1717,20 @@ hr {
 	width: 100%;	
 }
 
+.chkp {
+	font-size: 27px;
+    font-family: "DBHelvetORI-Md";
+}
+
+.chkp-sub {
+	font-size: 18px;
+    font-family: "DBHelvetORI";
+}
+
+.chkp-foot {
+	font-size: 22px;
+    font-family: "DBHelvetORI";
+}
 
 @font-face {
     font-family: DBHelvet-Blk;

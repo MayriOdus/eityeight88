@@ -462,12 +462,18 @@ var ete = (function( $, dc, w ) {
 				
 				if( msg.FAKE )
 				{
-					alert("Fake !!")
+					$('#isfake').modal('show');
 				}
-				else
+				else if( msg.DUP )
 				{
-					alert( "This is " + msg.PRODNAME )
+					$('#isdup').modal('show');
 				}
+				else if( !msg.FAKE )
+				{
+					$('#isreal').modal('show');
+					//alert( "This is " + msg.PRODNAME )
+				}
+				
 
 			}, 'json');
 		},
