@@ -11,7 +11,7 @@ define("_HOME", "หน้าหลัก");
 define("_ABOUT_US", "เกี่ยวกับเรา");
 define("_PRODUCTS", "สินค้า");
 define("_CONTACT_US", "ติดต่อเรา");
-define("_SECURITY_CODE_CHECKING", "เช็ครหัสผลิตภัณฑ์");
+define("_SECURITY_CODE_CHECKING", "CHECK CODE FOR INDONESIA");
 define("_NAME", "ชื่อของคุณ");
 define("_EMAIL_ADDRESS", "อีเมล");
 define("_SUBJECT", "เรื่อง");
