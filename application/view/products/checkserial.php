@@ -6,7 +6,32 @@
 		<div class="row">
 			
 			<div class="col-sm-6 col-md-6" style="font-size:40px;">
-				SLIDE
+                <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+                    <div class="carousel-inner product-image">
+                        <div class="item active" data-thumb="0">
+                            <img src="<?=URL;?>img/chkserial/01.jpg" style=" max-width: 293px;margin: auto;">
+                        </div>
+                        <div class="item" data-thumb="2">
+                            <img src="<?=URL;?>img/chkserial/02.jpg" style=" max-width: 293px;margin: auto;">
+                        </div>
+                        <div class="item" data-thumb="3">
+                            <img src="<?=URL;?>img/chkserial/03.jpg" style=" max-width: 293px;margin: auto;">
+                        </div>
+                        <div class="item" data-thumb="4">
+                            <img src="<?=URL;?>img/chkserial/04.jpg" style=" max-width: 293px;margin: auto;">
+                        </div>
+                    </div>
+                </div> 
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
 			</div>
 
 			<div class="col-sm-6 col-md-6">
@@ -23,7 +48,7 @@
 					   
 						<div class="row">
 							<div class="col-xs-12">
-								<input type="button" class="btn btn-black btn-block sharp" id="btn-chkall-serial" value="<?=_VALIDATE;?>">
+								<input type="button" class="btn btn-black btn-block sharp" id="btn-chkall-serial" value="SEND">
 							</div>
 						</div>
 					</fieldset>
@@ -35,13 +60,12 @@
 		<br><br>
 		<div class="row">
 			<div class="col-sm-12 text-center" style="font-size:40px;">
-				DETAIL HOW TO CHECKING
+                <div class="col-sm-12 col-md-12">
+				    <img src="<?=URL;?>img/chkserial/06.jpg" class="img-responsive">
+                </div>
 			</div>
 		</div>
-
     </div>
-
-
 </div>
 
 

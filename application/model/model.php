@@ -283,7 +283,7 @@ class Model
 		$query->execute($parameters);
 		$chk = $query->fetch(PDO::FETCH_ASSOC);
 
-		if( $chk["dupflag"] == 'Y' )
+		if( $chk["dupflag"] > 2 )
 		{
 			$r["DUP"] = true;
 			$r["FAKE"] = false;
@@ -293,7 +293,7 @@ class Model
 			$r["FAKE"] = false;
 			$r["PRODNAME"]  = $chk["name"];
 
-			$sql = " UPDATE product_serials SET dupflag = 'Y' WHERE id='".$chk["cid"]."' ";
+			$sql = " UPDATE product_serials SET dupflag = '".($chk["dupflag"]+1)."' WHERE id='".$chk["cid"]."' ";
 			$query = $this->db->prepare($sql);
 			$query->execute($parameters);
 		}
