@@ -1663,6 +1663,38 @@ hr {
 	margin-top: 20px;
 }
 
+
+@media (max-width: 479px) {
+    .chkserial {
+		margin-top:20px;
+	}
+}
+
+@media (min-width: 480px) {
+    .chkserial {
+		margin-top:20px;
+	}
+}
+
+@media (min-width: 768px) {
+    .chkserial {
+		margin-top:110px;
+	}
+}
+
+@media (min-width: 980px) {
+    .chkserial {
+		margin-top:160px;
+	}
+}
+
+@media (min-width: 1200px) {
+    .chkserial {
+		margin-top:160px;
+	}
+}
+
+
 .securitycode {
     background: #000;
     font-weight: bold;
