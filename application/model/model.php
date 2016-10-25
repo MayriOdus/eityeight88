@@ -519,7 +519,7 @@ class Model
         $query = $this->db->prepare($sql);
         $parameters = array(
 			':uname' => $param["uname"],
-			':upass' => $param["upass"]
+			':upass' => md5($param["upass"])
 		);
 
         // echo '[ PDO DEBUG ]: ' . Helper::debugPDO($sql, $parameters);  exit();
@@ -736,64 +736,99 @@ class Model
 	public function updateProduct($param)
 	{
 		$res = array();
+		$parameters = array();
+		$select = array();
+	
+		$column = $this->getTbColumn('product');
 
-		$sql = " UPDATE product SET
-					name_th = :name_th,
-					name_eng = :name_eng,
-					weights = :weights,
-					costs = :costs,
-					stocks = :stocks,
-					details = :details,
-					detail_th = :detail_th
-					WHERE code_product = :code_product ";
-        $query = $this->db->prepare($sql);
+		foreach( $column as $col )
+		{
+			if( isset($param[$col]) )
+			{
+				$parameters[':'.$col] = $param[$col];
+				$select[] = $col . ' = :'.$col; 
+			}
+		}
 
-        $parameters = array(
-			':code_product' => $param["code"],
-			':name_th' => $param["txtname_th"],
-			':name_eng' => $param["txtname_eng"],
-			':weights' => $param["txtweights"],
-			':costs' => $param["txtcosts"],
-			':stocks' => $param["txtstocks"],
-			':details' => $param["txtdetails"],
-			':detail_th' => $param["txtdetail_th"]
-		);
+		$sql = " UPDATE product SET ".implode(',', $select)." WHERE code_product = :code_product ";
+		$parameters[':code_product'] = $param["code"];
+
+		if( !empty($select) )
+		{
+			$query = $this->db->prepare($sql);
+
+			if( $query->execute($parameters) )
+			{
+				if( !empty($param["fcontent"]) )
+				{
+					$sql = " DELETE FROM upload_data WHERE prod_id = :id ";
+					$query = $this->db->prepare($sql);
+					$parameters = array( ':id' => $param["code"] );
+					$query->execute($parameters);
+					
+					foreach( $param["fcontent"] as $cont )
+					{
+						$sql = " INSERT INTO upload_data( file_name, times, prod_id, name_title) VALUES( :file_name, :times, :prod_id, :name_title )";
+						$query = $this->db->prepare($sql);
+						$parameters = array(
+							':file_name' => $cont,
+							':times' => date("d-M-y H.i.s"),
+							':prod_id' => $param["code"],
+							':name_title' => $param["txtname_eng"]
+						);
+						
+						$query->execute($parameters);
+					}
+				}
+
+				$res["SUCCESS"] = true;
+				$res["code"] = $param["code"];
+			}
+			else
+			{
+				$res["SUCCESS"] = false;
+			}
+		}
 
 		//echo '[ PDO DEBUG ]: ' . Helper::debugPDO($sql, $parameters);  exit();
 
-        if( $query->execute($parameters) )
-		{
-			if( !empty($param["fcontent"]) )
-			{
-				$sql = " DELETE FROM upload_data WHERE prod_id = :id ";
-				$query = $this->db->prepare($sql);
-				$parameters = array( ':id' => $param["code"] );
-				$query->execute($parameters);
-				
-				foreach( $param["fcontent"] as $cont )
-				{
-					$sql = " INSERT INTO upload_data( file_name, times, prod_id, name_title) VALUES( :file_name, :times, :prod_id, :name_title )";
-					$query = $this->db->prepare($sql);
-					$parameters = array(
-						':file_name' => $cont,
-						':times' => date("d-M-y H.i.s"),
-						':prod_id' => $param["code"],
-						':name_title' => $param["txtname_eng"]
-					);
-					
-					$query->execute($parameters);
-				}
-			}
-
-			$res["SUCCESS"] = true;
-			$res["code"] = $param["code"];
-		}
-		else
-		{
-			$res["SUCCESS"] = false;
-		}
-
 		return $res;
+	}
+
+	public function getTbColumn($tb)
+	{
+		$column_names = array();
+
+		$sql = 'SHOW COLUMNS FROM product';
+		$query = $this->db->prepare($sql);
+
+		try 
+		{    
+            if( $query->execute() )
+			{
+                $raw_column_data = $query->fetchAll();
+                
+                foreach($raw_column_data as $outer_key => $array)
+				{
+                    foreach($array as $inner_key => $value)
+					{
+						if ($inner_key === 'Field')
+						{
+							if (!(int)$inner_key)
+							{
+								$column_names[] = $value;
+							}
+						}
+                    }
+                }        
+            }
+
+			return $column_names;
+        } 
+		catch (Exception $e)
+		{
+			return $e->getMessage(); //return exception
+        }  
 	}
 	
 	public function deleteProduct($param)

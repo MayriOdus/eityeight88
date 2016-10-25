@@ -17,6 +17,8 @@ var ee = {
 			if( mode == 'edit' )
 			{
 				self.setProdDetail();
+				
+				CKEDITOR.replaceAll();
 			}
 		},
 
@@ -165,7 +167,7 @@ var ee = {
 				});
 
 			}
-
+		
 			if( $('#form1').length )
 			{
 				if( mode == 'edit' )
@@ -180,8 +182,21 @@ var ee = {
 				$('#form1').ajaxForm({
 					url: vUrl,
 					data: { code : c },
+					
+					beforeSubmit : function(arr, $form, options) {
+
+						$(arr).each(function () {
+
+							if( undefined !== CKEDITOR.instances[this.name] )
+							{
+								this.value = CKEDITOR.instances[this.name].getData();
+							}
+
+						});
+					},
 
 					beforeSend: function() {
+
 						var pg = $("#progress-bar");
 						var percentVal = '0%';
 						var minwidth = '0em';
@@ -230,9 +245,9 @@ var ee = {
 
 			for( i in pdata )
 			{
-				if( $("#txt"+i).length )
+				if( $("#"+i).length )
 				{
-					$("#txt"+i).val(pdata[i]);
+					$("#"+i).val(pdata[i]);
 				}
 			}
 		},
@@ -302,7 +317,6 @@ var ee = {
 
 			return (sa);
 		},
-
 		toPDF : function( table, filename ) 
 		{
 			var pdf = new jsPDF('p', 'pt', 'letter');
