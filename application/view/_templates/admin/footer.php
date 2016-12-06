@@ -26,6 +26,10 @@
 	<script src="<?=URL;?>js/jquery.form.js"></script>
 	<script src="<?=URL;?>js/jquery.chosen.min.js"></script>
 	<script src="<?=URL;?>js/jquery.table2excel.js"></script>
+
+	<script src="//cdn.ckeditor.com/4.5.11/basic/ckeditor.js"></script>
+
+
 	<!-- <script src="<?=URL;?>js/ZeroClipboard.min.js"></script> -->
 
 

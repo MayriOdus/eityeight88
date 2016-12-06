@@ -21,7 +21,7 @@
                         <div class="panel-heading">
 							<div class="row">
                             <div class="col-lg-6">List</div>
-							<div class="col-lg-6 text-right"><a href="product/add">New Product <i class="fa fa-plus"></i></a></div>
+							<!-- <div class="col-lg-6 text-right"><a href="product/add">New Product <i class="fa fa-plus"></i></a></div> -->
 							</div>
                         </div>
                         <!-- /.panel-heading -->
@@ -34,7 +34,7 @@
                                             <th>Code Product</th>
                                             <th>Name Eng</th>
                                             <th>ชื่อ</th>
-                                            <th>Price</th>
+                                            <!-- <th>Price</th> -->
                                             <th>#</th>
                                         </tr>
                                     </thead>
@@ -50,10 +50,10 @@
                                             <td><?=$prod["code_product"];?></td>
                                             <td><?=$prod["name_eng"];?></td>
                                             <td><?=$prod["name_th"];?></td>
-                                            <td><?=$prod["costs"];?></td>
+                                            <!-- <td><?=$prod["costs"];?></td> -->
                                             <td class="center">
 												<button type="button" class="btn btn-primary btn-xs" name="view-rec" c="<?=$prod["code_product"];?>">edit</button>
-												<button type="button" class="btn btn-danger btn-xs" name="del-rec" c="<?=$prod["id"];?>">remove</button>
+												<!-- <button type="button" class="btn btn-danger btn-xs" name="del-rec" c="<?=$prod["id"];?>">remove</button> -->
 											</td>
                                         </tr>
 									<?php
