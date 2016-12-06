@@ -125,12 +125,24 @@ $ingredients = $product["ingredients" . $lang];
 			<div class="form-group">
 				<div class="input-group" style="width: 100%;"">
 					<select class="form-control" name="color_code" id="color_code">
-						<option value=""> <?=_COLOR;?> <?=count($color_prod);?> <?=_SHADE_IS_AVAILABLE;?> </option>
 						<?php
+						if( $product['id'] == 42 )
+						{
+							?>
+							<option value=""> <?=_HAVE;?> <?=count($color_prod);?> <?=_SHADES_IN_A_BOX;?> </option>
+							<?php
+						}
+						else
+						{
+							?>
+							<option value=""> <?=_COLOR;?> <?=count($color_prod);?> <?=_SHADE_IS_AVAILABLE;?> </option>
+							<?php
+						}
 						foreach ($color_prod as $color) 
 						{
 							echo '<option value="'.$color.'" style="background-color:'.$color.'">'.$color.'</option>';
 						}
+					
 						?>
 					</select>
 				</div>
