@@ -91,6 +91,19 @@ class Product extends Controller
         require APP . 'view/product/gencode.php';
         require APP . 'view/_templates/admin/footer.php';
     }
+	
+	public function gen89serial()
+	{
+		$this->model->generateProduct89Code('11', 200000);
+	}
+
+	public function generatenextCode()
+	{
+		//echo md5('200000'.'40');exit;
+		$this->model->generatenextCode('40', 200001, 200000);
+
+		echo 'done';
+	}
 
 	public function newproduct()
 	{
