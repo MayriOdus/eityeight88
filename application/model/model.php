@@ -283,7 +283,7 @@ class Model
 		$query->execute($parameters);
 		$chk = $query->fetch(PDO::FETCH_ASSOC);
 
-		if( $chk["dupflag"] > 2 )
+		if( $chk["dupflag"] > 4 )
 		{
 			$r["DUP"] = true;
 			$r["FAKE"] = false;
