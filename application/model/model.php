@@ -17,7 +17,7 @@ class Model
 
 	public function getproducts()
 	{
-		$sql = " SELECT p.*, group_concat(u.file_name) as img_file FROM product p LEFT JOIN upload_data u ON p.code_product = u.prod_id WHERE p.shows = '1' GROUP BY p.id order by p.code_product ";
+		$sql = " SELECT p.*, group_concat(u.file_name) as img_file FROM product p LEFT JOIN upload_data u ON p.code_product = u.prod_id WHERE p.shows = '1' GROUP BY p.id order by p.seq ";
 		$query = $this->db->prepare($sql);
 
 		$query->execute();
@@ -588,6 +588,95 @@ class Model
 			if( ($i % $chuck) == 0 || $i == $max )
 			{
 				$sql = 'INSERT INTO product_serials( code_product, code_serial ) VALUES ';
+				$strSQL = $sql . substr($vsql, 0, -1);
+				$query = $this->db->prepare($strSQL);
+				$query->execute();
+				$vsql = '';
+			}
+			
+			$i++;
+		}
+
+		/*
+		$handle = fopen('gencode.sql','w');
+		fwrite($handle, $sql);
+		fclose($handle);
+
+		echo $command = "mysql -u ".DB_USER." -p ".DB_PASS." ".DB_NAME." < gencode.sql ";
+
+		exec($command);
+		*/
+	}
+
+	public function generatenextCode($id, $from, $stocks)
+	{
+		//$sql = " DELETE FROM product_serials WHERE code_product = '".$id."' ";
+		//$query = $this->db->prepare($sql);
+		//$query->execute();
+
+		$max = $stocks;
+		$i = $from;
+		$chuck = ceil($max / 20);
+		$vsql = '';
+
+		echo $i;
+		echo '
+		';
+		echo $max;
+
+		$mx = $max + $i;
+
+		while( $i <= $mx )
+		{
+			$code = md5($i.$id);
+			$code = substr($code, 0, 13);
+			
+			$vsql .= "( '".$id."', '".$code."' ),";
+
+			if( ($i % $chuck) == 0 || $i == $max )
+			{
+				$sql = 'INSERT INTO product_serials( code_product, code_serial ) VALUES ';
+				$strSQL = $sql . substr($vsql, 0, -1);
+				$query = $this->db->prepare($strSQL);
+				$query->execute();
+				$vsql = '';
+			}
+			
+			$i++;
+		}
+
+		/*
+		$handle = fopen('gencode.sql','w');
+		fwrite($handle, $sql);
+		fclose($handle);
+
+		echo $command = "mysql -u ".DB_USER." -p ".DB_PASS." ".DB_NAME." < gencode.sql ";
+
+		exec($command);
+		*/
+	}
+
+	public function generateProduct89Code($id, $stocks)
+	{
+		$sql = " DELETE FROM product89_serials WHERE code_product = '".$id."' ";
+		$query = $this->db->prepare($sql);
+		$query->execute();
+
+		$max = $stocks;
+		$i = 1;
+		$chuck = ceil($max / 20);
+		$vsql = '';
+
+		while( $i <= $max )
+		{
+			$code = md5($i.$id);
+			$code = substr($code, 0, 13);
+			
+			$vsql .= "( '".$id."', '".$code."' ),";
+
+			if( ($i % $chuck) == 0 || $i == $max )
+			{
+				$sql = 'INSERT INTO product89_serials( code_product, code_serial ) VALUES ';
 				$strSQL = $sql . substr($vsql, 0, -1);
 				$query = $this->db->prepare($strSQL);
 				$query->execute();

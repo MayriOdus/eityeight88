@@ -65,3 +65,5 @@ define("_INGREDIENTS", "Ingredients");
 define("_LINE", "LINE");
 define("_EMAIL_US", "Email Us");
 define("_PHONE", "Phone");
+define("_SHADES_IN_A_BOX", "shades in a box");
+define("_HAVE", "");
