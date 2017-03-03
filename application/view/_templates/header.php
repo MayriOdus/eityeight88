@@ -62,7 +62,7 @@
 								<ul class="qtrans_social_chooser" id="qsocial-chooser">
 
 									<li class="active" style="border:none;">
-										<a href="https://www.facebook.com/ver.88officialThai?ref=bookmarks"  target="_blank" class="btn btn-social-icon btn-facebook">
+										<a href="https://www.facebook.com/EityEightThailand"  target="_blank" class="btn btn-social-icon btn-facebook">
 											<i class="fa fa-facebook"></i>
 										</a>
 										<!-- <a href="#" data-toggle="modal" data-target=".soci-line" class="btn btn-social-icon btn-twitter"> -->

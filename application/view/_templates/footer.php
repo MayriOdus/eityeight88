@@ -10,7 +10,7 @@
 		
 		<p class="footer-links">
 			<ul class="social-network social-circle ">
-				<li><a href="https://www.facebook.com/ver.88officialThai?ref=bookmarks"  target="_blank" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="https://www.facebook.com/EityEightThailand"  target="_blank" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
 				<li>
 					<!-- <a href="http://line.me/ti/p/@VER.88OFFICIAL" target="_blank" data-toggle="modal" data-target=".soci-linexx" class="icoLine" title="Line" style="background-color: #ffffff; vertical-align: middle;"> -->
 					<a href="http://line.me/ti/p/@eityeight" target="_blank" class="icoLine" title="Line" style="background-color: #ffffff; vertical-align: middle;">
