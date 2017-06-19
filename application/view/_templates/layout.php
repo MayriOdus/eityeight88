@@ -51,6 +51,8 @@
   </div>
 </div>
 
+<script src="https://www.trustmarkthai.com/callbackData/initialize.js?t=a6f39d1-17-5-f702dc277e3334381fe25c312a28457fa1d22e" id="dbd-init"></script><div id="Certificate-banners"></div>
+
 <?php require APP . 'view/_templates/script.php'; ?>
 
 </body>
