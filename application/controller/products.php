@@ -23,7 +23,7 @@ class Products extends Controller
         // load views
 		$content = 'view/products/index.php';
         require APP . 'view/_templates/layout.php';
-    }	
+    }
 
 	public function product_detail($p, $code_prod)
 	{
@@ -46,24 +46,43 @@ class Products extends Controller
         require APP . 'view/_templates/layout.php';
     }
 
+    public function qr()
+    {
+        $_URL = URL . 'en' . "/";
+
+        $res = $this->model->chk_serial($_GET);
+
+        // load views
+        if( isset($res['PRODNAME']) && !empty($res['PRODNAME']) )
+        {
+            $content = 'view/products/qr.php';
+        }
+        else
+        {
+            $content = 'view/products/fack.php';
+        }
+        //$content = 'view/main/index.php';
+        require APP . 'view/_templates/layout.php';
+    }
+
     public function ajax_addbasket()
     {
         $res = $this->model->add_basket($_POST);
-        
+
         echo json_encode($res);
     }
 
     public function ajax_chkserial()
     {
         $res = $this->model->chk_serial($_POST);
-        
+
         echo json_encode($res);
     }
 
     public function ajax_chkserial_all()
     {
         $res = $this->model->chk_serial_all($_POST);
-        
+
         echo json_encode($res);
     }
 
