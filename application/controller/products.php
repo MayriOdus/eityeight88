@@ -46,11 +46,19 @@ class Products extends Controller
         require APP . 'view/_templates/layout.php';
     }
 
-    public function qr()
+    public function qr($qrc)
     {
         $_URL = URL . 'en' . "/";
 
-        $res = $this->model->chk_serial($_GET);
+        $code = base64_decode($qrc);
+        // MDUwMDAwMDAw
+
+        $p = array(
+            'pid' => (int) substr($code, 0, -7),
+            'pdata' => $qrc
+        );
+
+        $res = $this->model->chk_serial($p);
 
         // load views
         if( isset($res['PRODNAME']) && !empty($res['PRODNAME']) )

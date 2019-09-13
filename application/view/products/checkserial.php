@@ -4,7 +4,14 @@
     <div class="col-md-12">
 
 		<div class="row">
-			
+					
+			<div>
+				<p class="h4">FAKE PRODUCT (KW)</p>
+				<p class="h4">Please Contact Us</p>
+				<p class="h4">ver88officeil@gmail.com</p>
+			</div>
+
+			<?php /* ?>
 			<div class="col-sm-6 col-md-6" style="font-size:40px;">
                 <div class="row">
                     <div class="carousel-inner">
@@ -44,6 +51,7 @@
 					</fieldset>
 				</form>
 			</div>
+			<?php */ ?>
 
 		</div>	
 		
@@ -53,7 +61,7 @@
 
 
 
-
+<?php /* ?>
 
 <div class="modal fade" id="isreal" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-sm" role="document">
@@ -166,3 +174,5 @@
     </div>
     </div>
 </div>
+
+<?php */ ?>
